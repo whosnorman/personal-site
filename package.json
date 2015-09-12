@@ -1,0 +1,33 @@
+{
+  "name": "personal-site",
+  "version": "0.0.0",
+  "description": "matt ohagan's personal website",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattohagan/personal-site.git"
+  },
+  "keywords": [
+    "personal",
+    "ohagan"
+  ],
+  "author": "mattohagan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattohagan/personal-site/issues"
+  },
+  "homepage": "https://github.com/mattohagan/personal-site",
+  "dependencies": {
+    "logfmt": "^1.1.2",
+    "express": "^4.6.1",
+    "request": "^2.39.0",
+    "body-parser": "*",
+    "path": "^0.11.14",
+    "fs": "0.0.2",
+    "json": "^9.0.3",
+    "jade": "^1.9.2"
+  }
+}

@@ -1,0 +1,33 @@
+doctype html
+extends layout
+
+block localcss
+	link(rel='stylesheet' type='text/css' href='css/final.css')
+block localscripts
+	script(src='js/project.js')
+block content
+	.header-layout
+		block head-img
+		.head-content
+			.container
+				.header
+					.row
+						#back.nav
+							span.mega-octicon.octicon-chevron-left
+							span(id='txt') home
+					div(style='clear: both')
+
+			.container
+				.project-head
+					.head-bottom
+						.row
+							.six.columns
+								.small-line
+								.title
+									block proj-title
+						.row.type
+							.six.columns
+								block proj-position
+	.project-content
+		.container
+			block proj-content 

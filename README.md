@@ -1,18 +1,8 @@
-mattohagan.github.io
+[mattohagan.com](http://mattohagan.com)
 ====================
 
-personal portfolio and resume site
+matt's web presence
 
-[link for the lazy](http://mattohagan.github.io)
+wip
 
-### to add
-- resume
-- portfolio page
-  - projects and hacks
-
-### to fix
-- conent sliding 
-  - buggy when you don't wait for transition to finish
-- scaling/sizing
-  - working layout for all screen sizes
 

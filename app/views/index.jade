@@ -1,0 +1,75 @@
+extends layout
+
+block localcss
+	link(rel='stylesheet' type='text/css' href='css/final.css')
+block localscripts
+	script(src='js/final.js')
+block content
+	#landing
+		canvas(id='effects')
+		.container
+			.header
+				.row
+					.big.twelve.columns
+						| hey! i'm matt.
+					.sub-title.twelve.columns
+						| hackfsu director, computer science student, and community builder.
+				.small-line
+				div(style='clear: both')
+				ul.alone-nav
+					li.current portfolio
+					li 
+						a(target='_blank' href='http://github.com/mattohagan') github
+					li 
+						a(target='_blank' href='https://www.dropbox.com/s/8mt66kqr4t27tk4/Resume.pdf?dl=0') resume
+
+			.portfolio
+				.row
+					.proj.four.columns
+						.overlay
+						img(id='hackfsu' src='img/hackfsuOpening.jpg')
+						.title hackfsu
+						.desc Annual hackathon at Florida State.
+
+					.proj.eight.columns
+						.overlay
+						img(id='domi' src='img/domi-graph.png')
+						.title domi
+						.desc Room reservation system & dashboard.
+				.row
+					.proj.four.columns
+						.overlay
+						img(id='technole' src='img/technole.png')
+						.title technole
+						.desc Student tech organization.
+
+					.proj.four.columns
+						.overlay
+						img(id='runaway' src='img/kanye1.png')
+						.title runaway
+						.desc Kanye themed roadtrip generator.
+
+					.proj.four.columns
+						.overlay
+						img(id='hippo' src='img/hippo.jpg')
+						.title hippo
+						.desc Desktop hardware gadget.
+
+				.row
+					.proj.eight.columns
+						.overlay
+						img(id='jot' src='img/jotScreen3.png')
+						.title jot
+						.desc Room reservation system & dashboard.
+
+					.proj.four.columns
+						.overlay
+						img(id='previous-site' src='img/previous-site.png')
+						.title this site
+						.desc The previous version.
+
+					
+
+
+
+
