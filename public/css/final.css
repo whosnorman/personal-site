@@ -26,7 +26,7 @@
 }
 
 body {
-	background: #81968F;
+	background: #605D67;
 	color: #fff;
 	font-size: 16px;
 	font-family: 'Open Sans';
@@ -38,15 +38,15 @@ body {
 }
 
 .proj {
-	background: #81968F;
+	background: #605D67;
 }
 
 .proj .overlay {
-	background: #81968F;
+	background: #605D67;
 }
 
 .head-img:after {
-	background: linear-gradient(transparent, #81968F 90%);
+	background: linear-gradient(transparent, #605D67 90%);
 }
 
 
@@ -245,6 +245,10 @@ body {
 	top: -3em;
 }
 
+#battletrip {
+	top: -2.8em;
+}
+
 
 /* END BACKGROUND IMAGE IDs */
 
@@ -269,8 +273,7 @@ body {
 
 
 .project-head .head-bottom {
-	position: absolute;
-	bottom: 0;
+	margin-top: 16.2em;
 	width: 100%;
 }
 
@@ -306,6 +309,7 @@ body {
 	width: 100%;
 	font-weight: 100;
 	font-size: 0.8em;
+	margin-top: 3em;
 }
 
 
@@ -315,6 +319,10 @@ body {
 
 .head-content {
 	height: 100%;
+}
+
+.nav #txt {
+	margin-left: 10px;
 }
 
 .header-layout .nav {
