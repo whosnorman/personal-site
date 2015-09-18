@@ -13,15 +13,15 @@ var numX = 6;
 var numSquares = 8;
 
 var squareRange = {
-	max: 15,
-	min: 10
+	max: 16,
+	min: 8
 };
 var circleRange = {
 	max: 17,
-	min: 10
+	min: 8
 };
 var xRange = {
-	max: 9,
+	max: 12,
 	min: 5
 };
 
@@ -48,7 +48,38 @@ $(document).ready(function(){
 			console.log(link);
 		});
 	});
+
+
+	$('.proj').hover(function(e){
+		var id = $(this).find('img').attr('id');
+		console.log(id);
+		changeSiteColor(id);
+	});
 });
+
+function changeSiteColor(id){
+	var color;
+	switch(id){
+		case 'previous-site':
+		case 'jot': color = '#605D67';
+			break;
+		case 'domi':
+		case 'hackfsu': color = '#4E738C';
+			break;
+		case 'runaway':
+		case 'battletrip':
+		case 'technole': color = '#8E4E4E';
+			break;
+		default:
+			break;
+	}
+	console.log(color);
+
+	$('body').css('background', color);
+	$('.proj').css('background', color);
+	$('.proj .overlay').css('background', color);
+	$('.head-img:after').css('background', 'linear-gradient(transparent, '+color+'#605D67 90%)');
+}
 	
 function init(){
 	canvas = document.getElementById('effects');
@@ -85,7 +116,6 @@ function init(){
 var updateCursorLocation = function(e) {
 	cursorX = e.pageX;
 	cursorY = e.pageY;
-	console.log(cursorY);
 }
 
 var isHovered = function(arr, i, x, y) {

@@ -35,18 +35,38 @@ body {
 	margin: 0;
 	overflow-x: hidden;
 	​-webkit-font-smoothing:antialiased;
+
+	transition: all 200ms ease-out;
+	-webkit-transition: all 200ms ease-out;
+	-moz-transition: all 200ms ease-out;
+	-o-transition: all 200ms ease-out;
 }
 
 .proj {
 	background: #605D67;
+
+	transition: all 200ms ease-out;
+	-webkit-transition: all 200ms ease-out;
+	-moz-transition: all 200ms ease-out;
+	-o-transition: all 200ms ease-out;
 }
 
 .proj .overlay {
 	background: #605D67;
+
+	transition: all 200ms ease-out;
+	-webkit-transition: all 200ms ease-out;
+	-moz-transition: all 200ms ease-out;
+	-o-transition: all 200ms ease-out;
 }
 
 .head-img:after {
 	background: linear-gradient(transparent, #605D67 90%);
+
+	transition: all 200ms ease-out;
+	-webkit-transition: all 200ms ease-out;
+	-moz-transition: all 200ms ease-out;
+	-o-transition: all 200ms ease-out;
 }
 
 
