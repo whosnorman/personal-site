@@ -1,0 +1,7 @@
+body {
+	background: #8E4E4E !important;
+}
+
+.head-img:after {
+	background: linear-gradient(transparent, #8E4E4E 90%) !important;
+}

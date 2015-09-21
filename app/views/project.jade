@@ -3,6 +3,8 @@ extends layout
 
 block localcss
 	link(rel='stylesheet' type='text/css' href='css/final.css')
+	link(rel='stylesheet' type='text/css' href='css/project.css')
+	block bgcss
 block localscripts
 	script(src='js/project.js')
 block content
@@ -22,12 +24,24 @@ block content
 					.head-bottom
 						.row
 							.six.columns
-								.small-line
+								
 								.title
 									block proj-title
 						.row.type
 							.six.columns
 								block proj-position
+						.small-line
+						.sub
+							.row.date
+								.twelve.columns
+									span.mega-octicon.octicon-watch
+									block proj-date
+							.row.skills
+								.twelve.columns
+									span.mega-octicon.octicon-browser
+									block proj-skills
+
+
 	.project-content
 		.container
 			block proj-content 

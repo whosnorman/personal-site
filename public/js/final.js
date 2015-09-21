@@ -26,9 +26,15 @@ var xRange = {
 };
 
 var popRange = {
-	max: 25,
-	min: 5
+	max: 5,
+	min: 3
 };
+
+var popAmtRange = {
+	max: 6,
+	min: 4
+};
+
 
 var bctx;
 var canvas;
@@ -132,31 +138,24 @@ var calculateDistance = function(x1, y1, x2, y2) {
 
 // initialize popping effect
 function initPop(x, y){
-	var amt = 5;
+	var amt = Math.floor(randomSize(popAmtRange));
 	for(var i = 0; i < amt; i++){
 		
-		var size = randomSize(popRange);
+		var size = Math.floor(randomSize(popRange));
 		var opacity = 0.35;
 
-		var start = 1.6 * Math.PI;
-		var end = (Math.random() * (0.6 - 0.3) + 0.3) * Math.PI;
-		var deg = 180 / amt;
-    	var dir = deg * Math.PI;
+		var deg = (i + 1) * (360 / amt);
 
-    	x += size;
-
-		drawPop(x, y, size, start, end, opacity, color, dir);
+		drawPop(x, y, size, opacity, color, deg);
 
 		popArr.push({
 			x: x,
 			y: y,
 			size: size,
-			start: start,
-			end: end,
 			dr: 0,
 			c: color,
 			opacity: opacity,
-			dir: dir,
+			dir: deg,
 			done: false,
 			moveUp: false
 		});
@@ -166,24 +165,18 @@ function initPop(x, y){
 // on interval update the pop effects location
 function updatePops(delta){
 	for(var i = 0; i < popArr.length; i++){
-		// update pop settings here
-		// and then draw
-		// start goes up
-		// then end goes down
-		
-		popArr[i].end -= Math.sqrt(Math.random() * 0.1);
-		popArr[i].start -= Math.sqrt(Math.random() * 0.01);
-		popArr[i].y += Math.random() + 3;
-		popArr[i].x += Math.random() + 2;
-		
-		popArr[i].size += 1;
-
-		drawPop(popArr[i].x, popArr[i].y, popArr[i].size, popArr[i].start, popArr[i].end, popArr[i].opacity, popArr[i].c, popArr[i].dir);
-	
-		if(popArr[i].size >= 10){
+		popArr[i].size += 0.8;
+		if(popArr[i].size >= 8){
 			popArr.splice(i, 1);
+			i--;
+		} else {
+			drawPop(popArr[i].x, popArr[i].y, popArr[i].size, popArr[i].opacity, popArr[i].c, popArr[i].dir);
+			
+			var radians = toRadians(popArr[i].dir);
+			popArr[i].y += ((Math.sin(radians) * popArr[i].size) / 2);
+			popArr[i].x += ((Math.cos(radians) * popArr[i].size) / 2);
 		}
-
+		
 	}
 }
 
@@ -311,20 +304,44 @@ function randomSize(range){
 	return Math.random() * (range.max - range.min) + range.min;
 }
 
-function drawPop(x, y, size, startAngle, endAngle, opacity, color, dir){
+function drawPop(x, y, size, opacity, color, dir){
+	var radians = toRadians(dir)
+	var newY = size * Math.sin(radians);
+	var newX = size * Math.cos(radians);
+	var toX = x + newX;
+	var toY = y + newY;
+
 	bctx.beginPath();
-
 	bctx.moveTo(x, y);
-	var toX = size * Math.cos(dir) + x;
-	var toY = size * Math.cos(dir) + y;
 	bctx.lineTo(toX,toY);
-
 	bctx.lineWidth = 4;
 	bctx.globalAlpha = opacity;
 	bctx.lineCap = 'round';
-
-
 	bctx.stroke();
+}
+
+
+function toRadians(angle) {
+  return angle * (Math.PI / 180);
+}
+
+
+function toDeg(theta, convertedmx, convertedmy){
+  theta = theta * 180/Math.PI;
+  if(convertedmy< 0){
+    if(convertedmx < 0){
+      theta += 180;
+    }
+    else{
+      theta += 360;
+    }
+  }
+  else{
+    if(convertedmx < 0){
+      theta+=180;
+    }
+  }
+  return theta;
 }
 
 function drawCircle(x, y, radius, color, opacity){
