@@ -45,48 +45,70 @@ var cursorY = -1000;
 var pagePosition = 0;
 
 $(document).ready(function(){
+
+	// set favicon based on time of day
+	setFavicon();
+
+	// start canvas animations
 	init();
 
+	// listeners to route to each project page
 	$('.proj').on('click', function(e){
 		var link = $(this).find('img').attr('id');
 		getReadyToChange(function(){
 			window.location.href = link;
-			console.log(link);
 		});
 	});
 
-
+	// listeners to change page color for each project
 	$('.proj').hover(function(e){
 		var id = $(this).find('img').attr('id');
-		console.log(id);
 		changeSiteColor(id);
 	});
 });
 
+// set favicon based on time of day
+function setFavicon(){
+	var time = new Date();
+	time = time.getHours();
+	var favicon;
+	// night is set between 6pm and 5am
+	if(time > 18 || time < 5){
+		favicon = 'favicon-moon.png';
+	} else {
+		favicon = 'favicon-sunrise.png';
+	}
+
+	var favLink = '<link rel="shortcut icon" href="/public/img/'+favicon+'">';
+	$('head').append(favLink);
+}
+
+// ability to have different colors for each project
 function changeSiteColor(id){
 	var color;
 	switch(id){
-		case 'previous-site':
-		case 'jot': color = '#605D67';
-			break;
 		case 'domi':
-		case 'hackfsu': color = '#4E738C';
-			break;
+		case 'hackfsu': color = '#E88873';	// peach
+			break;		
 		case 'runaway':
 		case 'battletrip':
-		case 'technole': color = '#8E4E4E';
+		case 'technole': color = '#91BF94';	// mint
+			break;
+		case 'previous-site':
+		case 'jot': color = '#9EBFB3';		// baby blue
 			break;
 		default:
 			break;
 	}
-	console.log(color);
 
+	// reset all applicable css color styles
 	$('body').css('background', color);
 	$('.proj').css('background', color);
 	$('.proj .overlay').css('background', color);
 	$('.head-img:after').css('background', 'linear-gradient(transparent, '+color+'#605D67 90%)');
 }
-	
+
+// kick off canvas animations and interval timer
 function init(){
 	canvas = document.getElementById('effects');
 	canvas.width = document.getElementById('landing').offsetWidth;
@@ -103,10 +125,13 @@ function init(){
 		clickEvent = true;
 	}
 
+	// create the three shapes
 	initShape(numCircles, drawCircle, bubbleArr, circleRange);
 	initShape(numX, drawX, xArr, xRange);
 	initShape(numSquares, drawSquare, squareArr, squareRange);
 
+	// set timer for every 30ms
+	// time is to account for microincrements past real time done by js
 	var updateInterval = window.setInterval(function(){
 		var currTime = Date.now();
 		if(currTime - lastTime < 100){
@@ -118,12 +143,13 @@ function init(){
 
 }
 
-
+// updates cursor variables
 var updateCursorLocation = function(e) {
 	cursorX = e.pageX;
 	cursorY = e.pageY;
 }
 
+// checks if the mouse has hovered over a given x,y
 var isHovered = function(arr, i, x, y) {
 	var distance = calculateDistance(x, y, arr[i].x, arr[i].y);
 	if (distance < arr[i].size) {
@@ -132,6 +158,7 @@ var isHovered = function(arr, i, x, y) {
 	return false;
 }
 
+// used by isHovered()
 var calculateDistance = function(x1, y1, x2, y2) {
 	return Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2));
 }
