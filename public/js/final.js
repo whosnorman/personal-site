@@ -94,7 +94,7 @@ function changeSiteColor(id){
 		case 'battletrip':
 		case 'technole': color = '#91BF94';	// mint
 			break;
-		case 'previous-site':
+		case 'site':
 		case 'jot': color = '#9EBFB3';		// baby blue
 			break;
 		default:

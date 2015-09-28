@@ -10,7 +10,7 @@
 
 .sub span {
 	margin-right: 0.5em;
-	min-width: 32px;
+	min-width: 1em;
 	text-align: center;
 	font-size: 1.5em;
 }
@@ -21,7 +21,7 @@
 
 a {
 	text-decoration: none;
-	color: #fff;
+	color: #303030;
 	opacity: 0.5;
 }
 
