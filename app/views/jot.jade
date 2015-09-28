@@ -8,15 +8,40 @@ block head-img
 block proj-title
 	| Jot 
 block proj-position
-	| Chrome Extension
+	| Chrome Extension - <a href="https://chrome.google.com/webstore/detail/jot/mnemjleajnmodijhnibpekloajfdjjja"> Install </a>
 block proj-skills
 	| JS + CSS + HTML
 block proj-date
 	| October 2014
+block proj-head-other
+	.row.skills
+		.twelve.columns
+			span.mega-octicon.octicon-globe
+			| 10,500+ Users
 block proj-content
-	| Small batch Banksy selfies, authentic brunch PBR&B wayfarers. Bespoke +1 you probably haven't heard of them PBR aesthetic pickled. Roof party deep v migas organic twee. Roof party skateboard readymade fingerstache meggings, Tumblr vegan cardigan 3 wolf moon distillery wayfarers tattooed chambray. IPhone VHS farm-to-table Echo Park keffiyeh. Keffiyeh jean shorts chia, actually meditation messenger bag PBR&B next level art party polaroid ugh. Deep v kale chips direct trade, mlkshk banjo fanny pack kitsch single-origin coffee try-hard cornhole church-key.
-
+	| Started this little project in the Summer of 2014 when I first dabbled in web dev and found out that you could simply put 'data:text/html, &lt;html contenteditable&gt;' into the url bar and have a quick notepad. The design was inspired by the popular extension Momentum and was where the orginal set of backgrounds are from. I put the original 'data:text/html' snippet of Jot into a Gist if you want to give it a try.
 	<br />
 	<br />
-
-	| Ennui normcore Etsy, fap fanny pack pork belly Marfa flexitarian hashtag raw denim. Cold-pressed American Apparel fingerstache, ugh Brooklyn quinoa Portland plaid iPhone paleo locavore retro kitsch McSweeney's. Fashion axe raw denim leggings, Thundercats paleo ugh aesthetic flexitarian cray plaid Pinterest. Odd Future swag pop-up bespoke, lumbersexual crucifix ennui selvage Pinterest Carles gluten-free asymmetrical. Trust fund meh distillery you probably haven't heard of them, art party Marfa fap Brooklyn synth Echo Park. Migas kale chips kitsch, paleo Carles mixtape Bushwick meditation skateboard iPhone Kickstarter. Tofu vinyl distillery cliche Banksy you probably haven't heard of them +1, kogi PBR pour-over irony selfies meh.
+	.img-title
+		| <a href='https://gist.github.com/mattohagan/9904228022805012f8cf'>Jot Gist on Github</a>
+	<br />
+	| I hit a snag when I discovered that Chrome wasn't going to let me use localStorage with data:text/html, so I threw a json file in there and switched everything over to a chrome extension. I was later convinced by a friend to take some screenshots of Jot and throw it up on the Chrome Web Store. It was shipped at one of the first <a href="http://www.lytehacks.com">LyteHacks</a> in October 2014 and was <a href="http://www.producthunt.com/tech/jot-2">posted on Product Hunt</a>, initially hitting around 500 users. About a week or two later it hits about 1,000 users. Come to find out, <a href="http://www.lifehacker.jp/2014/10/141029todojot.html"> it was featured on lifehacker.jp</a>.
+	<br />
+	<br />
+	img(src='img/jotJapan.jpg')
+	.img-title
+		| Screenshot from <a href="http://www.lifehacker.jp/2014/10/141029todojot.html">Japan's Lifehacker</a>
+	<br />
+	| The user count hovered around 1k until January 2015 when it was featured in <a href="http://thenextweb.com/apps/2015/01/01/10-useful-chrome-extensions-may-not-tried/">an article on The Next Web</a> and recieved over 2,000 shares. After which it climbed at about 1k users a week until it hit 10,000. It's been slowly increasing since then, and hopefully I'll find the time to finish and ship out an update. In the meantime thanks to everyone that installed it and gave feedback!
+	<br />
+	<br />
+	img(src='img/jotScreen2.png')
+	.img-title
+		| Screenshot on Chrome Web Store
+	<br />
+	<br />
+	img(src='img/jotClearHover.gif')
+	.img-title
+		| Hovering over the clear button
+	<br />
+	<br />
