@@ -33,6 +33,10 @@ module.exports = function(app){
 		res.render('site');
 	});
 
+	app.get('/oldSite', function(req, res){
+		res.sendfile('public/oldSite/index.html');
+	});
+
 
 	// 404
 	// always have this route last

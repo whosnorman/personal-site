@@ -21,5 +21,10 @@ module.exports = function(app){
 	app.use("/css", app.express.static(__dirname + '/../public/css'));
 	app.use("/img", app.express.static(__dirname + '/../public/img'));
 	app.use("/fonts", app.express.static(__dirname + '/../public/fonts'));
+	
+	app.use("/oldjs", app.express.static(__dirname + '/../public/oldSite/oldjs'));
+	app.use("/oldcss", app.express.static(__dirname + '/../public/oldSite/oldcss'));
+	app.use("/oldimg", app.express.static(__dirname + '/../public/oldSite/oldimg'));
+	app.use("/unisansfree", app.express.static(__dirname + '/../public/oldSite/unisansfree'));
 
 }
