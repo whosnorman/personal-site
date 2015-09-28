@@ -12,9 +12,21 @@
 	margin-right: 0.5em;
 	min-width: 32px;
 	text-align: center;
+	font-size: 1.5em;
 }
 
 .sub div {
 	margin-bottom: 0.2em;
 }
 
+a {
+	text-decoration: none;
+	color: #fff;
+	opacity: 0.5;
+}
+
+a:hover {
+	cursor: pointer;
+	color: #fff;
+	opacity: 1;
+}
