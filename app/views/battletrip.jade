@@ -15,9 +15,26 @@ block proj-skills
 	| Objective-C + NodeJS/Express + Parse
 
 block proj-content
-	| Small batch Banksy selfies, authentic brunch PBR&B wayfarers. Bespoke +1 you probably haven't heard of them PBR aesthetic pickled. Roof party deep v migas organic twee. Roof party skateboard readymade fingerstache meggings, Tumblr vegan cardigan 3 wolf moon distillery wayfarers tattooed chambray. IPhone VHS farm-to-table Echo Park keffiyeh. Keffiyeh jean shorts chia, actually meditation messenger bag PBR&B next level art party polaroid ugh. Deep v kale chips direct trade, mlkshk banjo fanny pack kitsch single-origin coffee try-hard cornhole church-key.
-
+	| To preface, we thought of this idea at around 3pm on the Saturday of MHacks, or about halfway through the event. This left us 18 hours or so to build out what would become our first iOS app, not much sleep was had after that point.
+	<br />
+	<br />
+	| Battletrip is a life sized game of <a href='https://en.wikipedia.org/wiki/Battleship_(game)'>battleships</a>, and the way you take shots is by riding in an Uber. You download the app and authenticate with Uber, allowing us to poll your account to see when you're taking a ride. Once the driver hits the receipt button your ride status changes to completed, at which point we take your current location and plot it against the geo fences for battleships. You then get a push notification on whether you hit, missed, or sunk a ship. Everything happens in the background and you are still using Uber natively. The polling of the account happens on the iOS app using NSURLSession's so as not to overload the server, which handles the geo fencing by utilizing the <a href='https://www.npmjs.com/package/geolib'>geolib</a> module. The server also interfaces between the app and our <a href='https://parse.com/'>Parse</a> database, while notifications are sent using Parse's cloud code.
+	<br />
+	<br />
+	.img-title
+		| GitHub repos for the <a href='https://github.com/mattohagan/battletrip'>Node Server</a>, <a href='https://github.com/lindsay10c/battle-trip-ios'>iOS App</a>, and <a href='https://github.com/lindsay10c/battle-trip-ios/tree/master/battletrip'>Parse Cloud Code</a>
+	<br />
+	| Once a ship is hit, the radius shrinks, making it harder and harder to hit. While we realize a constant game of battletrip would be costly, it is a great business opportunity for Uber. They could use it when moving into a new city, announce a month long game of battleships, and give a free promo code to the user with the most points at the end of the month.
 	<br />
 	<br />
 
-	| Ennui normcore Etsy, fap fanny pack pork belly Marfa flexitarian hashtag raw denim. Cold-pressed American Apparel fingerstache, ugh Brooklyn quinoa Portland plaid iPhone paleo locavore retro kitsch McSweeney's. Fashion axe raw denim leggings, Thundercats paleo ugh aesthetic flexitarian cray plaid Pinterest. Odd Future swag pop-up bespoke, lumbersexual crucifix ennui selvage Pinterest Carles gluten-free asymmetrical. Trust fund meh distillery you probably haven't heard of them, art party Marfa fap Brooklyn synth Echo Park. Migas kale chips kitsch, paleo Carles mixtape Bushwick meditation skateboard iPhone Kickstarter. Tofu vinyl distillery cliche Banksy you probably haven't heard of them +1, kogi PBR pour-over irony selfies meh.
+	img(src='img/battletrip-map.png')
+	.img-title
+		| Map of battleship's in Ann Arbor
+	<br />
+	<br />
+	img(src='img/battletrip.jpg')
+	.img-title
+		| Showcasing during the MHacks 6 Expo
+	<br />
+	<br />
