@@ -73,7 +73,7 @@ function setFavicon(){
 	time = time.getHours();
 	var favicon;
 	// night is set between 6pm and 5am
-	if(time > 18 || time < 5){
+	if(time >= 18 || time < 5){
 		favicon = 'favicon-moon.png';
 	} else {
 		favicon = 'favicon-sunrise.png';

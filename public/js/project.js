@@ -20,7 +20,7 @@ function setFavicon(){
 	var time = new Date();
 	time = time.getHours();
 	var favicon;
-	if(time > 18 || time < 5){
+	if(time >= 18 || time < 5){
 		favicon = 'favicon-moon.png';
 	} else {
 		favicon = 'favicon-sunrise.png';
