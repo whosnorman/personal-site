@@ -253,7 +253,7 @@ body {
 
 
 .proj.mobile-show-bg {
-	border: 0.01em solid rgba(255, 255, 255, 1);
+	border: 0.3em solid rgba(255, 255, 255, 0);
 }
 
 .proj.mobile-show-bg img {
