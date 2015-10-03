@@ -92,9 +92,9 @@ function changeSiteColor(id){
 			break;		
 		case 'runaway':
 		case 'battletrip':
-		case 'technole': color = '#91BF94';	// mint
+		case 'site': color = '#91BF94';	// mint
 			break;
-		case 'site':
+		case 'technole':
 		case 'jot': color = '#9EBFB3';		// baby blue
 			break;
 		default:
