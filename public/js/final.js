@@ -180,17 +180,28 @@ function init(){
 	initShape(numX, drawX, xArr, xRange);
 	initShape(numSquares, drawSquare, squareArr, squareRange);
 
+	var showCanvas = true;
+	if(canvas.width <  550) {
+		$('#effects').css('display', 'none');
+		showCanvas = false;
+	}
+
 	// set timer for every 30ms
 	// time is to account for microincrements past real time done by js
 	var updateInterval = window.setInterval(function(){
 		var currTime = Date.now();
-		if(currTime - lastTime < 100){
-			update(currTime - lastTime);
-			if(canvas.width <  550)
-				updateBoxBackgrounds();
-		}
 
-		lastTime = currTime;
+		// either showing the canvas or updating box backgrounds
+		if(showCanvas){
+			if(currTime - lastTime < 100){
+				update(currTime - lastTime);
+			}
+
+			lastTime = currTime;
+		} else {
+			updateBoxBackgrounds();
+		}
+		
 	}, 30);
 
 }
