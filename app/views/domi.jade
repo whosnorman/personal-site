@@ -6,29 +6,49 @@ block head-img
 	.head-img(style="background-image: url('img/domiDashSecond.gif')")
 
 block proj-title
-	| Domi Station 
+	| Domi Station
 block proj-position
 	| Developer Intern
 block proj-date
 	| Fall 2014 - Spring 2015
 block proj-skills
 	| NodeJS/Express + MongoDB + Jade + JS/jQuery + Illustrator
+block proj-head-other
+	.row.skills
+		.twelve.columns
+			span.mega-octicon.octicon-globe
+			| <a href='http://www.domistation.com/'>domistation.com</a>
 
 block proj-content
-	| I interned for Domi for the duration of my Sophomore school year. The startup incubator and coworking space had just opened up their doors in the Spring of 2014. 
-
+	| I interned at Domi for the duration of my Sophomore school year while the startup incubator and coworking space had just opened up their doors in the Spring of 2014. When I joined the team, the biggest problem they had was the hassle of letting members schedule meetings in their conference rooms. They would have to email my boss, who would add an event to the google calendar. I decided to automate all of this, and learn a ton in the process. After all was said and done, the team's favorite feature is still the 'Approximate Emails Spared' section in the dashboard below.
+	<br />
+	<br />
+	| The entire room reservation system was built incrementally from scratch throughout the internship. The backend runs on an NodeJS/Express server that utilizes the <a href='https://www.mandrill.com/'>Mandrill</a> and <a href='https://developers.google.com/google-apps/calendar/?hl=en'>GCal</a> API's while storing all of the data through <a href='https://www.compose.io/mongodb/'>Compose's MongoDB ORM</a>. Ironically, Mandrill and Compose have since both switched to paid options in lieu of free accounts, so you could say I was ahead of the curve. The front end of the dashboard was built without any core frameworks but utilizes jade templates alongside  <a href='http://julian.com/research/velocity/'>Velocity.js</a> and <a href='https://gionkunz.github.io/chartist-js/'>Chartist.js</a>, two awesome libraries that help with creating easing functions and displaying charts respectively. 
+	<br />
+	<br />
+	| What you see below, the header of the dashboard, was built almost entirely in coffee shops during a three day stay in Ann Arbor, MI. This was definitely the most fun I had developing throughout the project as there were a lot of iterations throughout the three days and I'm happy with the balanced design it came out as. I added a couple of easter eggs like randomizing the welcome message as well as the accent colors, which are Domi's brand colors. Likewise, the superscript text you see next to the amount of requests, emails, and total time reserved are the amount those numbers have increased since the user has last visited the page.
 	<br />
 	<br />
 	img(src='img/domiDashSecond.gif')
 	.img-title
-		| Dashboard to visualize all of the reservation data
+		| Dashboard header to visualize all of the reservation data
 	<br />
 	<br />
-	| Unfortunately the rest of the dashboard shows alot of sensitive member data, but it looks great. 
+	img(src='img/domiFooterReservations.png')
+	.img-title
+		| Dashboard footer with a table of all reservations starting from most current
+	<br />
+	<br />
+	| Unfortunately, the rest of the dashboard shows a lot of sensitive member data, you'll just have to take my word that it looks great. The user facing side of the reservation system was integrated into Domi's Squarespace site and is shown below. I used the <a href='http://tympanus.net/codrops/2013/05/21/natural-language-form-with-custom-input-elements/'>Natural Language Form demo</a> from Codrops to make it easy to use for the members. When the server receives a request it checks to see if that room is availble at that time, if not it lets the user know who's already snagged it.
 	<br />
 	<br />
 	img(src='img/domiReservation.gif')
 	.img-title
-		| Dashboard to visualize all of the reservation data
+		| User facing side to make a room reservation
+	<br />
+	<br />
+	<br />
+	| Domi is building an amazing community in Tallahassee, if you're ever in town <a href="mailto:ohaganmatt@gmail.com?Subject=Hey!%Let's%meet%up." target="_top">drop me a line</a> and I'll show you around.
+	<br />
 	<br />
 	<br />
