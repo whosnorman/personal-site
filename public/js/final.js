@@ -65,7 +65,57 @@ $(document).ready(function(){
 		var id = $(this).find('img').attr('id');
 		changeSiteColor(id);
 	});
+
+
 });
+
+var idArray = ['hackfsu', 'domi', 'site', 'runaway', 'battletrip', 'jot', 'technole'];
+
+function updateBoxBackgrounds() {
+
+    var viewHeight = $(window).height();
+    var scrollTop = $(window).scrollTop(); 
+
+    var fullHeight = document.body.scrollHeight;
+
+    var scrollMax = fullHeight - viewHeight;
+    var padding = (scrollMax / 1.3) - (scrollTop / 1.3);
+    var boxHeight = 150;
+    var boxBottom = viewHeight - padding + scrollTop;
+    var boxTop = boxBottom - boxHeight;
+
+    //$('#line').css('top', boxTop);
+    //$('#line').css('height', boxHeight);
+
+    var visibleDivs = [];
+    for(var i = 0; i < idArray.length; i++){
+    	var id = idArray[i];
+    	var y = $('#'+id).offset().top;
+
+    	if(y > boxTop && y < boxBottom){
+    		visibleDivs.push(idArray[i]);
+    	}
+    }
+
+    //console.log('set bg: ' + visibleDivs[visibleDivs.length - 1]);
+
+    // choose last div in array which is the furthest
+    // one down the page that's in the box
+    var choose = visibleDivs[visibleDivs.length - 1];
+    addOrRemoveBG(choose);
+}
+
+function addOrRemoveBG(id){
+	// id passed in is the only one to set
+	for(var i = 0; i < idArray.length; i++){
+		var notId = idArray[i];
+		$('#'+notId).parent().removeClass('mobile-show-bg');
+	}
+
+	// only show current box
+	$('#'+id).parent().addClass('mobile-show-bg');
+
+}
 
 // set favicon based on time of day
 function setFavicon(){
@@ -135,7 +185,9 @@ function init(){
 	var updateInterval = window.setInterval(function(){
 		var currTime = Date.now();
 		if(currTime - lastTime < 100){
-			update(currTime - lastTime)
+			update(currTime - lastTime);
+			if(canvas.width <  550)
+				updateBoxBackgrounds();
 		}
 
 		lastTime = currTime;
