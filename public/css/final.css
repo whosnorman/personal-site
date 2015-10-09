@@ -355,9 +355,16 @@ body {
 	margin-top: 3em;
 }
 
-.project-content img {
+.project-content img{
 	width: 100%;
 	position: relative;
+}
+
+.project-content iframe {
+	width: 100%;
+	position: relative;
+	height: 35.2em;
+	border: 0;
 }
 
 .img-title {
