@@ -56,7 +56,7 @@ $(document).ready(function(){
 	$('.proj').on('click', function(e){
 		var link = $(this).find('img').attr('id');
 		getReadyToChange(function(){
-			window.location.href = link;
+			window.location = link;
 		});
 	});
 
