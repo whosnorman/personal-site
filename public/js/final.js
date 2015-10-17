@@ -54,15 +54,15 @@ $(document).ready(function(){
 
 	var win = window;
 	// listeners to route to each project page
-	$('.proj').on('click', function(e){
+	$('.proj').on('click', function(){
 		var link = $(this).find('img').attr('id');
 		getReadyToChange(function(){
-			win.location.href = link;
+			win.location.assign(link);
 		});
 	});
 
 	// listeners to change page color for each project
-	$('.proj').hover(function(e){
+	$('.proj').hover(function(){
 		var id = $(this).find('img').attr('id');
 		changeSiteColor(id);
 	});

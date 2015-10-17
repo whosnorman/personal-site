@@ -10,7 +10,7 @@ $(document).ready(function(){
 	// back button listener 
 	$('#back').on('click', function(){
 		$('body').fadeOut(1000, function(){
-			window.location.href = '/';
+			window.location.assign('/');
 		});
 	});
 });
