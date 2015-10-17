@@ -52,11 +52,12 @@ $(document).ready(function(){
 	// start canvas animations
 	init();
 
+	var win = window;
 	// listeners to route to each project page
 	$('.proj').on('click', function(e){
 		var link = $(this).find('img').attr('id');
 		getReadyToChange(function(){
-			window.location = link;
+			win.location.href = link;
 		});
 	});
 
