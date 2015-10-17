@@ -71,6 +71,9 @@ $(document).ready(function(){
 
 var idArray = ['hackfsu', 'domi', 'site', 'runaway', 'battletrip', 'jot', 'technole'];
 
+// made for scrolling on mobile
+// not ready for production yet, a little too 
+// jumpy when selecting the different boxes to show the background on 
 function updateBoxBackgrounds() {
 
     var viewHeight = $(window).height();
@@ -181,10 +184,12 @@ function init(){
 	initShape(numSquares, drawSquare, squareArr, squareRange);
 
 	var showCanvas = true;
-	if(canvas.width <  550) {
+	// this is if I want to remove canvas on mobile
+	// we'll keep it for now
+	/*if(canvas.width <  550) {
 		$('#effects').css('display', 'none');
 		showCanvas = false;
-	}
+	} */
 
 	// set timer for every 30ms
 	// time is to account for microincrements past real time done by js
@@ -199,7 +204,7 @@ function init(){
 
 			lastTime = currTime;
 		} else {
-			updateBoxBackgrounds();
+			//updateBoxBackgrounds();
 		}
 		
 	}, 30);
