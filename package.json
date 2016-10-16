@@ -1,6 +1,9 @@
 {
   "name": "personal-site",
   "version": "0.0.0",
+  "engines": {
+    "node":"4.1.1"
+  },
   "description": "matt ohagan's personal website",
   "main": "web.js",
   "scripts": {
