@@ -51,8 +51,6 @@ module.exports = function(app){
 
 
 
-
-
 	/* version 1 route */
 
 	app.get('/oldSite', function(req, res){
