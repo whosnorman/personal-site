@@ -1,8 +1,10 @@
 var request = require('request');
 var logfmt = require('logfmt');
 var bodyParser = require('body-parser');
+var redirect = require('express-redirect');
 
 module.exports = function(app){
+	redirect(app); // just mounting the redirect plugin
 	app.set('views', __dirname + '/../app/views');
 	app.set('view engine', 'jade');
 	app.locals.pretty = true;
@@ -22,6 +24,8 @@ module.exports = function(app){
 	app.use("/img", app.express.static(__dirname + '/../public/img'));
 	app.use("/fonts", app.express.static(__dirname + '/../public/fonts'));
 	
+	app.use("/1", app.express.static(__dirname + '/../public/1'));
+
 	app.use("/oldjs", app.express.static(__dirname + '/../public/oldSite/oldjs'));
 	app.use("/oldcss", app.express.static(__dirname + '/../public/oldSite/oldcss'));
 	app.use("/oldimg", app.express.static(__dirname + '/../public/oldSite/oldimg'));

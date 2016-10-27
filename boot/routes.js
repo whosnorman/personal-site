@@ -34,8 +34,12 @@ module.exports = function(app){
 	});
 
 	app.get('/oldSite', function(req, res){
-		res.sendfile('public/oldSite/index.html');
+		res.sendfile('public/1/index.html');
 	});
+
+	app.redirect('/resume',
+		"https://www.dropbox.com/s/8mt66kqr4t27tk4/Resume.pdf?dl=0"
+	);
 
 
 	// 404
