@@ -18,6 +18,7 @@ module.exports = function(app){
 	}));
 
 
+	// setup static routes
 	app.use("/public", app.express.static(__dirname + '/../public'));
 	app.use("/js", app.express.static(__dirname + '/../public/js'));
 	app.use("/css", app.express.static(__dirname + '/../public/css'));

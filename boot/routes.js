@@ -1,6 +1,8 @@
 
 module.exports = function(app){
 
+	/* version 3 routes */ 
+
 	app.get('/', function(req, res) {
 		res.render('index');
 	});
@@ -53,7 +55,7 @@ module.exports = function(app){
 
 	/* version 1 route */
 
-	app.get('/oldSite', function(req, res){
+	app.get('/1', function(req, res){
 		res.sendfile('public/1/index.html');
 	});
 
