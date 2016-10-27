@@ -5,42 +5,61 @@ module.exports = function(app){
 		res.render('index');
 	});
 
-	app.get('/hackfsu', function(req, res){
-		res.render('hackfsu');
+	app.redirect('/resume',
+		"https://www.dropbox.com/s/8mt66kqr4t27tk4/Resume.pdf?dl=0"
+	);
+
+
+
+	/* version 2 routes */
+
+	app.get('/2', function(req, res) {
+		res.render('2/index');
 	});
 
-	app.get('/domi', function(req, res){
-		res.render('domi');
+	app.get('/2/hackfsu', function(req, res){
+		res.render('2/hackfsu');
 	});
 
-	app.get('/battletrip', function(req, res){
-		res.render('battletrip');
+	app.get('/2/domi', function(req, res){
+		res.render('2/domi');
 	});
 
-	app.get('/jot', function(req, res){
-		res.render('jot');
+	app.get('/2/battletrip', function(req, res){
+		res.render('2/battletrip');
 	});
 
-	app.get('/technole', function(req, res){
-		res.render('technole');
+	app.get('/2/jot', function(req, res){
+		res.render('2/jot');
 	});
 
-	app.get('/runaway', function(req, res){
-		res.render('runaway');
+	app.get('/2/technole', function(req, res){
+		res.render('2/technole');
 	});
 
-	app.get('/site', function(req, res){
-		res.render('site');
+	app.get('/2/runaway', function(req, res){
+		res.render('2/runaway');
 	});
+
+	app.get('/2/site', function(req, res){
+		res.render('2/site');
+	});
+
+	app.get('/2/*', function(req, res){
+		res.render('2/404');
+	});
+
+
+
+
+
+	/* version 1 route */
 
 	app.get('/oldSite', function(req, res){
 		res.sendfile('public/1/index.html');
 	});
 
-	app.redirect('/resume',
-		"https://www.dropbox.com/s/8mt66kqr4t27tk4/Resume.pdf?dl=0"
-	);
-
+	
 
 	// 404
 	// always have this route last

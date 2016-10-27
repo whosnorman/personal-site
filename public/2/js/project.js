@@ -10,7 +10,7 @@ $(document).ready(function(){
 	// back button listener 
 	$('#back').on('click', function(){
 		$('body').fadeOut(1000, function(){
-			window.location.assign('/');
+			window.location.assign('/2');
 		});
 	});
 });
@@ -26,6 +26,6 @@ function setFavicon(){
 		favicon = 'favicon-sunrise.png';
 	}
 
-	var favLink = '<link rel="shortcut icon" href="/public/img/'+favicon+'?1">'
+	var favLink = '<link rel="shortcut icon" href="/public/2/img/'+favicon+'?1">'
 	$('head').append(favLink);
 }
