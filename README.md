@@ -1,16 +1,14 @@
-[ohagan.co](http://ohagan.co)
-====================
+Personal portfolio, been through three iterations, all of which are still available to view. 
 
-matt's web presence
+---
 
-
-## version 3 [wip] - [live here](http://ohagan.co/)
-Includes 17 projects, not done yet. 
+### `v3` *current*
+[Live here](http://ohagan.co/). Includes 17 projects, still a work in progress.  
 
 
-## version 2 - [see v2 live](http://ohagan.co/2)
-Built during summer and fall of 2015, showcases seven projects, one of which includes all of the iterations of [that site](http://ohagan.co/2/site).
+### `v2` *2015-16*
+[See Version 2 live](http://ohagan.co/2). Showcases seven projects, one of which includes all of the iterations of [that site](http://ohagan.co/2/site).
 
 
-## version 1 - [see v1 live](http://ohagan.co/1)
-Built in the summer of 2014, one of my first side projects after starting to travel to hackathons. 
+### `v1` *2014-15*
+[See Version 1 live](http://ohagan.co/1). Was one of my first side projects after starting to travel to hackathons. 
