@@ -1,0 +1,86 @@
+extends layout
+
+block localcss
+	link(rel='stylesheet' type='text/css' href='css/final.css')
+block localscripts
+	script(src='js/final.js')
+block content
+	#landing
+		canvas(id='effects')
+		//- #line
+		.container
+			.header
+				.row
+					.big.twelve.columns
+						| hey! i'm matt.
+					.sub-title.twelve.columns
+						| aspiring product designer and community builder. 
+				.small-line
+				div(style='clear: both')
+				ul.alone-nav
+					li.current portfolio
+					li 
+						a(target='_blank' href='http://dribbble.com/ohagan') dribbble
+					li 
+						a(target='_blank' href='https://twitter.com/micdropmatt') twitter
+					li 
+						a(target='_blank' href='https://www.dropbox.com/s/8mt66kqr4t27tk4/Resume.pdf?dl=0') resume
+						
+
+			.portfolio
+				.row
+					.proj.four.columns
+						.overlay
+						img(id='hackfsu' src='img/hackfsuOpening.jpg')
+						.title hackfsu
+						.desc Annual hackathon at Florida State.
+
+					.proj.eight.columns
+						.overlay
+						img(id='domi' src='img/domi-graph-2.png')
+						.title domi
+						.desc Room reservation system & dashboard.
+				.row
+					.proj.four.columns
+						.overlay
+						img(id='site' src='img/previous-site.png')
+						.title this site
+						.desc The journey and process.
+
+					.proj.four.columns
+						.overlay
+						img(id='runaway' src='img/kanye1.png')
+						.title runaway
+						.desc Kanye themed roadtrip generator.
+
+					.proj.four.columns
+						.overlay
+						img(id='battletrip' src='img/battletrip.JPG')
+						.title battletrip
+						.desc Lifesize battleships played with Uber.
+
+				.row
+					.proj.eight.columns
+						.overlay
+						img(id='jot' src='img/jotScreen3.png')
+						.title jot
+						.desc Chrome extension with around 10k users.
+
+					.proj.four.columns
+						.overlay
+						img(id='technole' src='img/technole.png')
+						.title technole
+						.desc Student tech organization.
+				//- .row
+				//- 	.proj.four.columns
+				//- 		.overlay
+				//- 		img(id='technole' src='img/technole.png')
+				//- 		.title hone
+				//- 		.desc StartupBus 2016 adventures.
+					
+
+					
+
+
+
+
