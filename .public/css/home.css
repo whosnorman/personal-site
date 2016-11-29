@@ -1,0 +1,50 @@
+body {
+  font-family: 'Avenir', sans-serif; }
+
+html {
+  font-size: 10px; }
+
+.container {
+  max-width: 1100px; }
+
+.section-header hr {
+  height: 2px;
+  background-color: #000000;
+  margin: 1rem 0; }
+
+.section-header .color-block {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+  margin: 0.5rem 1rem 0 0; }
+
+.section-header .title {
+  font-size: 2rem;
+  float: left; }
+
+.section-header .extra-info {
+  color: #303030;
+  opacity: 0.5;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 0.7rem; }
+
+.section-header.red .color-block {
+  background-color: #F23D60; }
+
+.section-header.purple .color-block {
+  background-color: #564787; }
+
+.section-header.blue .color-block {
+  background-color: #37A3F4; }
+
+.section-header.red {
+  color: #F23D60; }
+
+.section-header.purple {
+  color: #564787; }
+
+.section-header.blue {
+  color: #37A3F4; }
+
+/*# sourceMappingURL=home.css.map */

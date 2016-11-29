@@ -1,0 +1,48 @@
+extends layout
+
+block localcss
+	link(rel='stylesheet' type='text/css' href='css/project.css')
+block localscripts
+	script(src='js/project.js')
+block content
+	.header#dev
+		.container
+			.back 
+				.triangle
+				| Home
+			.title Dashboard
+			.meta
+				.type Web App
+				.experience 
+					ul
+						li UI Design
+						li Full-Stack Web
+	.container
+		.quote
+			| After a year, the reservation system had saved my boss approximately <span class='dev'>1500 emails</span> and handled <span class='dev'>567 room requests</span>. 
+		.base-info.row
+			.columns.three
+				.sub-header End Product
+				.text A room reservation system and companion dashboard for Domi Station, an incubator and co-working space in Tallahassee.
+
+				.sub-header Tech Used
+				.text NodeJS/Express + MongoDB + Jade + JS/jQuery
+			.columns.nine
+				img(src='img/domi/domiDashSecond.gif')
+				.sub-text Dashboard on load, displaying reservation stats.
+
+		.section
+			.heading Reservation System
+			.text After we thought of the initial idea for a scavenger hunt, we started wireframing the app. Thinking of what features we wanted to include and how the user flow might work. 
+			img.add-border(src='img/domi/domiReservation.gif')
+
+		.section
+			.heading Dashboard
+			.text After we thought of the initial idea for a scavenger hunt, we started wireframing the app. Thinking of what features we wanted to include and how the user flow might work. 
+			img(src='img/domi/domiFooterReservations.PNG')
+		
+		.section
+			.heading Slack Bot
+			.text After we thought of the initial idea for a scavenger hunt, we started wireframing the app. Thinking of what features we wanted to include and how the user flow might work. 
+			img.add-border.smaller(src='img/domi/dom_bot_snag.gif')
+		

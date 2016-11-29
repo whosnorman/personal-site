@@ -1,83 +1,179 @@
 extends layout
 
 block localcss
-	link(rel='stylesheet' type='text/css' href='css/final.css')
+	link(rel='stylesheet' type='text/css' href='css/home.css')
 block localscripts
-	script(src='js/final.js')
+	script(src='js/home.js')
 block content
-	#landing
-		canvas(id='effects')
-		//- #line
+	.container
+		.hero
+			.row(style='position: relative; height: auto')
+				.six.columns.image
+					img(src='img/headshot.jpg')
+					.flex
+						.hello hey there! i'm matt.
+						.line
+				.five.columns.info
+					.line
+
+					.to-show
+						.sub-header currently
+						.text I'm a product designer and community builder.
+
+					.to-show
+						.sub-header previously
+						.text I was a software engineer at MongoDB, StateFarm, and Domi Station.
+
+					.to-show
+						.scroll
+							.gif
+							.text scroll to see some projects I've built
+		
+		//- Design projects
+		a(class='anchor-padding' name='design')
+		.section-header.red
+			.row
+				.twelve.columns
+					.u-pull-left
+						.color-block.u-pull-left
+						.title Design
+					.u-pull-right.extra-info
+						#[span(id='design-seen') 0]/4 #[span.hide-on-mobile Projects] Explored
+			.row
+				hr.twelve.columns
+		.section-projects
+			.row
+				.four.columns.project#site
+					.image
+						img(src='img/floatie/group-prpl.jpg')
+						.check
+							img(src='img/white-check-shadow.png')
+					.info
+						.title This Site
+						.description The journey and process. 
+				.four.columns.project#hunt
+					.image
+						img(src='img/floatie/barcamp-topics.jpg')
+					.info
+						.title Hunt
+						.description Scavenger hunt and snapchat stories mashup. 
+				.four.columns.project#dashboard
+					.image
+						img(src='img/floatie/stage.jpg')
+					.info
+						.title Dashboard
+						.description Room reservation system for Domi Station.
+			.row
+				.four.columns.project#illustrations
+					.image
+						img(src='img/floatie/swag.jpg')
+					.info
+						.title Illustrations
+						.description Digital doodles in my free time.
+		
+
+		//- Dev projects
+		a(class='anchor-padding' name='dev')
+		.section-header.purple
+			.row
+				.twelve.columns
+					.u-pull-left
+						.color-block.u-pull-left
+						.title Development
+					.u-pull-right.extra-info
+						#[span(id='community-seen') 0]/5 #[span.hide-on-mobile Projects] Explored
+			.row
+				hr.twelve.columns
+		.section-projects
+			.row
+				.four.columns.project#hone
+					.image
+						img(src='img/floatie/group-prpl.jpg')
+					.info
+						.title Hone
+						.description Finalist in StartupBus Summer ‘16.
+				.four.columns.project#runaway
+					.image
+						img(src='img/floatie/barcamp-topics.jpg')
+					.info
+						.title Runaway
+						.description Kanye themed roadtrip generator.
+				.four.columns.project#jot
+					.image
+						img(src='img/floatie/stage.jpg')
+					.info
+						.title Jot
+						.description Chrome extension featured in TechCrunch Japan.
+			.row
+				.four.columns.project#battletrip
+					.image
+						img(src='img/floatie/swag.jpg')
+					.info
+						.title Battletrip
+						.description Lifesize game of battleships played by taking an Uber.
+				.four.columns.project#dream-catcher
+					.image
+						img(src='img/floatie/swag.jpg')
+					.info
+						.dream
+							.title Dream Catcher
+							.description Recreates your dream using relevant, one-second clips.
+	
+	//- Community cards
+	.full-width-overflow
+		a(class='anchor-padding' name='community')
 		.container
-			.header
+			.section-header.blue
 				.row
-					.big.twelve.columns
-						| hey! i'm matt.
-					.sub-title.twelve.columns
-						| aspiring product designer and community builder. 
-				.small-line
-				div(style='clear: both')
-				ul.alone-nav
-					li.current portfolio
-					li 
-						a(target='_blank' href='http://dribbble.com/ohagan') dribbble
-					li 
-						a(target='_blank' href='https://twitter.com/micdropmatt') twitter
-					li 
-						a(target='_blank' href='https://www.dropbox.com/s/8mt66kqr4t27tk4/Resume.pdf?dl=0') resume
-						
-
-			.portfolio
+					.twelve.columns
+						.u-pull-left
+							.color-block.u-pull-left
+							.title Community
+						.u-pull-right.extra-info
+							#[span(id='community-seen') 0]/4 #[span.hide-on-mobile Projects] Seen
 				.row
-					.proj.four.columns
-						.overlay
-						img(id='hackfsu' src='img/hackfsuOpening.jpg')
-						.title hackfsu
-						.desc Annual hackathon at Florida State.
+					hr.twelve.columns
 
-					.proj.eight.columns
-						.overlay
-						img(id='domi' src='img/domi-graph-2.png')
-						.title domi
-						.desc Room reservation system & dashboard.
-				.row
-					.proj.four.columns
-						.overlay
-						img(id='site' src='img/previous-site.png')
-						.title this site
-						.desc The journey and process.
+			.section-community
+				ul.cards
+					li.card.leftmost.current#0
+						include floatie
+						.arrow.left
+							img(src='/img/arrow-blue-left.png')
+					li.card.right-start#1
+						.arrow.right
+							img(src='/img/arrow-blue-right.png')
+						include fh
+						.arrow.left
+							img(src='/img/arrow-blue-left.png')
+					li.card.off-right#2
+						.arrow.right
+							img(src='/img/arrow-blue-right.png')
+						include hackfsu
+						.arrow.left
+							img(src='/img/arrow-blue-left.png')
+					li.card.off-right#3
+						.arrow.right
+							img(src='/img/arrow-blue-right.png')
+						include technole
+	
+	.container			
+		.footer
+			| Thanks for stopping by!
+			.icons
+				a(href='https://www.instagram.com/mattohagan/')
+					i.fa.fa-instagram
+				a(href='https://www.dribbble.com/ohagan/')
+					i.fa.fa-dribbble
+				a(href='https://www.twitter.com/micdropmatt/')
+					i.fa.fa-twitter
+				a(href='https://www.github.com/mattohagan/')
+					i.fa.fa-github
+			
+			
+								
 
-					.proj.four.columns
-						.overlay
-						img(id='runaway' src='img/kanye1.png')
-						.title runaway
-						.desc Kanye themed roadtrip generator.
 
-					.proj.four.columns
-						.overlay
-						img(id='battletrip' src='img/battletrip.JPG')
-						.title battletrip
-						.desc Lifesize battleships played with Uber.
-
-				.row
-					.proj.eight.columns
-						.overlay
-						img(id='jot' src='img/jotScreen3.png')
-						.title jot
-						.desc Chrome extension with around 10k users.
-
-					.proj.four.columns
-						.overlay
-						img(id='technole' src='img/technole.png')
-						.title technole
-						.desc Student tech organization.
-				//- .row
-				//- 	.proj.four.columns
-				//- 		.overlay
-				//- 		img(id='technole' src='img/technole.png')
-				//- 		.title hone
-				//- 		.desc StartupBus 2016 adventures.
-					
 
 					
 
