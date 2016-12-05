@@ -34,6 +34,15 @@ $blue: #37A3F4;
 	}
 }
 
+.dont-show {
+	opacity: 0;
+	transition: all 300ms ease-out;
+
+	&.show {
+		opacity: 1;
+	}
+}
+
 
 .hero {
 	padding-top: 9rem;
@@ -584,6 +593,8 @@ $blue: #37A3F4;
 }
 
 .section-header {
+	padding-top: 1.4rem;
+	
 	hr {
 		height: 1px;
 		background-color: #000000;

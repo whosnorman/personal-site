@@ -1,17 +1,45 @@
 .container {
   max-width: 1000px; }
 
+.dont-show {
+  opacity: 0;
+  transform: translate(0, -20px);
+  transition: all 450ms ease-out; }
+  .dont-show.show {
+    transform: translate(0, 0);
+    opacity: 1; }
+
+.to-hide {
+  opacity: 1;
+  transition: all 300ms ease-out; }
+  .to-hide.hide {
+    opacity: 0; }
+
 .header {
   width: 100%;
-  height: 33vh; }
+  height: 0; }
+  .header.slide-down {
+    animation: 750ms spring linear;
+    animation-fill-mode: forwards; }
   .header#dev {
     color: #564787;
     background-color: rgba(86, 71, 135, 0.2); }
   .header#design {
     color: #F23D60;
     background-color: rgba(242, 61, 96, 0.2); }
+  .header .hide-left {
+    transform: translate(-40px, 0);
+    opacity: 0;
+    transition: all 300ms ease-out; }
+    .header .hide-left.show {
+      transform: translate(0, 0);
+      opacity: 1; }
+    .header .hide-left.type {
+      transition-delay: 50ms; }
+    .header .hide-left.back {
+      transition-delay: 50ms; }
   .header .title {
-    padding-top: 6rem;
+    padding-top: 10rem;
     font-family: 'League Spartan';
     font-size: 8rem; }
   .header .meta {
@@ -22,19 +50,41 @@
     .header .meta .type {
       font-size: 2rem;
       line-height: 1rem; }
+      .header .meta .type span {
+        font-style: italic;
+        margin-left: 2rem; }
     .header .meta .experience {
       font-size: 2rem;
-      padding-right: 0.8rem;
-      border-right: 0.4rem solid #564787; }
+      padding-right: 1.3rem;
+      position: relative; }
       .header .meta .experience ul {
         margin: 0;
         text-align: right;
         list-style: none; }
       .header .meta .experience li {
         line-height: 1.8rem;
-        margin-top: 1.2rem; }
+        margin-top: 1.2rem;
+        transform: translate(20px, 0);
+        opacity: 0;
+        transition: all 300ms ease-out;
+        transition-delay: 50ms; }
       .header .meta .experience li:nth-child(1) {
+        transition-delay: 150ms;
         margin-top: 0; }
+      .header .meta .experience.move-up li {
+        opacity: 1;
+        transform: translate(0, 0); }
+      .header .meta .experience::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 0;
+        width: 0.4rem;
+        background-color: #564787;
+        transition: all 200ms ease-out; }
+      .header .meta .experience.move-up::after {
+        height: 100%; }
   .header .back {
     padding-top: 3rem;
     width: auto;
@@ -56,7 +106,7 @@
 .quote {
   padding-top: 12rem;
   padding-bottom: 15rem;
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 500;
   line-height: 6rem; }
   .quote span {
@@ -68,7 +118,7 @@
       bottom: 1.5rem;
       height: 2.3rem;
       width: 0;
-      transition: all 500ms ease-in-out; }
+      transition: all 300ms linear; }
     .quote span.show::before {
       width: 100%; }
     .quote span.dev::before {
@@ -76,24 +126,23 @@
     .quote span.design {
       background-color: rgba(242, 61, 96, 0.2); }
 
-.base-info .sub-header {
-  font-weight: 800;
-  font-size: 1.8rem; }
-
-.base-info .text {
-  opacity: 0.5;
-  font-size: 2rem;
-  margin-bottom: 7rem; }
-
-.base-info img {
-  width: 100%;
-  height: auto; }
-
-.base-info .sub-text {
-  margin-top: 1rem;
-  opacity: 0.6;
-  font-size: 2rem;
-  /*
+.base-info {
+  transition-delay: 250ms; }
+  .base-info .sub-header {
+    font-weight: 800;
+    font-size: 1.8rem; }
+  .base-info .text {
+    opacity: 0.5;
+    font-size: 2rem;
+    margin-bottom: 7rem; }
+  .base-info img {
+    width: 100%;
+    height: auto; }
+  .base-info .sub-text {
+    margin-top: 1rem;
+    opacity: 0.6;
+    font-size: 2rem;
+    /*
 		border-left: 0.4rem solid rgba(0,0,0, 0.5);
 		line-height: 2.2rem;
 		padding-left: 0.8rem;
@@ -114,24 +163,32 @@
   margin-top: 3rem; }
   .section img.add-border {
     border: 0.5rem solid rgba(0, 0, 0, 0.1); }
-  .section img.smaller {
-    width: 75%; }
+  .section img.half {
+    width: 50%; }
 
 @media all and (max-width: 450px) {
   html {
     font-size: 8px; }
   .quote {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     line-height: 4.5rem;
     padding-top: 6rem;
     padding-bottom: 8rem; }
+    .quote span::before {
+      bottom: 1rem; }
   .header .title {
-    font-size: 6.5rem;
-    padding-bottom: 3rem; }
-  .header .type {
-    line-height: 1.5rem;
-    font-style: italic; }
+    font-size: 3.5rem;
+    padding-bottom: 3rem;
+    padding-top: 13rem; }
+  .header .meta .type {
+    line-height: 1.8rem; }
+    .header .meta .type span {
+      margin-left: 1rem; }
   .header .back .triangle {
     margin-top: 0.5rem; }
   .section .heading {
     line-height: 6.5rem; } }
+
+@media all and (max-width: 320px) {
+  html {
+    font-size: 7px; } }

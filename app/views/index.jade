@@ -28,7 +28,8 @@ block content
 						.scroll
 							.gif
 							.text scroll to see some projects I've built
-		
+	
+	.container.dont-show
 		//- Design projects
 		a(class='anchor-padding' name='design')
 		.section-header.red
@@ -38,14 +39,14 @@ block content
 						.color-block.u-pull-left
 						.title Design
 					.u-pull-right.extra-info
-						#[span(id='design-seen') 0]/4 #[span.hide-on-mobile Projects] Explored
+						#[span(id='design-seen') 1]/4 #[span.hide-on-mobile Projects] Explored
 			.row
 				hr.twelve.columns
 		.section-projects
 			.row
 				.four.columns.project#site
 					.image
-						img(src='img/floatie/group-prpl.jpg')
+						img(src='img/site/thumb.png')
 						.check
 							img(src='img/white-check-shadow.png')
 					.info
@@ -59,7 +60,7 @@ block content
 						.description Scavenger hunt and snapchat stories mashup. 
 				.four.columns.project#dashboard
 					.image
-						img(src='img/floatie/stage.jpg')
+						img(src='img/dashboard/thumb.png')
 					.info
 						.title Dashboard
 						.description Room reservation system for Domi Station.
@@ -120,7 +121,7 @@ block content
 							.description Recreates your dream using relevant, one-second clips.
 	
 	//- Community cards
-	.full-width-overflow
+	.full-width-overflow.dont-show
 		a(class='anchor-padding' name='community')
 		.container
 			.section-header.blue
@@ -157,7 +158,7 @@ block content
 							img(src='/img/arrow-blue-right.png')
 						include technole
 	
-	.container			
+	.container.dont-show			
 		.footer
 			| Thanks for stopping by!
 			.icons

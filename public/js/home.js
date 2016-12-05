@@ -10,6 +10,7 @@ $(document).ready(function(){
 		$('.hero .image .line').addClass('move');
 		$('.hero .info .line').addClass('move');
 		$('.hero .to-show div').addClass('show');
+		$('.dont-show').addClass('show');
 
 	}, 500); 
 
