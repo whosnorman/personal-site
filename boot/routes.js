@@ -7,8 +7,44 @@ module.exports = function(app){
 		res.render('index');
 	});
 
-	app.get('/project', function(req, res) {
-		res.render('project');
+	app.get('/dashboard', function(req, res) {
+		res.render('project/dashboard');
+	});
+
+	app.get('/runaway', function(req, res) {
+		res.render('project/runaway');
+	});
+
+	app.get('/hone', function(req, res) {
+		res.render('project/hone');
+	});
+
+	app.get('/hunt', function(req, res) {
+		res.render('project/hunt');
+	});
+
+	app.get('/site', function(req, res) {
+		res.render('project/site');
+	});
+
+	app.get('/illustrations', function(req, res) {
+		res.render('project/illustrations');
+	});
+
+	app.get('/battletrip', function(req, res) {
+		res.render('project/battletrip');
+	});
+
+	app.get('/dream-catcher', function(req, res) {
+		res.render('project/dream-catcher');
+	});
+
+	app.get('/jot', function(req, res) {
+		res.render('project/jot');
+	});
+
+	app.get('/vestview', function(req, res) {
+		res.render('project/vestview');
 	});
 
 	app.redirect('/resume',

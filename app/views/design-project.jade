@@ -1,0 +1,35 @@
+extends layout
+
+block localcss
+	link(rel='stylesheet' type='text/css' href='css/spring.css')
+	link(rel='stylesheet' type='text/css' href='css/project.css')
+block localscripts
+	script(src='js/project.js')
+block content
+	.header#design
+		.container
+			.hide-left
+				.back
+					.triangle
+					| Home
+			.title.hide-left 
+				block title
+			.meta
+				.type.hide-left
+					block type
+					block year
+				block experience 
+	.container#design
+		.quote.dont-show
+			block quote
+		.base-info.row.dont-show
+			block base-info
+
+	.container.dont-show#design
+		block main
+		
+	.container
+		.footer
+			.back#design
+				.triangle
+				| Back to Projects

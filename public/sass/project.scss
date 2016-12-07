@@ -9,10 +9,12 @@ $blue: #37A3F4;
 
 .dont-show {
 	opacity: 0;
+	-webkit-transform: translate(0, -20px);
 	transform: translate(0, -20px);
 	transition: all 450ms ease-out;
 
 	&.show {
+		-webkit-transform: translate(0, 0);
 		transform: translate(0, 0);
 		opacity: 1;
 	}
@@ -27,39 +29,75 @@ $blue: #37A3F4;
 	}
 }
 
+#dev {
+	.quote span::before {
+		background-color: rgba(86, 71, 135, 0.2);
+	}
+}
+
+#design {
+	.quote span::before {
+		background-color: rgba(242, 61, 96, 0.2);
+	}
+}
+
 
 .header {
 	width: 100%;
 	height: 0;
+	
+	&.slide-down {
+		-webkit-animation: 750ms spring linear;
+		animation: 750ms spring linear;
+  		-webkit-animation-fill-mode: forwards;
+  		animation-fill-mode: forwards;
+	}
+
+	// testing out just easing the height
+	//
 	// opacity: 0;
 	// height: 37vh;
 	// transition: all 400ms ease-in;
 
-	&.slide-down {
-		animation: 750ms spring linear;
-  		animation-fill-mode: forwards;
-	}
-
 	// &.slide-down {
-	// 	opacity: 1;
+	// 	opacity: 1;x
 	// }
 	
 	&#dev {
 		color: $purple;
 		background-color: rgba(86, 71, 135, 0.2);
+
+		.back .triangle {
+			border-right: 0.8rem solid $purple;
+		}
+
+		.meta .experience::after {
+			background-color: $purple;
+		}
 	}
 
 	&#design {
 		color: $red;
 		background-color: rgba(242, 61, 96, 0.2);
+
+		.back .triangle {
+			border-right: 0.8rem solid $red;
+		}
+
+		.meta .experience::after {
+			background-color: $red;
+		}
 	}
 
+
 	.hide-left {
+		-webkit-transform: translate(-40px, 0);
 		transform: translate(-40px, 0);
 		opacity: 0;
 		transition: all 300ms ease-out;
 
 		&.show {
+			-webkit-transform: translate(0, 0);
 			transform: translate(0, 0);
 			opacity: 1;
 		}
@@ -104,11 +142,13 @@ $blue: #37A3F4;
 				margin: 0;
 				text-align: right;
 				list-style: none;
+				padding: 0;
 			}
 
 			li {
 				line-height: 1.8rem;
 				margin-top: 1.2rem;
+				-webkit-transform: translate(20px, 0);
 				transform: translate(20px, 0);
 				opacity: 0;
 				transition: all 300ms ease-out;
@@ -122,6 +162,7 @@ $blue: #37A3F4;
 
 			&.move-up li {
 				opacity: 1;
+				-webkit-transform: translate(0, 0);
 				transform: translate(0, 0);
 			}
 
@@ -139,6 +180,10 @@ $blue: #37A3F4;
 			&.move-up::after {
 				height: 100%;
 			}
+		}
+
+		.extra-margin {
+			margin-top: 3rem;
 		}
 
 		
@@ -183,25 +228,18 @@ $blue: #37A3F4;
 
 		&::before {
 			content: '';
+			z-index: -1;
 			position: absolute;
 			bottom: 1.5rem;
 			height: 2.3rem;
 			width: 0;
+			background-color: rgba(86, 71, 135, 0.2);
 			transition: all 300ms linear;
 		}
 
 		&.show::before {
 			width: 100%;
 		}
-
-		&.dev::before {
-			background-color: rgba(86, 71, 135, 0.2);
-		}
-
-		&.design {
-			background-color: rgba(242, 61, 96, 0.2);
-		}
-		
 	}
 }
 
@@ -245,8 +283,13 @@ $blue: #37A3F4;
 	}
 
 	.text {
-		opacity: 0.5;
+		opacity: 0.6;
 		font-size: 2rem;
+		line-height: 3.5rem;
+
+		span {
+			opacity: 1;
+		}
 	}
 
 	img {
@@ -254,14 +297,120 @@ $blue: #37A3F4;
 		height: auto;
 		margin-top: 3rem;
 
-		&.add-border {
-			border: 0.5rem solid rgba(0,0,0, 0.1);
-		}
-
 		&.half {
 			width: 50%;
 		}
 	}
+}
+
+.add-border {
+	border: 0.5rem solid rgba(0,0,0, 0.1);
+}
+
+a {
+	opacity: 1;
+	color: #303030;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+#dev a:hover {
+	color: black;
+	border-color: $purple;
+	opacity: 1;
+	cursor: pointer;
+}
+
+#design a:hover {
+	color: black;
+	border-color: $red;
+	opacity: 1;
+	cursor: pointer;
+}
+
+
+.last-bit {
+	width: 100%;
+	height: 20vh;
+	margin-top: 12rem;
+	margin-bottom: -4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+
+.footer {
+	width: 100%;
+	height: 40vh;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.back {
+		padding: 1.2rem 2rem 1rem 2rem;
+		font-size: 2rem;
+		font-weight: 500;
+		border: 0;
+		border-radius: 5px;
+
+		.triangle {
+			width: 0;
+			height: 0;
+			float: left;
+			margin-top: 0.6rem;
+			margin-right: 1rem;
+
+			border-right: 0.8rem solid $purple;
+			border-top: 0.8rem solid transparent;
+			border-bottom: 0.8rem solid transparent;
+
+			transition: all 200ms ease-out;
+		}
+
+		&#dev:hover {
+			cursor: pointer;
+			background-color: rgba(86, 71, 135, 0.1);
+
+			.triangle {
+				-webkit-transform: translate(-4px, 0);
+				transform: translate(-4px, 0);
+			}
+		}
+
+		&#design:hover {
+			cursor: pointer;
+			background-color: rgba(242, 61, 96, 0.1);
+
+			.triangle {
+				-webkit-transform: translate(-4px, 0);
+				transform: translate(-4px, 0);
+			}
+		}
+
+		&#dev {
+			color: $purple;
+			background-color: rgba(86, 71, 135, 0.2);
+
+			.triangle {
+				border-right: 0.8rem solid $purple;
+			}
+		}
+
+		&#design {
+			color: $red;
+			background-color: rgba(242, 61, 96, 0.2);
+
+			.triangle {
+				border-right: 0.8rem solid $red;
+			}
+		}
+	}
+
+
 }
 
 
@@ -307,6 +456,7 @@ $blue: #37A3F4;
 	.section {
 		.heading {
 			line-height: 6.5rem;
+			margin-bottom: 1rem;
 		}
 	}
 

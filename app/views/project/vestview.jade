@@ -1,0 +1,43 @@
+extends ../design-project
+
+block title
+	| Vestview
+block type
+	| Web App
+block year
+	| #[span 2016]
+
+block experience
+	.experience
+		ul
+			li UI/UX Design
+			li Full-Stack Web
+
+block quote
+	| Given a certain stock over the last month, we wanted to see #[span what ] #[span the ] #[span internet ] #[span had ] #[span to ] #[span say]. 
+
+block base-info
+	.columns.three
+		.sub-header Purpose
+		.text Group project for our CEN4020 - Software Engineering course. Ideated, designed, and built over the course of about three months.
+
+		.sub-header Tech Used
+		.text HTML/CSS/JS/jQuery + Python/Flask + MongoDB
+	.columns.eight.pull-right
+		img(src='img/vestview/vestview-demo.gif')
+		.sub-text Main dashboard, playing through the past month. Tweets show general sentiment analysis.
+block main
+	.section
+		.heading UI Mockups
+		.text
+		<br/>
+		img(src='img/vestview/vv-mockups_stock-view.png')
+		img(src='img/vestview/vv-mockups_stock-view_2.png')
+		img.add-border(src='img/vestview/vv-mockups_dash.png')
+		img(src='img/vestview/vestview-logo-large.png')
+
+	.section
+		.last-bit
+			.text.six.columns
+				| Github repo for the <a href="https://github.com/joshgarlitos/vestview" target="_blank"> flask server and front-end</a>.
+

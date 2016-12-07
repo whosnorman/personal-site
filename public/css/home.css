@@ -148,6 +148,7 @@
       width: 45%;
       height: 9.5rem;
       background-color: #F23D60;
+      background-size: cover;
       border-radius: 4px;
       overflow: hidden;
       opacity: 1;
@@ -274,11 +275,12 @@
 .community-project {
   border: solid rgba(0, 0, 0, 0.1);
   border-width: 1rem;
-  padding: 4rem; }
+  padding: 4rem;
+  margin-bottom: 4rem; }
   .community-project .number {
     color: #303030;
     opacity: 0.3;
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 700; }
   .community-project .important {
     color: #37A3F4;
@@ -289,12 +291,12 @@
     font-weight: 700;
     font-size: 1.1rem; }
   .community-project .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700; }
   .community-project .position {
     font-style: italic;
     opacity: 0.5;
-    margin-top: -0.9rem; }
+    margin-top: -0.7rem; }
   .community-project .left-content .description {
     opacity: 0.5;
     margin-top: 2.5rem;
@@ -305,6 +307,17 @@
       margin-top: 2rem; }
     .community-project .left-content .meta .info {
       opacity: 0.5; }
+    .community-project .left-content .meta .info-with-link span {
+      opacity: 0.5; }
+    .community-project .left-content .meta .info-with-link a {
+      opacity: 0.5;
+      color: #303030;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+      .community-project .left-content .meta .info-with-link a:hover {
+        border-color: #37A3F4;
+        opacity: 1;
+        cursor: pointer; }
     .community-project .left-content .meta .info-link a {
       color: #303030;
       text-decoration: none;
@@ -333,11 +346,18 @@
     -ms-transform: rotate(-2deg);
     transform: rotate(-2deg);
     right: -6px; }
+  .community-project .show-gallery .rotate-5 {
+    -webkit-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg); }
   .community-project .photos {
     position: relative;
     padding: 0;
     cursor: pointer;
-    height: 33vh; }
+    height: 27vh;
+    width: 88%;
+    margin-left: 6%;
+    -webkit-tap-highlight-color: transparent; }
     .community-project .photos li {
       list-style: none; }
     .community-project .photos .item {
@@ -358,6 +378,7 @@
       -webkit-transform: translate3d(0, 0, 0);
       opacity: 0.3;
       display: table-row;
+      -webkit-tap-highlight-color: transparent;
       -webkit-box-shadow: 0px 1px 30px 0px rgba(71, 71, 73, 0.3);
       -moz-box-shadow: 0px 1px 30px 0px rgba(71, 71, 73, 0.3);
       box-shadow: 0px 1px 30px 0px rgba(71, 71, 73, 0.3);
@@ -366,13 +387,17 @@
       transition: all 200ms ease-in-out;
       opacity: 1; }
     .community-project .photos .move-down {
-      top: 6rem;
+      top: 5rem;
       left: -14px;
       width: 100%; }
     .community-project .photos .move-down-abit {
       top: 3rem;
       right: 0;
       width: 100%; }
+    .community-project .photos .full-width {
+      width: 100%; }
+    .community-project .photos .too-tall {
+      top: 1.5rem; }
   .community-project .left {
     float: left; }
 
@@ -412,7 +437,30 @@
 .anchor-padding {
   height: 7rem; }
 
+#dashboard .image {
+  background-position-x: -100px; }
+
+#battletrip .image {
+  background-position-x: -15px; }
+
 @media all and (max-width: 450px) {
+  .community-project {
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 3rem;
+    padding: 0; }
+    .community-project .number {
+      margin-top: 0.2rem; }
+    .community-project .title {
+      font-size: 2rem; }
+    .community-project .position {
+      margin-top: -0.4rem; }
+    .community-project .photos {
+      height: 44vh;
+      width: 60%;
+      margin-left: 20%;
+      margin-top: 5%;
+      margin-bottom: 0; }
   .hide-on-mobile {
     display: none; }
   .section-projects .project .info .dream {

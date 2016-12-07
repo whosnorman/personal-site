@@ -1,0 +1,65 @@
+extends ../design-project
+
+block title
+	| Dashboard
+block type
+	| Web App
+block year
+	| #[span 2014]
+
+block experience
+	.experience
+		ul
+			li UI Design
+			li Full-Stack Web
+
+block quote
+	| After a year, the reservation system had saved the community manager approximately #[span 1320 ] #[span emails] and handled #[span 733 ] #[span room ]#[span requests]. 
+
+block base-info
+	.columns.three
+		.sub-header End Product
+		.text A room reservation system and companion dashboard for Domi Station, an incubator and co-working space in Tallahassee.
+
+		.sub-header Tech Used
+		.text NodeJS/Express + MongoDB + Jade + JS/jQuery
+	.columns.nine
+		img.add-border(src='img/dashboard/domiReservation.gif')
+		.sub-text Turned out to be my first interface that would have a substantial user base. Opted to utilize a #[a(href='http://tympanus.net/codrops/2013/05/21/natural-language-form-with-custom-input-elements/') Codrops demo], throw in a loading bar and error messages, and began work on the backend.
+block main
+	.section
+		.heading Domi Station
+		.text I interned at #[a(href='http://domistation.com') Domi] for the duration of my Sophomore school year, while the startup incubator and coworking space had just opened up their doors in the Spring of 2014. When I joined the team, the biggest problem they had was the hassle of letting members schedule meetings in their conference rooms. They would have to email the community manager, who would add an event to the google calendar. I decided to automate all of this, and learn a ton in the process. After all was said and done, the team's favorite feature is still the Approximate Emails Spared section in the dashboard below.
+
+	.section
+		.heading Surfacing Insights
+		.text 
+			| The entire room reservation system was built incrementally from scratch throughout the internship. The backend runs on an NodeJS/Express server that utilizes Mandrill and GCal API's while storing everything in MongoDB. The front-end of the dashboard was built without any core frameworks but utilizes jade templates alongside <a href='http://julian.com/research/velocity/'>Velocity.js</a> and <a href='https://gionkunz.github.io/chartist-js/'>Chartist.js</a>, two awesome libraries that help with creating easing functions and displaying charts respectively. 
+			<br />
+			<br />
+			| What you see below, the header of the dashboard, was built almost entirely in coffee shops during a three day stay in Ann Arbor, MI. This was definitely the most fun I had developing throughout the project as there were a lot of iterations and prototyping ideas throughout the three days. The result, a balanced dashboard that draws your eye to possible new insights.
+			<br />
+			<br />
+			| The superscript text you see next to the amount of requests, emails, and total time reserved are the amount those numbers have increased since the user has last visited the page.
+			<br />
+			<br />
+
+		img(src='img/dashboard/domiDashSecond.gif')
+		<br />
+		<br />
+		<br />
+		<br />
+		.text
+			| Here you can see the dashboard footer with a table of all reservations starting from most current.
+		img(src='img/dashboard/domiFooterReservations.PNG')
+	
+	.section
+		.heading Slack Bot
+		.text Once the dashboard was shipped, I had a bit of extra time left in the internship to tinker with Slack's new bot API. We moved in Dom, the friendly monster and Domi mascot, to Slack and had him up and running to handle room requests.
+		img.add-border.half(src='img/dashboard/dom_bot_snag.gif')
+
+	.section
+		.last-bit
+			.text.six.columns
+				| Domi is building an amazing community in Tallahassee. If you're ever in town, <a href="http://twitter.com/micdropmatt" target="_blank">drop me a line</a> and I'll show you around!
+

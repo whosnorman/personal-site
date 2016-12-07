@@ -1,0 +1,45 @@
+extends ../dev-project
+
+block title
+	| Jot
+block type
+	| Chrome Extension
+block year
+	| #[span 2014]
+
+block experience
+	.experience.extra-margin
+		ul
+			li Front-End Web
+
+block quote
+	| This project started when I found out that you could simply put #[span data:text/html, ] #[span &lt;html ] #[span contenteditable&gt;] into the url bar and have a quick notepad.
+
+block base-info
+	img(src='img/jot/jotScreen3.png')
+
+block main
+	.section
+		.heading My First Product
+		.text 
+			| I began Jot the summer after my first round of hackathons. The first iteration still lives on in a <a href='https://gist.github.com/mattohagan/9904228022805012f8cf' target='_blank'>Gist</a> if you want to give it a try. I hit a snag when I discovered that Chrome wasn't going to let me use localStorage with data:text/html, so I threw a json file in there and switched everything over to a chrome extension. I was later convinced by a friend to take some screenshots of Jot and throw it up on the Chrome Web Store. It was shipped at a hack night in October 2014 and was <a href="http://www.producthunt.com/tech/jot-2" target='_blank'>posted on Product Hunt</a>, initially hitting around 500 users. About a week or two later it hits about 1,000 users. Come to find out, it was <a href="http://www.lifehacker.jp/2014/10/141029todojot.html" target='_blank'>featured on lifehacker.jp</a>.
+			<br />
+			<br />
+		img(src='img/jot/jotJapan.jpg')
+		.text
+			<br />
+			<br />
+			| The user count hovered around 1k until January 2015 when it was featured in an <a href="http://thenextweb.com/apps/2015/01/01/10-useful-chrome-extensions-may-not-tried/" target='_blank'>article on The Next Web</a> and recieved over 2,000 shares. After which it climbed at about 1k users a week until it hit 10,000. It's been slowly increasing since then, and hopefully I'll find the time to finish and ship out an update. In the meantime thanks to everyone that installed and gave feedback!
+			<br />
+			<br />
+		img(src='img/jot/jotClearHover.gif')
+		img(src='img/jot/jotScreen2.png')
+
+
+	.section
+		.last-bit
+			.text.five.columns
+				| Jot is available for download on the <a href="https://chrome.google.com/webstore/detail/jot/mnemjleajnmodijhnibpekloajfdjjja" target='_blank'>Chrome Web Store</a>.
+
+	
+

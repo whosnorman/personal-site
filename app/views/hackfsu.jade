@@ -1,38 +1,34 @@
 extends community
 
 block number
-	| 3/4
+	| On-Campus
 block title
 	| HackFSU
 block position
-	| Founding Director
+	| Founding Director, 2014
 
 block meta
 	.row
 		.twelve.columns
 			.sub-header Desc.
-			.info Florida's premiere student hackathon held at Florida State University.
+			.info-with-link <span> Florida's premiere student hackathon held at Florida State. Focused on community and </span> #[a(target='_blank' href='https://www.youtube.com/watch?v=_96bjX-wKBI') culture]<span>.</span>
 	.row
 		.twelve.columns
 			.sub-header Site
-			.info-link #[a(href='http://hackfsu.com') hackfsu.com]
-	.row
-		.twelve.columns
-			.sub-header Date
-			.info Spring 2014 - Spring 2016
+			.info-link #[a(target='_blank' href='http://hackfsu.com') hackfsu.com]
 	.row
 		.twelve.columns
 			.sub-header Takeaways
-			.important Event Experience + Building Teams
+			.info Event Experience + Building Teams
 
 block photos
 	ul.photos#hackfsu
-		li.item.rotate-2
-			img(src='img/floatie/barcamp-topics.jpg')
-		li.item.gif.rotate-1
-			img(src='img/floatie/gifn-booth-static.gif')
-		li.item.move-down-abit.rotate-4
-			img(src='img/floatie/swag.jpg')
-		li.item.move-down.rotate-3
-			img(src='img/floatie/stage.jpg')
-			<iframe width="400" height="200" src="https://www.youtube.com/embed/VtgGd9kW550" frameborder="0" allowfullscreen></iframe>
+		li.item.full-width.move-down.rotate-5
+			img(src='img/hackfsu/hackfsuPhotobooth.jpg')
+		li.item.full-width.move-down-abit.rotate-4
+			img(src='img/hackfsu/hackfsuNintendo.JPG')
+		li.item.full-width.move-down.rotate-3
+			img(src='img/hackfsu/hackfsuFirstTeam.jpg')
+		li.item.move-down.rotate-5
+			img(src='img/hackfsu/hackfsuOpening.jpg').active
+			

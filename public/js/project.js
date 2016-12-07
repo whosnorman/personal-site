@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	setFavicon();
 	// get project id & set localStorage to seen 
 
 	$('.back').click(function(){
@@ -41,4 +42,20 @@ function drawQuoteMarks(){
 
 		delay += 300;
 	});
+}
+
+// set favicon based on time of day
+function setFavicon(){
+	var time = new Date();
+	time = time.getHours();
+	var favicon;
+	// night is set between 6pm and 5am
+	if(time >= 18 || time < 5){
+		favicon = 'favicon-moon.png';
+	} else {
+		favicon = 'favicon-sunrise.png';
+	}
+
+	var favLink = '<link rel="shortcut icon" href="/public/img/'+favicon+'">';
+	$('head').append(favLink);
 }

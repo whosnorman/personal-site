@@ -1,0 +1,48 @@
+extends ../dev-project
+
+block title
+	| Battletrip
+block type
+	| iOS App
+block year
+	| #[span 2015]
+
+block experience
+	.experience
+		ul
+			li iOS
+			li Backend Web
+
+block quote
+	| Imagine a life sized game of battleships, and the way you take shots is by riding in an Uber, #[span welcome ] #[span to ] #[span Battletrip]. 
+
+block base-info
+	.columns.six
+		.sub-header Tech Used
+		.text NodeJS/Express + Objective-C + Parse
+	
+	.columns.six
+		.sub-header Timeline
+		.text We thought of this idea at around 3pm on the Saturday of MHacks, or about halfway through the event. This left us 18 hours or so to build out what would become our first iOS app.
+
+block main
+	.section
+		.heading How it Works
+		.text 
+			| In the app, you authenticate with Uber, allowing us to poll your account to see when you're taking a ride. Once the driver hits the receipt button your ride status changes to completed, at which point we take your current location and plot it against the geo fences for battleships. You then get a push notification on whether you hit, missed, or sunk a ship. Everything happens in the background and you are still using Uber natively. The polling of the account happens on the iOS app using NSURLSession's so as not to overload the server, which handles the geo fencing by utilizing the <a href='https://www.npmjs.com/package/geolib'>geolib</a> module. The server also interfaces between the app and our <a href='https://parse.com/'>Parse</a> database, while notifications are sent using Parse's cloud code. Once a ship is hit, the radius shrinks, making it harder and harder to hit.
+			<br />
+			<br />
+			| While we realize a constant game of battletrip would be costly, this could be a great business play for Uber. Say they move in to a new city, they could then announce a month long game of battletrip. At the end of the month, the user with the most points wins a promo code. Throw in sponsored locations and you've got yourself a web 2.0 feature launch. 
+			<br />
+			<br />
+
+		img(src='img/battletrip/battletrip-map.PNG')
+		img(src='img/battletrip/battletrip.JPG')
+
+	.section
+		.last-bit
+			.text.six.columns
+				| GitHub repos for the <a href='https://github.com/mattohagan/battletrip'>Node Server</a>, <a href='https://github.com/lindsay10c/battle-trip-ios'>iOS App</a>, and <a href='https://github.com/lindsay10c/battle-trip-ios/tree/master/battletrip'>Parse Cloud Code</a>
+
+	
+

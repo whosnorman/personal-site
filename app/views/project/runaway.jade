@@ -1,0 +1,44 @@
+extends ../dev-project
+
+block title
+	| Runaway
+block type
+	| Web App
+block year
+	| #[span 2014]
+
+block experience
+	.experience.extra-margin
+		ul
+			li Full-Stack Web
+
+block quote
+	| Tell us your maximum time and budget, type of car, as well as passenger count and #[span let ] #[span us ] #[span make ] #[span your ] #[span escape ] #[span plan]. 
+
+block base-info
+	.columns.four
+		.sub-header Tech Used
+		.text Node/MeteorJS + HTML/CSS/JS + MailJet API 
+	
+	.columns.four
+		.sub-header Timeline
+		.text We built Runaway in 24 hours at HackNC. It was the first hackathon team that I had been on to use a project manager.
+
+	.columns.four
+		.sub-header Origin
+		.text In case you haven't guessed, the name and theme were inspired by Kanye's song #[a(href='http://genius.com/Kanye-west-runaway-lyrics') Runaway]. 
+block main
+	.section
+		.heading Kanye Lends a Hand
+		.text 
+			| Runaway is a road trip generator made to pair you up with local travelers for a weekend of affordable and time efficient fund. You tell us your budget, type of car, amount of friends, and maximum time you are willing to spend and we give you up to eight road trip options. We reserve 60% of the total budget for gas and the trip ends wherever the first constraint maxes out first.
+			<br />
+			<br />
+			| After you select a probable trip, we store you in our database. As soon as another user in the same vicinity submits for a trip we match you up and start an anonymous conversation over email through the MailJet API.
+		img(src='img/runaway/firstScreen.png')
+		img(src='img/runaway/secondScreen.png')
+		img(src='img/runaway/fourthScreen.png')
+		img(src='img/runaway/hacknc.jpg')
+
+	
+

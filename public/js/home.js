@@ -1,7 +1,8 @@
 $(document).ready(function(){
+	setFavicon();
 
 	setTimeout(function(){
-		$('#floatie').addClass('show-gallery');
+		$('.photos').addClass('show-gallery');
 		let arr = $('#floatie').find('li').toArray();
 		$(arr[arr.length - 1]).find('img').addClass('active');
 		
@@ -19,19 +20,32 @@ $(document).ready(function(){
 		floatie: {
 			direction: 'forward',
 			count: 1
+		},
+		fh: {
+			direction: 'forward',
+			count: 1
+		},
+		hackfsu: {
+			direction: 'forward',
+			count: 1
+		},
+		technole: {
+			direction: 'forward',
+			count: 1
 		}
 	}
 
-	$('.project').on('tap', function(e){
+	$('.project').on('click', function(e){
+		$('.to-hide').addClass('hide');
 		let id = $(e.currentTarget).attr('id');
-		alert(id);
-
-		window.location = '/project';
+		window.location = '/' + id;
 	});
 
 	$('.photos').click(function(e){
 		const photos = $(e.currentTarget);
 		let id = $(photos).attr('id');
+
+		console.log(id);
 
 		const list = $(photos).find('li').toArray();
 		const length = list.length;
@@ -203,6 +217,22 @@ function makeInactive(el) {
 			$(img).attr('src', src.replace('.', '-static.'));
 		}
 	}
+}
+
+// set favicon based on time of day
+function setFavicon(){
+	var time = new Date();
+	time = time.getHours();
+	var favicon;
+	// night is set between 6pm and 5am
+	if(time >= 18 || time < 5){
+		favicon = 'favicon-moon.png';
+	} else {
+		favicon = 'favicon-sunrise.png';
+	}
+
+	var favLink = '<link rel="shortcut icon" href="/public/img/'+favicon+'">';
+	$('head').append(favLink);
 }
 
 
