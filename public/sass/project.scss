@@ -20,6 +20,13 @@ $blue: #37A3F4;
 	}
 }
 
+.illos {
+	img {
+		width: 100%;
+		margin-top: 10rem;
+	}
+}
+
 .to-hide {
 	opacity: 1;
 	transition: all 300ms ease-out;
@@ -186,6 +193,10 @@ $blue: #37A3F4;
 			margin-top: 3rem;
 		}
 
+		&.slim {
+			margin-top: 0rem;
+		}
+
 		
 	}
 	
@@ -231,7 +242,7 @@ $blue: #37A3F4;
 			z-index: -1;
 			position: absolute;
 			bottom: 1.5rem;
-			height: 2.3rem;
+			height: 2rem;
 			width: 0;
 			background-color: rgba(86, 71, 135, 0.2);
 			transition: all 300ms linear;
@@ -305,6 +316,7 @@ $blue: #37A3F4;
 
 .add-border {
 	border: 0.5rem solid rgba(0,0,0, 0.1);
+	margin-left: -0.5rem;
 }
 
 a {
@@ -444,6 +456,10 @@ a {
 				span {
 					margin-left: 1rem;
 				}
+			}
+
+			&.slim {
+				margin-top: -1rem;
 			}
 		}
 

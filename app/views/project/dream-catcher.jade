@@ -1,0 +1,45 @@
+extends ../dev-project
+
+block title
+	| Dream Catcher
+block type
+	| iOS App
+block year
+	| #[span 2015]
+
+block experience
+	.experience.extra-margin
+		ul
+			li Back-end Web
+
+block quote
+	| Memories of our dreams don't have to fade. We aimed to create a #[span unique ] #[span experience ] #[span of ] #[span your ] #[span dream] that's hard to forget. 
+
+block base-info
+	.columns.six
+		.sub-header End Product
+		.text An app to capture your dreams for later. Takes in a description of the dream and creates a video to simluate the feel of what it could have been.
+
+		.sub-header Tech Used
+		.text NodeJS/Express + ffmpeg + MongoDB
+
+		.sub-header Timeline
+		.text With two iOS devs and two backend devs, we were able to pull together a functional prototype in 18 hours at #[a(href='http://knighthacks.org/') KnightHacks] and secured 2nd place.
+	.columns.four.pull-right
+		img(src='img/dream-catcher/screenshot.png')
+		.sub-text Screenshot of playing back a genereated dream.
+block main
+	.section
+		.heading How it Works
+		.text 
+			| We searched YouTube for a bunch of go pro and point-of-view style videos, then chopped them up into one-second clips. We utilized #[a(href='https://www.clarifai.com/') Clarafai’s] API to tag the clips and store their info in MongoDB. Once we receive a description of a user’s dream, we mash together all the relevant clips, and send URL’s for both the final video and a thumbnail back to the app. We built the server with ExpressJS, ngrok to serve all the files during the demo, and ffmpeg to do the heavy lifting.
+
+		img(src='img/dream-catcher/dc-demo.jpg')
+		img(src='img/dream-catcher/dreamCatcher-poster.png')
+	
+
+	.section
+		.last-bit
+			.text.six.columns
+				| Github repos for both the #[a(href="https://github.com/gitbenji/dreamCatcher" target="_blank") Node Server] and #[a(target="_blank" href='https://github.com/littlejohntj/DreamCatcher') iOS App].
+

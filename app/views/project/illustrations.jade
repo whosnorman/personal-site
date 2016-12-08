@@ -1,0 +1,37 @@
+extends ../layout
+
+block localcss
+	link(rel='stylesheet' type='text/css' href='css/spring.css')
+	link(rel='stylesheet' type='text/css' href='css/project.css')
+block localscripts
+	script(src='js/project.js')
+block content
+	.header#design
+		.container
+			.hide-left
+				.back
+					.triangle
+					| Home
+			.title.hide-left 
+				| Illustrations
+			.meta.slim
+				.type.hide-left Digital doodles in my free time
+	.container.dont-show.illos#design
+		img(src='img/illos/illo-15.png')
+		img(src='img/illos/illo-16.png')
+		img(src='img/illos/illo-17.png')
+		img(src='img/illos/illo-18.png')
+		img(src='img/illos/illo-20.png')
+		img.add-border(src='img/illos/illo-21.png')
+		img(src='img/illos/illo-22.png')
+
+		.section
+			.last-bit
+				.text.four.columns
+					| You can find more creations on my #[a(target='_blank' href='http://dribbble.com/ohagan') Dribbble ] and #[a(target='_blank' href='http://instagram.com/mattohagan') Instagram].
+		
+	.container
+		.footer
+			.back#design
+				.triangle
+				| Back to Projects

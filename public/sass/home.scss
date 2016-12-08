@@ -226,6 +226,8 @@ $blue: #37A3F4;
 				height: 9.5rem;
 				background-color: $red;
 				background-size: cover;
+				background-position-x: center;
+				background-position-y: center;
 				border-radius: 4px;
 				overflow: hidden;
 				opacity: 1;
@@ -591,9 +593,9 @@ $blue: #37A3F4;
 			display: table-row;
 			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-			-webkit-box-shadow: 0px 1px 30px 0px rgba(71,71,73,0.3);
-			-moz-box-shadow: 0px 1px 30px 0px rgba(71,71,73,0.3);
-			box-shadow: 0px 1px 30px 0px rgba(71,71,73,0.3);
+			-webkit-box-shadow: 0px 1px 30px 0px rgba(71,71,73,0.25);
+			-moz-box-shadow: 0px 1px 30px 0px rgba(71,71,73,0.25);
+			box-shadow: 0px 1px 30px 0px rgba(71,71,73,0.25);
 
 			border: 7px solid white;
 		}
@@ -690,14 +692,17 @@ $blue: #37A3F4;
 }
 
 
-#dashboard .image {
-	background-position-x: -100px;
-}
+// #dashboard .image {
+// 	background-position-x: -100px;
+// }
 
-#battletrip .image {
-	background-position-x: -15px;
-}
+// #battletrip .image {
+// 	background-position-x: -15px;
+// }
 
+#jot .image {
+	background-position-y: 0;
+}
 
 @media all and (max-width: 450px) {
 

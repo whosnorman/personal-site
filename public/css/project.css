@@ -11,6 +11,10 @@
     transform: translate(0, 0);
     opacity: 1; }
 
+.illos img {
+  width: 100%;
+  margin-top: 10rem; }
+
 .to-hide {
   opacity: 1;
   transition: all 300ms ease-out; }
@@ -110,6 +114,8 @@
         height: 100%; }
     .header .meta .extra-margin {
       margin-top: 3rem; }
+    .header .meta.slim {
+      margin-top: 0rem; }
   .header .back {
     padding-top: 3rem;
     width: auto;
@@ -142,7 +148,7 @@
       z-index: -1;
       position: absolute;
       bottom: 1.5rem;
-      height: 2.3rem;
+      height: 2rem;
       width: 0;
       background-color: rgba(86, 71, 135, 0.2);
       transition: all 300ms linear; }
@@ -191,7 +197,8 @@
     width: 50%; }
 
 .add-border {
-  border: 0.5rem solid rgba(0, 0, 0, 0.1); }
+  border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  margin-left: -0.5rem; }
 
 a {
   opacity: 1;
@@ -286,6 +293,8 @@ a {
     line-height: 1.8rem; }
     .header .meta .type span {
       margin-left: 1rem; }
+  .header .meta.slim {
+    margin-top: -1rem; }
   .header .back .triangle {
     margin-top: 0.5rem; }
   .section .heading {

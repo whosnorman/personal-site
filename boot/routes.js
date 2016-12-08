@@ -104,7 +104,7 @@ module.exports = function(app){
 	// 404
 	// always have this route last
 	app.get('*', function(req, res){
-	  	res.render('404');
+	  	res.render('2/404');
 	});
 
 }
