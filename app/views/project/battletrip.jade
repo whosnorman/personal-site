@@ -14,7 +14,7 @@ block experience
 			li Backend Web
 
 block quote
-	| Imagine a #[span life-sized ] #[span game ] #[span of ] #[span battleships], where the way you take shots is by riding in an Uber; welcome to Battletrip.
+	| We built a #[span life-sized ] #[span game ] #[span of ] #[span battleships], where you take shots by riding in an Uber.
 
 block base-info
 	.columns.three
@@ -32,12 +32,15 @@ block main
 			| In the app, you authenticate with Uber, allowing us to poll your account to see when you're taking a ride. Once the driver hits the receipt button your ride status changes to completed, at which point we take your current location and plot it against the geo fences for battleships. You then get a push notification on whether you hit, missed, or sunk a ship. Everything happens in the background and you are still using Uber natively. The polling of the account happens on the iOS app using NSURLSession's so as not to overload the server, which handles the geo fencing by utilizing the <a href='https://www.npmjs.com/package/geolib'>geolib</a> module. The server also interfaces between the app and our <a href='https://parse.com/'>Parse</a> database, while notifications are sent using Parse's cloud code. Once a ship is hit, the radius shrinks, making it harder and harder to hit.
 			<br />
 			<br />
-			| While we realize a constant game of battletrip would be costly, this could be a great business play for Uber. Say they move in to a new city, they could then announce a month long game of battletrip. At the end of the month, the user with the most points wins a promo code. Throw in sponsored locations and you've got yourself a web 2.0 feature launch. 
-			<br />
-			<br />
 
 		img(src='img/battletrip/battletrip-map.PNG')
 		img(src='img/battletrip/battletrip.JPG')
+
+		.text 
+			<br />
+			<br />
+			| While we realize a constant game of battletrip would be costly, this could be a great business play for Uber. Say they move in to a new city, they could then announce a month long game of battletrip. At the end of the month, the user with the most points wins a promo code. And hey, if they throw in sponsored locations, it may just help out with their burn rate.
+			
 
 	.section
 		.last-bit

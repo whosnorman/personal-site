@@ -420,9 +420,8 @@
   .section-header .extra-info {
     color: #303030;
     opacity: 0.5;
-    font-size: 1.6rem;
-    font-weight: 800;
-    margin-top: 0.7rem; }
+    font-size: 1.7rem;
+    margin-top: 0.3rem; }
   .section-header.red {
     color: #F23D60; }
     .section-header.red .color-block {
@@ -441,6 +440,55 @@
 
 #jot .image {
   background-position-y: 0; }
+
+@media all and (max-width: 550px) {
+  .section-header {
+    margin-bottom: 3rem; }
+    .section-header * {
+      float: none; }
+    .section-header .title {
+      float: none;
+      text-align: center;
+      width: 100%; }
+    .section-header .extra-info {
+      text-align: center;
+      width: 100%; }
+    .section-header .color-block {
+      display: none; }
+    .section-header hr {
+      display: none; }
+  .hero {
+    padding-top: 3rem; }
+    .hero .image .line {
+      display: none; }
+    .hero .image .hello {
+      top: 2rem; }
+    .hero .info {
+      height: 60rem; }
+      .hero .info .scroll {
+        margin-bottom: 7rem;
+        display: none; }
+      .hero .info .line.move {
+        -webkit-animation: finish-line 800ms 550ms 1;
+        animation: finish-line 800ms 550ms 1;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards; }
+      .hero .info .to-show div {
+        transition: all 350ms ease-out;
+        -webkit-transform: translate(0, -20px);
+        -ms-transform: translate(0, -20px);
+        transform: translate(0, -20px);
+        opacity: 0; }
+        .hero .info .to-show div.show {
+          -webkit-transform: translate(0, 0);
+          -ms-transform: translate(0, 0);
+          transform: translate(0, 0); }
+          .hero .info .to-show div.show.sub-header {
+            transition-delay: 1150ms; }
+          .hero .info .to-show div.show.text {
+            transition-delay: 1300ms; }
+          .hero .info .to-show div.show.scroll {
+            transition-delay: 1450ms; } }
 
 @media all and (max-width: 450px) {
   .community-project {
@@ -465,46 +513,13 @@
   .section-projects .project .info .dream {
     width: 113%; }
     .section-projects .project .info .dream .title {
-      font-size: 2rem; }
-  .hero {
-    padding-top: 3rem; }
-    .hero .image .line {
-      display: none; }
-    .hero .image .hello {
-      top: 2rem; }
-    .hero .info {
-      height: 80vh; }
-      .hero .info .scroll {
-        margin-bottom: 7rem; }
-      .hero .info .line.move {
-        -webkit-animation: finish-line 800ms 550ms 1;
-        animation: finish-line 800ms 550ms 1;
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards; }
-      .hero .info .to-show div {
-        transition: all 350ms ease-out;
-        -webkit-transform: translate(0, -20px);
-        -ms-transform: translate(0, -20px);
-        transform: translate(0, -20px);
-        opacity: 0; }
-        .hero .info .to-show div.show {
-          -webkit-transform: translate(0, 0);
-          -ms-transform: translate(0, 0);
-          transform: translate(0, 0); }
-          .hero .info .to-show div.show.sub-header {
-            transition-delay: 1150ms; }
-          .hero .info .to-show div.show.text {
-            transition-delay: 1300ms; }
-          .hero .info .to-show div.show.scroll {
-            transition-delay: 1450ms; } }
+      font-size: 2rem; } }
 
 @media all and (max-width: 320px) {
   .hero .image .hello {
     font-size: 3rem; }
-  .hero .info {
-    height: 100vh; }
-    .hero .info .scroll {
-      font-size: 1.7rem; } }
+  .hero .info .scroll {
+    font-size: 1.7rem; } }
 
 /* Keyframe Animations */
 @keyframes start-line {

@@ -657,9 +657,8 @@ $blue: #37A3F4;
 	.extra-info {
 		color: #303030;
 		opacity: 0.5;
-		font-size: 1.6rem;
-		font-weight: 800;
-		margin-top: 0.7rem;
+		font-size: 1.7rem;
+		margin-top: 0.3rem;
 	}
 
 	&.red {
@@ -702,6 +701,94 @@ $blue: #37A3F4;
 
 #jot .image {
 	background-position-y: 0;
+}
+
+@media all and (max-width: 550px) {
+
+	.section-header {
+		margin-bottom: 3rem;
+		
+		& * {
+			float: none;
+		}
+
+		.title {
+			float: none;
+			text-align: center;
+			width: 100%;
+		}
+
+		.extra-info {
+			text-align: center;
+			width: 100%;
+		}
+
+		.color-block {
+			display: none;
+		}
+
+		hr {
+			display: none;
+		}
+	}
+
+	.hero {
+		padding-top: 3rem;
+
+		.image {
+			.line {
+				display: none;
+			}
+
+			.hello {
+				top: 2rem;
+			}
+		}
+
+		.info {
+			height: 60rem;
+
+			.scroll {
+				margin-bottom: 7rem;
+				display: none;
+			}
+
+			.line {
+				&.move {
+					-webkit-animation: finish-line 800ms 550ms 1;
+					animation: finish-line 800ms 550ms 1;
+					-webkit-animation-fill-mode: forwards;
+					animation-fill-mode: forwards;
+				}
+			}
+
+			.to-show div {
+				transition: all 350ms ease-out;
+				-webkit-transform: translate(0, -20px);
+				-ms-transform: translate(0, -20px);
+				transform: translate(0, -20px);
+				opacity: 0;
+
+				&.show {
+					-webkit-transform: translate(0, 0);
+					-ms-transform: translate(0, 0);
+					transform: translate(0, 0);
+
+					&.sub-header {
+						transition-delay: 1150ms;
+					}
+
+					&.text {
+						transition-delay: 1300ms;
+					}
+
+					&.scroll {
+						transition-delay: 1450ms;
+					}
+				}
+			}
+		}
+	}
 }
 
 @media all and (max-width: 450px) {
@@ -751,65 +838,6 @@ $blue: #37A3F4;
 			}
 		}
 	}
-
-	.hero {
-		padding-top: 3rem;
-
-		.image {
-			.line {
-				display: none;
-			}
-
-			.hello {
-				top: 2rem;
-			}
-		}
-
-		.info {
-			height: 80vh;
-
-			.scroll {
-				margin-bottom: 7rem;
-			}
-
-			.line {
-				&.move {
-					-webkit-animation: finish-line 800ms 550ms 1;
-					animation: finish-line 800ms 550ms 1;
-					-webkit-animation-fill-mode: forwards;
-					animation-fill-mode: forwards;
-				}
-			}
-
-			.to-show div {
-				transition: all 350ms ease-out;
-				-webkit-transform: translate(0, -20px);
-				-ms-transform: translate(0, -20px);
-				transform: translate(0, -20px);
-				opacity: 0;
-
-				&.show {
-					-webkit-transform: translate(0, 0);
-					-ms-transform: translate(0, 0);
-					transform: translate(0, 0);
-
-					&.sub-header {
-						transition-delay: 1150ms;
-					}
-
-					&.text {
-						transition-delay: 1300ms;
-					}
-
-					&.scroll {
-						transition-delay: 1450ms;
-					}
-				}
-			}
-		}
-
-
-	}
 }
 
 @media all and (max-width: 320px) {
@@ -821,7 +849,6 @@ $blue: #37A3F4;
 		}
 
 		.info {
-			height: 100vh;
 
 			.scroll {
 				font-size: 1.7rem;
