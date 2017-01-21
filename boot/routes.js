@@ -51,6 +51,10 @@ module.exports = function(app){
 		"https://www.dropbox.com/s/8mt66kqr4t27tk4/Resume.pdf?dl=0"
 	);
 
+	app.redirect('/workshop',
+		"https://www.dropbox.com/s/gxuh951cmsu6ev5/product-design-workshop.pdf?dl=0"
+	);
+
 
 
 	/* version 2 routes */
