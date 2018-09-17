@@ -2,9 +2,13 @@ let frameDuration = 260;
 
 $(document).ready(function(){
 	setFavicon();
+	setVersionToggle();
 
+	$('.frame--1').find('.not-visible').addClass('visible');
+	$('.frame--is-hidden').removeClass('frame--is-hidden');
+	
 	setTimeout(function(){
-		$('.frame--1').find('.not-visible').addClass('visible');
+
 		$('.dont-show').addClass('show');
 
 		setInterval(function(){
@@ -27,10 +31,8 @@ $(document).ready(function(){
 				}
 			}
 
-		}, 4000);
-
-
-	}, 500); 
+		}, 3000);
+	}, 1000);
 
 
 	$('.project').on('click', function(e){
@@ -40,6 +42,30 @@ $(document).ready(function(){
 	});
 
 });
+
+function setVersionToggle(){
+	$('select').change(function(){
+		let value = parseInt(this.value);
+		switch(value){
+			case 0: break;
+			case 1: 
+				$('.to-hide').addClass('hide');
+				window.location = '/3';
+				break;
+			case 2:
+				$('.to-hide').addClass('hide');
+				window.location = '/2';
+				break;
+			case 3:
+				$('.to-hide').addClass('hide');
+				window.location = '/1';
+				break;
+			default:
+				break;
+
+		}
+	});
+}
 	
 
 function removeAfterTransition(){
