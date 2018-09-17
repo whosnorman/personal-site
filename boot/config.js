@@ -11,6 +11,7 @@ module.exports = function(app){
 
 	// logger
 	app.use(logfmt.requestLogger());
+	
 	// for routing and rendering
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({
@@ -27,5 +28,6 @@ module.exports = function(app){
 	
 	app.use("/1", app.express.static(__dirname + '/../public/1'));
 	app.use("/2", app.express.static(__dirname + '/../public/2'));
+	app.use("/3", app.express.static(__dirname + '/../public/3'));
 
 }

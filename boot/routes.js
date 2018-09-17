@@ -7,46 +7,6 @@ module.exports = function(app){
 		res.render('index');
 	});
 
-	app.get('/dashboard', function(req, res) {
-		res.render('project/dashboard');
-	});
-
-	app.get('/runaway', function(req, res) {
-		res.render('project/runaway');
-	});
-
-	app.get('/hone', function(req, res) {
-		res.render('project/hone');
-	});
-
-	app.get('/hunt', function(req, res) {
-		res.render('project/hunt');
-	});
-
-	app.get('/site', function(req, res) {
-		res.render('project/site');
-	});
-
-	app.get('/illustrations', function(req, res) {
-		res.render('project/illustrations');
-	});
-
-	app.get('/battletrip', function(req, res) {
-		res.render('project/battletrip');
-	});
-
-	app.get('/dream-catcher', function(req, res) {
-		res.render('project/dream-catcher');
-	});
-
-	app.get('/jot', function(req, res) {
-		res.render('project/jot');
-	});
-
-	app.get('/vestview', function(req, res) {
-		res.render('project/vestview');
-	});
-
 	app.redirect('/resume',
 		"https://www.dropbox.com/s/8mt66kqr4t27tk4/Resume.pdf?dl=0"
 	);
@@ -54,6 +14,56 @@ module.exports = function(app){
 	app.redirect('/workshop',
 		"https://www.dropbox.com/s/gxuh951cmsu6ev5/product-design-workshop.pdf?dl=0"
 	);
+
+
+
+	/* version 3 routes */
+
+	app.get('/3', function(req, res) {
+		res.render('3/index');
+	});
+
+	app.get('/3/dashboard', function(req, res) {
+		res.render('3/project/dashboard');
+	});
+
+	app.get('/3/runaway', function(req, res) {
+		res.render('3/project/runaway');
+	});
+
+	app.get('/3/hone', function(req, res) {
+		res.render('3/project/hone');
+	});
+
+	app.get('/3/hunt', function(req, res) {
+		res.render('3/project/hunt');
+	});
+
+	app.get('/3/site', function(req, res) {
+		res.render('3/project/site');
+	});
+
+	app.get('/3/illustrations', function(req, res) {
+		res.render('3/project/illustrations');
+	});
+
+	app.get('/3/battletrip', function(req, res) {
+		res.render('3/project/battletrip');
+	});
+
+	app.get('/3/dream-catcher', function(req, res) {
+		res.render('3/project/dream-catcher');
+	});
+
+	app.get('/3/jot', function(req, res) {
+		res.render('3/project/jot');
+	});
+
+	app.get('/3/vestview', function(req, res) {
+		res.render('3/project/vestview');
+	});
+
+	
 
 
 

@@ -1,11 +1,29 @@
+$off-black: #111111;
+$gray: #C0C0C0;
+
 body {
-	font-family: 'Avenir', sans-serif;
+	font-family: 'Hoefler Text', sans-serif;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	letter-spacing: 0.5px;
 }
 
 html {
 	font-size: 10px;
+	color: $off-black;
 }
 
 .container {
 	max-width: 1300px;
+}
+
+a {
+	transition: all 200ms ease-in-out;
+	text-decoration: none;
+	color: $gray;
+
+	&:hover {
+		color: $off-black;
+		text-decoration: underline;		
+	}
 }

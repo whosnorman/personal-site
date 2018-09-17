@@ -1,39 +1,37 @@
+let frameDuration = 260;
+
 $(document).ready(function(){
 	setFavicon();
 
 	setTimeout(function(){
-		$('.photos').addClass('show-gallery');
-		let arr = $('#floatie').find('li').toArray();
-		$(arr[arr.length - 1]).find('img').addClass('active');
-		
-		$('.hero .image').addClass('show');
-		$('.hero .hello').addClass('show');
-		$('.hero .image .line').addClass('move');
-		$('.hero .info .line').addClass('move');
-		$('.hero .to-show div').addClass('show');
+		$('.frame--1').find('.not-visible').addClass('visible');
 		$('.dont-show').addClass('show');
+
+		setInterval(function(){
+			let frames = $('.frames').children().toArray();
+
+
+			for(let i = 0; i < 5; i++){
+				let current = frames[i].className.split("--").pop();
+
+				if(current == 0){
+					$(frames[i]).attr('class', 'frame frame--4');
+					$(frames[i]).children().removeClass('visible');
+				} else {
+					$(frames[i]).attr('class', 'frame frame--' + (current-1));
+				}
+
+				// show the current one 
+				if(current == 2){
+					$(frames[i]).children().addClass('visible');
+				}
+			}
+
+		}, 4000);
+
 
 	}, 500); 
 
-
-	let gallery = {
-		floatie: {
-			direction: 'forward',
-			count: 1
-		},
-		fh: {
-			direction: 'forward',
-			count: 1
-		},
-		hackfsu: {
-			direction: 'forward',
-			count: 1
-		},
-		technole: {
-			direction: 'forward',
-			count: 1
-		}
-	}
 
 	$('.project').on('click', function(e){
 		$('.to-hide').addClass('hide');
@@ -41,182 +39,39 @@ $(document).ready(function(){
 		window.location = '/' + id;
 	});
 
-	$('.photos').click(function(e){
-		const photos = $(e.currentTarget);
-		let id = $(photos).attr('id');
-
-		console.log(id);
-
-		const list = $(photos).find('li').toArray();
-		const length = list.length;
-
-
-		// going forward
-			// get last position 
-			// if it's the last one
-				// don't change position, change direction
-			// else
-				// hide position + 1
-			// set position to what was hidden
-			
-		// going backward
-			// get last position
-			// if it's the first one
-				// don't change position, change direction
-			// else
-				// hide position - 1
-			// set position to what was hidden
-
-
-			/*[0, 1, 2, 3]
-			length = 4
-			count = 1
-			3 needs to be hidden
-
-			forward => 3, 2, 1
-			backward => 1, 2, 3
-
-			count = 2
-			2 needs to be hidden 
-			toHide = length - count
-
-			if(toHide == 0) switch to backward
-
-			if(toHide == length - 1) swtich to forward */
-
-
-		let count = gallery[id].count;
-		let position = length - count;
-
-		if(gallery[id].direction == 'forward') {
-			// last one
-			if(position == 0) {
-				gallery[id].direction = 'backward';
-
-				makeActive(list[1]);
-				makeInactive(list[0]);
-
-				position++;
-				gallery[id].count--;
-			} else {
-				makeInactive(list[position]);
-				makeActive(list[position - 1]);
-
-				gallery[id].count++;
-			}
-
-			
-		} else if (gallery[id].direction == 'backward') {
-			// back to the beginning
-			if(position == length - 1) {
-				console.log(position);
-				gallery[id].direction = 'forward';
-				gallery[id].count++;
-
-				makeInactive(list[position]);
-				makeActive(list[position - 1]);
-			} else {
-				gallery[id].count--;
-				position++;
-
-				makeInactive(list[position - 1]);
-				makeActive(list[position]);
-			}
-
-		}
-
-		$(list[position]).toggleClass('hide');
-	});
-
-	$('li.card').on('click', function(e){
-		// if the card clicked is not current
-		if($.inArray('current', e.currentTarget.classList) == -1) {
-			// reset previous card's gallery
-			$('.show-gallery').removeClass('show-gallery');
-
-			let cards = $('ul.cards').find('li.card').toArray();
-			let currentIndex = parseInt($(e.currentTarget).attr('id'));
-
-			if(currentIndex == 0) {											// edge case for leftmost 
-				setClass(cards[0], 'card leftmost current');
-				showGallery(cards[0]);
-
-				setClass(cards[1], 'card right-start');
-
-				for(let i = 2; i < cards.length; i++) {
-					setClass(cards[i], 'card off-right');
-				}
-			} else if (currentIndex == cards.length - 1) {					// edge case for rightmost
-				setClass(cards[currentIndex], 'card rightmost current');
-				showGallery(cards[currentIndex]);
-
-				setClass(cards[currentIndex - 1], 'card left-end');
-
-				for(let i = currentIndex - 2; i >= 0; i--) {
-					setClass(cards[i], 'card off-left');
-				}
-			} else {														// middle cards
-				setClass(cards[currentIndex], 'card middle current');
-				showGallery(cards[currentIndex]);
-
-				// go down left side
-				let leftIndex = currentIndex - 1;
-				setClass(cards[leftIndex], 'card left-mid');
-				for(let i = leftIndex - 1; i >= 0; i--) {
-					setClass(cards[i], 'card off-left');
-				}
-
-				// go down right side
-				let rightIndex = currentIndex + 1;
-				setClass(cards[rightIndex], 'card right-mid');
-				for(let i = rightIndex + 1; i < cards.length; i++) {
-					setClass(cards[i], 'card off-right');
-				}
-			}
-		}
-	});
 });
+	
 
-function setClass(el, classes) {
-	$(el).attr('class', classes);
-}
+function removeAfterTransition(){
+	$(".frame--1").on(
+    "transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd",
+    function() {
+        $(this).removeClass("frame--0");
+    });
 
-function showGallery(el) {
-	setTimeout(function(){
-		$(el).find('.photos').addClass('show-gallery');
+    $(".frame--2").on(
+    "transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd",
+    function() {
+        $(this).removeClass("frame--3");
+    });
 
-		// only if there isn't already an active photo
-		if($(el).find('.active').length == 0){
-			let photos = $(el).find('.photos li').toArray();
-			$(photos[photos.length - 1]).find('img').addClass('active');
-		}
-	}, 300);
-}
+    $(".frame--3").on(
+    "transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd",
+    function() {
+        $(this).removeClass("frame--4");
+    });
 
-function makeActive(el) {
-	$(el).find('img').addClass('active');
+    $(".frame--4").on(
+    "transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd",
+    function() {
+        $(this).removeClass("frame--0");
+    });
 
-	// if it's a gif
-	if($.inArray('gif', el.classList) > -1) {
-		let img = $(el).find('img');
-		let src = $(img).attr('src');
-
-		$(img).attr('src', src.replace('-static', ''));
-	}
-}
-
-function makeInactive(el) {
-	$(el).find('img').removeClass('active');
-
-	// if it's a gif
-	if($.inArray('gif', el.classList) > -1) {
-		let img = $(el).find('img');
-		let src = $(img).attr('src');
-
-		if(src.indexOf('static' !== -1)) {
-			$(img).attr('src', src.replace('.', '-static.'));
-		}
-	}
+    $(".frame--0").on(
+    "transitionend MSTransitionEnd webkitTransitionEnd oTransitionEnd",
+    function() {
+        $(this).removeClass("frame--1");
+    });
 }
 
 // set favicon based on time of day

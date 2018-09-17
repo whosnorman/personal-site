@@ -5,185 +5,52 @@ block localcss
 block localscripts
 	script(src='js/home.js')
 block content
-	.container
-		.hero
-			.row(style='position: relative; height: auto')
-				.six.columns.image
-					img(src='img/headshot.jpg')
-					.flex
-						.hello hey there! i'm matt.
-						.line
-				.five.columns.info
-					.line
+	.container.hero.dont-show
+		.hero__header
+			.hero__header-toggle v4.2018
+			.hero__header-icons
+				a(href='https://www.are.na/matt-o-hagan' target='_blank' rel='noopener noreferrer')
+					include svgs/arena-logo.svg
+				a(href='https://www.instagram.com/mattohagan/' target='_blank' rel='noopener noreferrer')
+					include svgs/ig-logo.svg
+			.u-cf
 
-					.to-show
-						.sub-header currently
-						.text I'm a product designer and community builder studying computer science. 
+		.hero__middle
+			.row.hero__middle-center
+				.hero__middle-left.six.columns
+					.frames
+						.frame.frame--0 
+							img(src='/img/IMG_7763.jpg').not-visible
+						
+						.frame.frame--1
+							img(src='/img/matt-gif-2.gif').not-visible
 
-					.to-show
-						.sub-header previously
-						.text I was a software engineering intern at MongoDB, StateFarm, and Domi Station.
+						.frame.frame--2
+							img(src='/img/static-antique.jpg').not-visible
 
-					.to-show
-						.scroll
-							.gif
-							.text scroll to see some projects I've built
-	
-	.container.dont-show
-		//- Design projects
-		a(class='anchor-padding' name='design')
-		.section-header.red
-			.row
-				.twelve.columns
-					.u-pull-left
-						.color-block.u-pull-left
-						.title Design
-					.u-pull-right.extra-info
-						//- #[span(id='design-seen') 1]/4 #[span.hide-on-mobile Projects]
-						| Explorations in digital aesthetics.
-			.row
-				hr.twelve.columns
-		.section-projects
-			.row
-				.four.columns.project#site
-					.image(style='background-image: url("img/site/thumb.png")')
-						//- .check
-						//- 	img(src='img/white-check-shadow.png')
-					.info
-						.title This Site
-						.description The journey and process. 
-				.four.columns.project#hunt
-					.image(style='background-image: url("img/hunt/thumb.png")')
-					.info
-						.title Hunt
-						.description Scavenger hunt and snapchat stories mashup. 
-				.four.columns.project#dashboard
-					.image(style='background-image: url("img/dashboard/thumb.png")')
-					.info
-						.title Dashboard
-						.description Room reservation system for Domi Station.
-			.row
-				.four.columns.project#illustrations
-					.image(style='background-image: url("img/illos/thumb.png")')
-					.info
-						.title Illustrations
-						.description Digital doodles in my free time.
-				.four.columns.project#vestview
-					.image(style='background-image: url("img/vestview/thumb.png")')
-					.info
-						.title Vestview
-						.description Playback last months stocks alongside social commentary.
+						.frame.frame--3 
+							img(src='/img/IMG_9633.jpg').not-visible
+						.frame.frame--4 
+							img(src='/img/primitive 003.png').not-visible
+					.controls
+						#go-left
+						#pause
+						#play
+						#go-right
+
+
+				.hero__middle-right.three.columns
+					p.copy
+						|<b>Matt O'Hagan</b> </br>
+						|Design at <a href='/plaid'>Plaid</a> // Art and </br>
+						|community at <a href='/teal'>Teal Process</a>
+		.hero__bottom
+			.hero__bottom-see-more Musings, works, and tidings
+			.hero__bottom-down-arrow
+
+
+						
 		
-
-		//- Dev projects
-		a(class='anchor-padding' name='dev')
-		.section-header.purple
-			.row
-				.twelve.columns
-					.u-pull-left
-						.color-block.u-pull-left
-						.title Development
-					.u-pull-right.extra-info
-						//- #[span(id='community-seen') 0]/5 #[span.hide-on-mobile Projects] Explored
-						| Full-stack side projects. 
-			.row
-				hr.twelve.columns
-		.section-projects
-			.row
-				.four.columns.project#hone
-					.image(style='background-image: url("img/hone/thumb.png")')
-					.info
-						.title Hone
-						.description Finalist in StartupBus Summer ‘16.
-				.four.columns.project#runaway
-					.image(style='background-image: url("img/runaway/thumb.png")')
-					.info
-						.title Runaway
-						.description Kanye themed roadtrip generator.
-				.four.columns.project#jot
-					.image(style='background-image: url("img/jot/thumb.png")')
-					.info
-						.title Jot
-						.description Chrome extension featured in TechCrunch Japan.
-			.row
-				.four.columns.project#battletrip
-					.image(style='background-image: url("img/battletrip/thumb.png")')
-					.info
-						.title Battletrip
-						.description Lifesize game of battleships played by taking an Uber.
-				.four.columns.project#dream-catcher
-					.image(style='background-image: url("img/dream-catcher/thumb.png")')
-					.info
-						.dream
-							.title Dream Catcher
-							.description Recreates your dream using relevant, one-second clips.
-	
-	//- Community cards
-	.full-width-overflow.dont-show
-		a(class='anchor-padding' name='community')
-		.container
-			.section-header.blue
-				.row
-					.twelve.columns
-						.u-pull-left
-							.color-block.u-pull-left
-							.title Community
-						.u-pull-right.extra-info
-							//- #[span(id='community-seen') 0]/4 #[span.hide-on-mobile Projects] Seen
-							| Initiatives to provide better tech opportunities for students in Florida.
-				.row
-					hr.twelve.columns
-
-			//- .section-community
-			//- 	ul.cards
-			//- 		li.card.leftmost.current#0
-			//- 			include floatie
-			//- 			.arrow.left
-			//- 				img(src='/img/arrow-blue-left.png')
-			//- 		li.card.right-start#1
-			//- 			.arrow.right
-			//- 				img(src='/img/arrow-blue-right.png')
-			//- 			include fh
-			//- 			.arrow.left
-			//- 				img(src='/img/arrow-blue-left.png')
-			//- 		li.card.off-right#2
-			//- 			.arrow.right
-			//- 				img(src='/img/arrow-blue-right.png')
-			//- 			include hackfsu
-			//- 			.arrow.left
-			//- 				img(src='/img/arrow-blue-left.png')
-			//- 		li.card.off-right#3
-			//- 			.arrow.right
-			//- 				img(src='/img/arrow-blue-right.png')
-			//- 			include technole
-			.section-community
-				.row
-					.columns.six
-						include floatie
-					.columns.six
-						include fh
-				.row
-					.columns.six
-						include hackfsu
-					.columns.six
-						include technole
-
-	
-	.container.dont-show			
-		.footer
-			| Thanks for stopping by!
-			.icons
-				a(href='https://www.instagram.com/mattohagan/')
-					i.fa.fa-instagram
-				a(href='https://www.dribbble.com/ohagan/')
-					i.fa.fa-dribbble
-				a(href='https://www.twitter.com/micdropmatt/')
-					i.fa.fa-twitter
-				a(href='https://www.github.com/mattohagan/')
-					i.fa.fa-github
-			
-			
-								
 
 
 
