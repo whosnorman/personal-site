@@ -1,58 +1,36 @@
-$off-black: #171717;
-$gray: #C0C0C0;
 
-$beige: #FFF6EA;
-$purple: #CDBCEB;
-$red: #FF6E6E;
-$blue: #8ACCFF;
-$orange: #FFAE4A;
+$off-black: #111111;
+$gray: #C0C0C0;
 
 $frame-pad: 1.6rem;
 $frame-delay: 150ms;
 $frame-duration: 450ms;
 
-.homepage {
-	width: calc(100% - 16rem);
-	padding-top: 8rem;
-	padding-bottom: 8rem;
-	margin: 0 auto;
-}
+
+
 
 .hero {
-	height: calc(100vh - 16rem);
+	min-height: 100vh;
+	padding-top: 8rem;
+	padding-bottom: 8rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 
-	&__content {
-		&-center {
-			&-welcome {
-				display: flex;
-				justify-content: center;
-				text-align: center;
-				flex-direction: column;
-			}
-		}
-	}
-
-	&__center {
-		
-	}
-
-	&__footer {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+	&__header {
 
 		&-toggle {
+			float: left;
+			position: realative;
+
 			.select-wrapper {
 				position: relative;
-				width: 8.8rem;
-
+				width: 7.8rem;
+				
 				&::before {
 					display: inline-block;
 					content: '';
-					background-image: url('/img/svgs/icon-arrow.svg');
+					background-image: url('/img/svgs/arrow-down.svg');
 					background-repeat: no-repeat;
 					background-position: center;
 					width: 16px;
@@ -66,9 +44,6 @@ $frame-duration: 450ms;
 			
 			select {
 				width: 10rem;
-				position: realative;
-				background: $beige;
-
 
 				border: none;
 				-webkit-appearance: none;
@@ -78,6 +53,7 @@ $frame-duration: 450ms;
 		}
 
 		&-icons {
+			float: right;
 
 			a {
 				margin-right: 1.6rem;
@@ -256,158 +232,6 @@ $frame-duration: 450ms;
 	}
 }
 
-
-.focus-area {
-	width: 27.5rem;
-	position: relative;
-
-	&.dont-show {
-		.focus-area__topper {
-			opacity: 0;
-			transform: translate(32px, 32px);
-			transition-duration: 400ms;
-		}
-
-		.focus-area__shadow {
-			opacity: 0;
-			transform: translate(32px, 32px);
-			transition-delay: 200ms;
-			transition-duration: 400ms;
-		}
-
-		.focus-area__close {
-			opacity: 0;
-		}
-
-		.focus-area__arrow {
-			opacity: 0;
-			transform: translate(-40px, -50%);
-			// transition: all 300ms cubic-bezier(0.55, -0.01, 0.32, 1.21);
-			// transition-delay: 75ms;
-		}
-	}
-
-	&.show {
-		.focus-area__topper {
-			transform: translate(0, 0);
-			opacity: 1;
-		}
-
-		.focus-area__shadow {
-			transform: translate(0, 0);
-			opacity: 1;
-		}
-
-		.focus-area__arrow {
-			// opacity: 1;
-			// transform: translate(-32px, -50%);
-		}
-	}
-
-	&:hover {
-		cursor: pointer;
-
-		.focus-area__topper {
-			transform: translate(-4px, -4px);
-			// transition: all 200ms cubic-bezier(0.55, -0.01, 0.32, 1.21);
-		}
-
-		.focus-area__arrow {
-			transform: translate(-24px, -50%);
-		}
-	}
-
-	&--is-raised {
-		&:hover {
-			cursor: pointer;
-
-			.focus-area__topper {
-				transform: translate(-10px, -10px);
-			}
-
-			.focus-area__arrow {
-				transform: translate(50%, -50%);
-			}
-
-			.focus-area__close {
-				transform: translate(291px, -50%);
-			}
-		}
-
-		.focus-area__topper {
-			transform: translate(-10px, -10px);
-		}
-
-		.focus-area__arrow {
-			transform: translate(50%, -50%);
-		}
-
-		.focus-area__close {
-			transform: translate(291px, -50%);
-		}
-	}
-
-	&__topper {
-		border-radius: 1px;
-		border: 1px solid $off-black;
-		background: $beige;
-		padding-top: 2.4rem;
-		padding-bottom: 2.4rem;
-		z-index: 10;
-		position: relative;
-		text-align: center;
-		// transition: all 200ms cubic-bezier(0.55, -0.01, 0.32, 1.21);
-		transition: all 200ms ease-in-out;
-		transform: translate(0, 0);
-		opacity: 1;
-	}
-
-	&__arrow {
-		position: absolute;
-		height: 20px;
-		z-index: 5;
-		top: 50%;
-		transform: translate(-32px, -50%);
-		// transition: all 200ms cubic-bezier(0.55, -0.01, 0.32, 1.21);
-		transition: all 200ms ease-in-out;
-	}
-
-	&__close {
-		z-index: 5;
-		position: absolute;
-		left: 0;
-		top: 50%;
-		transform: translate(235px, -50%);
-		transition: all 300ms cubic-bezier(0.55, -0.01, 0.32, 1.21);
-		opacity: 1;
-	}
-
-	&__shadow {
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		border-radius: 1px;
-		border: 1px solid $off-black;
-		z-index: 0;
-		// transition: all 200ms cubic-bezier(0.55, -0.01, 0.32, 1.21);
-		transition: all 200ms ease-in-out;
-		transform: translate(0, 0);
-		opacity: 1;
-	}
-
-	&.red {
-		.focus-area__shadow {
-			background: $red;
-		}
-	}
-}
-
-.mobile-show {
-	display: none;
-}
-
 @media all and (max-width: 399px) {
 	.hero {
 		padding-top: 2.4rem;
@@ -422,14 +246,6 @@ $frame-duration: 450ms;
 				}
 			}
 		}
-	}
-
-	.mobile-hide {
-		display: none;
-	}
-
-	.mobile-show {
-		display: block;
 	}
 }
 

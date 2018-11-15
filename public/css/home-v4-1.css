@@ -1,30 +1,20 @@
-.homepage {
-  width: calc(100% - 16rem);
+.hero {
+  min-height: 100vh;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  margin: 0 auto; }
-
-.hero {
-  height: calc(100vh - 16rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  .hero__content-center-welcome {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column; }
-  .hero__footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
-    .hero__footer-toggle .select-wrapper {
+  .hero__header-toggle {
+    float: left;
+    position: realative; }
+    .hero__header-toggle .select-wrapper {
       position: relative;
-      width: 8.8rem; }
-      .hero__footer-toggle .select-wrapper::before {
+      width: 7.8rem; }
+      .hero__header-toggle .select-wrapper::before {
         display: inline-block;
         content: '';
-        background-image: url("/img/svgs/icon-arrow.svg");
+        background-image: url("/img/svgs/arrow-down.svg");
         background-repeat: no-repeat;
         background-position: center;
         width: 16px;
@@ -33,22 +23,22 @@
         right: 0;
         top: 10px;
         pointer-events: none; }
-    .hero__footer-toggle select {
+    .hero__header-toggle select {
       width: 10rem;
-      position: realative;
-      background: #FFF6EA;
       border: none;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none; }
-    .hero__footer-icons a {
+  .hero__header-icons {
+    float: right; }
+    .hero__header-icons a {
       margin-right: 1.6rem;
       text-decoration: none; }
-      .hero__footer-icons a:last-child {
+      .hero__header-icons a:last-child {
         margin-right: 0; }
-      .hero__footer-icons a:hover svg g g {
-        fill: #171717; }
-    .hero__footer-icons svg g g {
+      .hero__header-icons a:hover svg g g {
+        fill: #111111; }
+    .hero__header-icons svg g g {
       transition: all 200ms ease-in-out;
       fill: #C0C0C0; }
   .hero__middle {
@@ -72,7 +62,7 @@
           position: absolute;
           height: 348px;
           width: 278px;
-          border: 1px solid #171717;
+          border: 1px solid #111111;
           background: #FFFFFF;
           transition: all 450ms cubic-bezier(0.55, -0.01, 0.32, 1.21); }
           .hero__middle-left .frames .frame img {
@@ -129,11 +119,11 @@
     transition: all 300ms ease-in-out; }
     .hero__bottom:hover {
       cursor: pointer;
-      color: #171717; }
+      color: #111111; }
       .hero__bottom:hover .arrow--is-down {
         transform: translateY(2px); }
         .hero__bottom:hover .arrow--is-down svg g g {
-          fill: #171717; }
+          fill: #111111; }
 
 .arrow {
   transition: all 300ms ease-in-out; }
@@ -144,95 +134,7 @@
     transform: translateY(2px);
     cursor: pointer; }
     .arrow--is-down:hover svg g g {
-      fill: #171717; }
-
-.focus-area {
-  width: 27.5rem;
-  position: relative; }
-  .focus-area.dont-show .focus-area__topper {
-    opacity: 0;
-    transform: translate(32px, 32px);
-    transition-duration: 400ms; }
-  .focus-area.dont-show .focus-area__shadow {
-    opacity: 0;
-    transform: translate(32px, 32px);
-    transition-delay: 200ms;
-    transition-duration: 400ms; }
-  .focus-area.dont-show .focus-area__close {
-    opacity: 0; }
-  .focus-area.dont-show .focus-area__arrow {
-    opacity: 0;
-    transform: translate(-40px, -50%); }
-  .focus-area.show .focus-area__topper {
-    transform: translate(0, 0);
-    opacity: 1; }
-  .focus-area.show .focus-area__shadow {
-    transform: translate(0, 0);
-    opacity: 1; }
-  .focus-area:hover {
-    cursor: pointer; }
-    .focus-area:hover .focus-area__topper {
-      transform: translate(-4px, -4px); }
-    .focus-area:hover .focus-area__arrow {
-      transform: translate(-24px, -50%); }
-  .focus-area--is-raised:hover {
-    cursor: pointer; }
-    .focus-area--is-raised:hover .focus-area__topper {
-      transform: translate(-10px, -10px); }
-    .focus-area--is-raised:hover .focus-area__arrow {
-      transform: translate(50%, -50%); }
-    .focus-area--is-raised:hover .focus-area__close {
-      transform: translate(291px, -50%); }
-  .focus-area--is-raised .focus-area__topper {
-    transform: translate(-10px, -10px); }
-  .focus-area--is-raised .focus-area__arrow {
-    transform: translate(50%, -50%); }
-  .focus-area--is-raised .focus-area__close {
-    transform: translate(291px, -50%); }
-  .focus-area__topper {
-    border-radius: 1px;
-    border: 1px solid #171717;
-    background: #FFF6EA;
-    padding-top: 2.4rem;
-    padding-bottom: 2.4rem;
-    z-index: 10;
-    position: relative;
-    text-align: center;
-    transition: all 200ms ease-in-out;
-    transform: translate(0, 0);
-    opacity: 1; }
-  .focus-area__arrow {
-    position: absolute;
-    height: 20px;
-    z-index: 5;
-    top: 50%;
-    transform: translate(-32px, -50%);
-    transition: all 200ms ease-in-out; }
-  .focus-area__close {
-    z-index: 5;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translate(235px, -50%);
-    transition: all 300ms cubic-bezier(0.55, -0.01, 0.32, 1.21);
-    opacity: 1; }
-  .focus-area__shadow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: 1px;
-    border: 1px solid #171717;
-    z-index: 0;
-    transition: all 200ms ease-in-out;
-    transform: translate(0, 0);
-    opacity: 1; }
-  .focus-area.red .focus-area__shadow {
-    background: #FF6E6E; }
-
-.mobile-show {
-  display: none; }
+      fill: #111111; }
 
 @media all and (max-width: 399px) {
   .hero {
@@ -241,11 +143,7 @@
     .hero__middle {
       margin-top: 8rem; }
       .hero__middle-right .copy {
-        margin-top: 4rem; }
-  .mobile-hide {
-    display: none; }
-  .mobile-show {
-    display: block; } }
+        margin-top: 4rem; } }
 
 .dont-show {
   opacity: 0;

@@ -7,38 +7,57 @@ $(document).ready(function(){
 	$('.frame--1').find('.not-visible').addClass('visible');
 	$('.frame--is-hidden').removeClass('frame--is-hidden');
 	
+	// setTimeout(function(){
+
+	// 	$('.dont-show').addClass('show');
+
+	// 	setInterval(function(){
+	// 		let frames = $('.frames').children().toArray();
+
+
+	// 		for(let i = 0; i < 5; i++){
+	// 			let current = frames[i].className.split("--").pop();
+
+	// 			if(current == 0){
+	// 				$(frames[i]).attr('class', 'frame frame--4');
+	// 				$(frames[i]).children().removeClass('visible');
+	// 			} else {
+	// 				$(frames[i]).attr('class', 'frame frame--' + (current-1));
+	// 			}
+
+	// 			// show the current one 
+	// 			if(current == 2){
+	// 				$(frames[i]).children().addClass('visible');
+	// 			}
+	// 		}
+
+	// 	}, 3000);
+	// }, 1000);
+
 	setTimeout(function(){
-
 		$('.dont-show').addClass('show');
-
-		setInterval(function(){
-			let frames = $('.frames').children().toArray();
-
-
-			for(let i = 0; i < 5; i++){
-				let current = frames[i].className.split("--").pop();
-
-				if(current == 0){
-					$(frames[i]).attr('class', 'frame frame--4');
-					$(frames[i]).children().removeClass('visible');
-				} else {
-					$(frames[i]).attr('class', 'frame frame--' + (current-1));
-				}
-
-				// show the current one 
-				if(current == 2){
-					$(frames[i]).children().addClass('visible');
-				}
-			}
-
-		}, 3000);
-	}, 1000);
+		setTimeout(function(){
+			$('.dont-show').removeClass('dont-show');
+			$('.show').removeClass('show');
+		}, 1000);
+	}, 200);
+	
 
 
 	$('.project').on('click', function(e){
 		$('.to-hide').addClass('hide');
 		let id = $(e.currentTarget).attr('id');
 		window.location = '/' + id;
+	});
+
+
+	$('.focus-area').on('click', function(e) {
+		let classname = 'focus-area--is-raised';
+		if($(this).hasClass(classname)) {
+			$(this).removeClass(classname);
+		} else {
+			$(this).addClass(classname);
+		}
 	});
 
 });

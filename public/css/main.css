@@ -1,26 +1,51 @@
+@font-face {
+  font-family: 'Souvenir';
+  src: url("/fonts/Souvenir-Demi.otf");
+  font-weight: 500; }
+
+html, body {
+  background: #FFF6EA; }
+
 body {
-  font-family: 'Hoefler Text', sans-serif;
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 500;
+  font-style: normal;
   font-size: 1.6rem;
   line-height: 2.4rem;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.2px; }
+
+h3 {
+  font-family: "Souvenir", serif;
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0; }
 
 html {
   font-size: 10px;
-  color: #111111; }
+  color: #171717; }
 
-.container {
+.max-width {
   max-width: 1300px; }
 
 a {
-  transition: all 200ms ease-in-out;
-  text-decoration: none;
-  color: #C0C0C0; }
+  color: #171717;
+  border-bottom: 1px dashed #171717;
+  padding-bottom: 2px;
+  text-decoration: none; }
   a:hover {
-    color: #111111;
-    text-decoration: underline; }
+    color: #FFF6EA;
+    border-bottom: 1px dashed transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #171717; }
 
 .to-hide {
   opacity: 1;
   transition: all 300ms ease-out; }
   .to-hide.hide {
     opacity: 0; }
+
+select {
+  margin-bottom: 0;
+  padding: 0;
+  height: 1.5em; }
