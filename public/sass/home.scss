@@ -25,18 +25,117 @@ $frame-duration: 450ms;
 	justify-content: space-between;
 
 	&__content {
+		height: 100%;
+
+		@mixin focus-area-column {
+			height: 100%;
+		    padding-bottom: 8rem;
+		    display: flex;
+		    justify-content: space-between;
+		    flex-direction: column;
+		}
+
 		&-center {
-			&-welcome {
-				display: flex;
-				justify-content: center;
-				text-align: center;
-				flex-direction: column;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			flex-direction: column;
+			padding-bottom: 8rem;
+
+			.center {
+				position: relative;
+
+				&__welcome {
+					transition: all 300ms ease-in-out;
+					opacity: 1;
+					position: absolute;
+				}
+
+				&__project {
+					position: absolute;
+					transition: all 300ms ease-in-out;
+					opacity: 1;
+					position: relative;
+
+					&--is-orange {
+						.center__project-arrow {
+							height: 20px;
+
+							svg g g {
+								fill: $orange;
+							}
+						}
+					}
+
+					&-arrow {
+						position: absolute;
+						top: 50%;
+						right: 0;
+						transform: translate(-16px, -50%);
+						transition: all 200ms ease-in-out;
+					}
+
+					ul {
+						list-style: none;
+						text-align: left;
+						width: 100%;
+						padding-left: 2.4rem;
+						padding-right: 2.4rem;
+
+						li {
+							position: relative;
+							border-bottom: 1px solid rgba(0,0,0,0.2);
+
+							a {
+								display: block;
+								width: 100%;
+								height: 100%;
+								padding-top: 2.4rem;
+								padding-bottom: 2.4rem;
+								border: none;
+							}
+
+							// override base anchor styling
+							a:hover {
+								-webkit-text-stroke-width: 0;
+								color: $off-black;
+								border: none;
+							}
+
+							b {
+								letter-spacing: 0.5px;
+							}
+
+							&:last-child {
+								border-bottom: 1px solid rgba(0,0,0,0);
+							}
+
+							&:hover {
+								cursor: pointer;
+
+								.center__project-arrow {
+									transform: translate(0, -50%);
+								}
+							}
+						}
+					}
+				}
+
+				&--is-hidden {
+					opacity: 0;
+					pointer-events: none;
+				}
 			}
 		}
-	}
 
-	&__center {
-		
+		&-left {
+			@include focus-area-column;
+		}
+
+		&-right {
+			@include focus-area-column;
+		}
 	}
 
 	&__footer {
@@ -47,34 +146,42 @@ $frame-duration: 450ms;
 		&-toggle {
 			.select-wrapper {
 				position: relative;
-				width: 8.8rem;
+				display: flex;
+				align-items: center;
 
-				&::before {
-					display: inline-block;
-					content: '';
-					background-image: url('/img/svgs/icon-arrow.svg');
-					background-repeat: no-repeat;
-					background-position: center;
-					width: 16px;
-					height: 16px;
-					position: absolute;
-					right: 0;
-					top: 10px;
-					pointer-events: none;
+				&__arrow {
+					margin-right: 1rem;
+					transition: all 200ms ease-in-out;
+					height: 20px;
+
+					svg g g {
+						fill: $beige;
+					}
+				}
+
+				select {
+					background: $beige;
+					cursor: pointer;
+					border: none;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+
+					// this aligns the tooltip text
+					padding-left: 1rem;
+					margin-left: -1rem;
+				}
+
+				&:hover {
+					cursor: pointer;
+
+					.select-wrapper__arrow {
+						transform: translateX(4px);
+					}
 				}
 			}
 			
-			select {
-				width: 10rem;
-				position: realative;
-				background: $beige;
-
-
-				border: none;
-				-webkit-appearance: none;
-				-moz-appearance: none;
-				appearance: none;
-			}
+			
 		}
 
 		&-icons {
@@ -82,6 +189,7 @@ $frame-duration: 450ms;
 			a {
 				margin-right: 1.6rem;
 				text-decoration: none;
+				border-bottom: none;
 
 				&:last-child {
 					margin-right: 0;
@@ -89,149 +197,17 @@ $frame-duration: 450ms;
 
 				&:hover {
 					svg g g {
-						fill: $off-black;
+						fill: $beige;
+						stroke: $off-black;
 					}
 				}
 			}
 
 			svg g g {
-				transition: all 200ms ease-in-out;
-				fill: $gray;
+				fill: $off-black;
 			}
 
 
-		}
-	}
-
-	&__middle {
-		position: relative;
-		flex: 1;
-
-		&-center {
-			transform: translateY(-50%);
-			top: 50%;
-			width: 100%;
-			position: absolute;
-		}
-
-		&-left {
-			display: flex;
-			justify-content: flex-end;
-			margin-right: 4rem;
-
-			.frames {
-				position: relative;
-				height: 382px;
-				width: 312px;
-
-				.frame {
-					border-radius: 1px;
-					position: absolute;
-					height: 348px;
-					width: 278px;
-
-					border: 1px solid $off-black;
-					background: #FFFFFF;
-
-					transition: all $frame-duration cubic-bezier(0.55, -0.01, 0.32, 1.21);
-
-					img {
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-					}
-
-					.not-visible {
-						opacity: 0;
-						transition: all $frame-duration ease-in-out;
-
-						&.visible {
-							opacity: 1;
-						}
-					}
-
-					&--4 {
-						opacity: 0;
-						transform: translate($frame-pad * 3, $frame-pad * 3);
-						transition-delay: $frame-delay * 4;
-						z-index: 1;
-					}
-
-					&--3 {
-						opacity: 1;
-						transform: translate($frame-pad * 2, $frame-pad * 2);
-						transition-delay: $frame-delay * 3;
-						z-index: 10;
-
-						&.frame--is-hidden {
-							opacity: 0;
-							transform: translate($frame-pad * 3, $frame-pad * 3);
-						}
-					}
-
-					&--2 {
-						opacity: 1;
-						transform: translate($frame-pad, $frame-pad);
-						transition-delay: $frame-delay * 2;
-						z-index: 100;
-
-						&.frame--is-hidden {
-							opacity: 0;
-							transform: translate($frame-pad * 2, $frame-pad * 2);
-						}
-					}
-					
-					&--1 {
-						opacity: 1;
-						transform: translate(0);
-						transition-delay: $frame-delay;
-						z-index: 1000;
-
-						&.frame--is-hidden {
-							opacity: 0;
-							transform: translate($frame-pad, $frame-pad);
-						}
-					}
-					
-					&--0 {
-						opacity: 0;
-						transform: translate(-$frame-pad, -$frame-pad);
-						transition-delay: 0ms;
-						z-index: 10000;
-					}
-
-					
-				}
-			}
-		}
-
-		&-right {
-			margin-left: 0;
-
-			.copy {
-				margin-top: 8rem;
-			}
-		}
-	}
-
-	&__bottom {
-		color: $gray;
-		width: 100%;
-		text-align: center;
-		transition: all 300ms ease-in-out;
-
-
-		&:hover {
-			cursor: pointer;
-			color: $off-black;
-
-			.arrow--is-down{
-				transform: translateY(2px);
-
-				svg g g {
-					fill: $off-black;
-				}
-			}
 		}
 	}
 }
@@ -264,15 +240,15 @@ $frame-duration: 450ms;
 	&.dont-show {
 		.focus-area__topper {
 			opacity: 0;
-			transform: translate(32px, 32px);
-			transition-duration: 400ms;
+			// transform: translate(24px, 24px);
+			transition-duration: 350ms;
 		}
 
 		.focus-area__shadow {
 			opacity: 0;
-			transform: translate(32px, 32px);
-			transition-delay: 200ms;
-			transition-duration: 400ms;
+			// transform: translate(32px, 32px);
+			// transition-delay: 0ms;
+			// transition-duration: 400ms;
 		}
 
 		.focus-area__close {
@@ -281,7 +257,7 @@ $frame-duration: 450ms;
 
 		.focus-area__arrow {
 			opacity: 0;
-			transform: translate(-40px, -50%);
+			// transform: translate(-40px, -50%);
 			// transition: all 300ms cubic-bezier(0.55, -0.01, 0.32, 1.21);
 			// transition-delay: 75ms;
 		}
@@ -295,12 +271,36 @@ $frame-duration: 450ms;
 
 		.focus-area__shadow {
 			transform: translate(0, 0);
-			opacity: 1;
+			// opacity: 1;
 		}
 
 		.focus-area__arrow {
+			transition: all 350ms ease-in-out;
+			transform: translate(40px, -50%);
 			// opacity: 1;
 			// transform: translate(-32px, -50%);
+		}
+	}
+
+	&.pre-pop {
+		.focus-area__topper {
+			transition: all 300ms ease-in-out;
+		}
+
+		.focus-area__arrow {
+			// transition: all 250ms ease-in-out;
+			transition: all 300ms cubic-bezier(0.55, -0.01, 0.32, 1.21);
+			transition-delay: 100ms;
+		}
+	}
+
+	&.pop-out {
+		.focus-area__topper {
+			transform: translate(-10px, -10px);
+		}
+
+		.focus-area__arrow {
+			transform: translate(-32px, -50%);
 		}
 	}
 
@@ -326,7 +326,7 @@ $frame-duration: 450ms;
 			}
 
 			.focus-area__arrow {
-				transform: translate(50%, -50%);
+				transform: translate(40px, -50%);
 			}
 
 			.focus-area__close {
@@ -339,7 +339,7 @@ $frame-duration: 450ms;
 		}
 
 		.focus-area__arrow {
-			transform: translate(50%, -50%);
+			transform: translate(40px, -50%);
 		}
 
 		.focus-area__close {
@@ -365,6 +365,7 @@ $frame-duration: 450ms;
 	&__arrow {
 		position: absolute;
 		height: 20px;
+		opacity: 1;
 		z-index: 5;
 		top: 50%;
 		transform: translate(-32px, -50%);
@@ -397,10 +398,49 @@ $frame-duration: 450ms;
 		opacity: 1;
 	}
 
-	&.red {
+	@mixin focus-area-color($color){
 		.focus-area__shadow {
-			background: $red;
+			background: $color;
 		}
+
+		.focus-area__arrow {
+			svg g g {
+				fill: $color;
+			}
+		}
+	}
+
+	&--is-red {
+		@include focus-area-color($red);
+	}
+
+	&--is-blue {
+		@include focus-area-color($blue);
+	}
+
+	&--is-purple {
+		@include focus-area-color($purple);
+	}
+
+	&--is-orange {
+		@include focus-area-color($orange);
+	}
+
+	&--is-1 {
+
+	}
+
+	&--is-2 {
+		margin-top: 4rem;
+	}
+
+	&--is-3 {
+		align-self: flex-end;
+	}
+
+	&--is-4 {
+		align-self: flex-end;
+		margin-bottom: 8rem;
 	}
 }
 

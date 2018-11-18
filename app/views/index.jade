@@ -25,22 +25,22 @@ block content
 
 
 			.hero__content.row
-				.hero__content-left-side.four.columns
-					|left
-					.focus-area.red.dont-show
-						.focus-area__topper Designing digital products
-						.focus-area__arrow
-							include svgs/icon-arrow.svg
-						.focus-area__close
-							include svgs/icon-close.svg
-						.focus-area__shadow
+				.hero__content-left.four.columns
+					.focus-area--is-red.focus-area--is-2#fa-designing
+						include focus-area/designing
+					.focus-area--is-blue.focus-area--is-3#fa-community
+						include focus-area/community
 				.hero__content-center.four.columns
-					|center
-					.hero__content-center-welcome
+					.center__welcome.dont-show#welcome
 						h3 Welcome!
 						p This is my lil corner of the<br>net, happy explorin'
-				.hero__content-right-side.four.columns
-					|right
+					include center-project/sharing
+
+				.hero__content-right.four.columns
+					.focus-area--is-purple.focus-area--is-1#fa-artifacts
+						include focus-area/artifacts
+					.focus-area--is-orange.focus-area--is-4#fa-sharing
+						include focus-area/sharing
 
 
 			
@@ -49,11 +49,13 @@ block content
 			.hero__footer
 				.hero__footer-toggle.mobile-hide
 					.select-wrapper
-						select
-							option(value=0) v4.2018
-							option(value=1) v3.2017
+						.select-wrapper__arrow
+							include svgs/icon-arrow.svg
+						select#port-version
+							option(value=1) v1.2014
 							option(value=2) v2.2016
-							option(value=3) v1.2014
+							option(value=3) v3.2017
+							option(value=4 selected='selected') v4.2018
 
 				.hero__footer-description
 					|Design at <a href='/plaid'>Plaid</a> ~ Art and community at <a href='/teal'>Teal Process</a>

@@ -47,8 +47,9 @@ html {
 a {
 	color: $off-black;
 	// transition: color 200ms ease-in-out;
-	border-bottom: 1px dashed $off-black;
-	padding-bottom: 2px;
+	// border-bottom: 1px dashed $off-black;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	padding-bottom: 1.5px;
 	text-decoration: none;
 
 	&:hover {
