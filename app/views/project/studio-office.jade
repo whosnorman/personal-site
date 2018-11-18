@@ -1,0 +1,31 @@
+extends ../layout
+
+block localcss
+	link(rel='stylesheet' type='text/css' href='css/project.css')
+block localscripts
+	script(src='js/project.js')
+block content
+	.body-container
+		.header#design
+			.row
+				.ten.columns
+				.hide-left
+					.back
+						.triangle
+						| Home
+				.title.hide-left 
+					block title
+					|hello
+				.meta
+					.type.hide-left
+						block type
+						block year
+					block experience 
+		.container#design
+			.quote.dont-show
+				block quote
+			.base-info.row.dont-show
+				block base-info
+
+		.container.dont-show#design
+			block main

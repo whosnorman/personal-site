@@ -11,12 +11,6 @@ $frame-pad: 1.6rem;
 $frame-delay: 150ms;
 $frame-duration: 450ms;
 
-.homepage {
-	width: calc(100% - 16rem);
-	padding-top: 8rem;
-	padding-bottom: 8rem;
-	margin: 0 auto;
-}
 
 .hero {
 	height: calc(100vh - 16rem);
@@ -41,6 +35,7 @@ $frame-duration: 450ms;
 			justify-content: center;
 			text-align: center;
 			flex-direction: column;
+			position: relative;
 			padding-bottom: 8rem;
 
 			.center {
@@ -48,15 +43,24 @@ $frame-duration: 450ms;
 
 				&__welcome {
 					transition: all 300ms ease-in-out;
+					transition-delay: 250ms;
 					opacity: 1;
+					transform: translateX(0);
+				}
+
+				&__projects-container {
 					position: absolute;
+					width: 100%;
+					height: 100%;
+					display: flex;
+					align-items: center;
 				}
 
 				&__project {
 					position: absolute;
 					transition: all 300ms ease-in-out;
 					opacity: 1;
-					position: relative;
+					width: 100%;
 
 					&--is-orange {
 						.center__project-arrow {
@@ -82,17 +86,33 @@ $frame-duration: 450ms;
 						width: 100%;
 						padding-left: 2.4rem;
 						padding-right: 2.4rem;
+						margin: 0;
 
 						li {
 							position: relative;
 							border-bottom: 1px solid rgba(0,0,0,0.2);
+							opacity: 1;
+							transform: translateX(0);
+							transition: all 250ms ease-in-out;
+
+							&:nth-child(1) {
+								transition-delay: 0ms;
+							}
+
+							&:nth-child(2) {
+								transition-delay: 100ms;								
+							}
+
+							&:nth-child(3) {
+								transition-delay: 200ms;								
+							}
 
 							a {
 								display: block;
 								width: 100%;
 								height: 100%;
-								padding-top: 2.4rem;
-								padding-bottom: 2.4rem;
+								padding-top: 4rem;
+								padding-bottom: 4rem;
 								border: none;
 							}
 
@@ -125,6 +145,18 @@ $frame-duration: 450ms;
 				&--is-hidden {
 					opacity: 0;
 					pointer-events: none;
+
+					&.center__welcome {
+						transition-delay: 0ms;
+						transform: translate(16px);
+					}
+
+					ul {
+						li {
+							opacity: 0;
+							transform: translateX(-16px);
+						}
+					}
 				}
 			}
 		}
@@ -238,10 +270,12 @@ $frame-duration: 450ms;
 	position: relative;
 
 	&.dont-show {
+		transition-duration: 400ms;
+
 		.focus-area__topper {
 			opacity: 0;
 			// transform: translate(24px, 24px);
-			transition-duration: 350ms;
+			transition-duration: 400ms;
 		}
 
 		.focus-area__shadow {
@@ -282,17 +316,18 @@ $frame-duration: 450ms;
 		}
 	}
 
-	&.pre-pop {
-		.focus-area__topper {
-			transition: all 300ms ease-in-out;
-		}
+	// &.pre-pop {
+	// 	.focus-area__topper {
+	// 		transition: all 300ms ease-in-out;
+	// 		transition-delay: 0ms;
+	// 	}
 
-		.focus-area__arrow {
-			// transition: all 250ms ease-in-out;
-			transition: all 300ms cubic-bezier(0.55, -0.01, 0.32, 1.21);
-			transition-delay: 100ms;
-		}
-	}
+	// 	.focus-area__arrow {
+	// 		// transition: all 250ms ease-in-out;
+	// 		// transition: all 300ms cubic-bezier(0.55, -0.01, 0.32, 1.21);
+	// 		transition-delay: 100ms;
+	// 	}
+	// }
 
 	&.pop-out {
 		.focus-area__topper {
@@ -301,6 +336,7 @@ $frame-duration: 450ms;
 
 		.focus-area__arrow {
 			transform: translate(-32px, -50%);
+			transition-delay: 100ms;
 		}
 	}
 
@@ -427,20 +463,39 @@ $frame-duration: 450ms;
 	}
 
 	&--is-1 {
+		.dont-show {
+			transition-delay: 400ms;
+		}
 
+		.pre-pop {
+			transition-delay: 0ms;
+		}
 	}
 
 	&--is-2 {
-		margin-top: 4rem;
+		margin-top: 25%;
+
+		.dont-show {
+			transition-delay: 600ms;
+		}
 	}
 
 	&--is-3 {
 		align-self: flex-end;
+		margin-bottom: 30%;
+
+		.dont-show {
+			transition-delay: 800ms;
+		}
 	}
 
 	&--is-4 {
 		align-self: flex-end;
-		margin-bottom: 8rem;
+		margin-bottom: 10%;
+
+		.dont-show {
+			transition-delay: 1000ms;
+		}
 	}
 }
 
@@ -448,21 +503,113 @@ $frame-duration: 450ms;
 	display: none;
 }
 
-@media all and (max-width: 399px) {
+@media all and (max-width: 799px) {
+
+	.focus-area {
+		&--is-1 {
+			margin: 0;
+			align-self: center;
+		}
+
+		&--is-2 {
+			margin: 0;
+			align-self: center;
+		}
+
+		&--is-3 {
+			align-self: center;
+			margin: 0;
+		}
+
+		&--is-4 {
+			align-self: center;
+			margin: 0;
+		}
+
+		margin-top: 1.6rem;
+		margin-bottom: 1.6rem;
+	}
+
 	.hero {
-		padding-top: 2.4rem;
-		padding-bottom: 2.4rem;
+		padding: 0;
+		height: auto;
 
-		&__middle {
-			margin-top: 8rem;
+		&__footer-description {
+			margin-top: 4rem;
+			text-align: center;
+			width: 100%;
+		}
 
-			&-right {
-				.copy {
-					margin-top: 4rem;
+		&__content {
+			&-center {
+				padding-bottom: 2.4rem;
+				position: relative;
+				flex-direction: column;
+
+				p {
+					margin-bottom: 0;
+				}
+			}
+
+			.center {
+				&__welcome {
+					margin-top: 8rem;
+				}
+
+				&__projects-container {
+					position: relative;
+					width: 100%;
+					flex-direction: column;
+					max-height: 0;
+					transition: all 350ms ease-in-out;
+					overflow: hidden;
+
+					&.show-projects {
+						max-height: 500px;
+					}
+				}
+
+				&__project {
+					position: relative;
+					width: 275px;
+
+					&.center--is-hidden {
+						li {
+							opacity: 0;
+							transform: translateX(-16px);
+						}
+
+						pointer-events: auto;
+					}
+
+					ul {
+						margin-bottom: 4rem;
+						padding: 0;
+
+						li {
+							opacity: 1;
+							transform: translateX(0);
+							transition: all 300ms ease-in-out;
+
+							&:nth-child(1) {
+								transition-delay: 0ms;
+							}
+
+							&:nth-child(2) {
+								transition-delay: 100ms;								
+							}
+
+							&:nth-child(3) {
+								transition-delay: 200ms;								
+							}
+						}
+					}
 				}
 			}
 		}
 	}
+
+	
 
 	.mobile-hide {
 		display: none;
@@ -478,9 +625,9 @@ $frame-duration: 450ms;
 
 
 
-.dont-show {
+.dont-show, .show-last {
 	opacity: 0;
-	transition: all 300ms ease-out;
+	transition: all 350ms ease-out;
 
 	&.show {
 		opacity: 1;

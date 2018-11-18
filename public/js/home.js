@@ -34,26 +34,31 @@ $(document).ready(function(){
 	// 	}, 3000);
 	// }, 1000);
 
+	// show initial elements 
 	setTimeout(function(){
 		$('.dont-show').addClass('show');
+
+		// remove classes for initial entrace, including focus areas 
 		setTimeout(function(){
 			$('.dont-show').removeClass('dont-show');
-			$('.focus-area').addClass('pre-pop');
+			$('.focus-area').addClass('pop-out');
 			$('.show').removeClass('show');
 
-			$('.focus-area').addClass('pop-out');
+			// remove pop out for focus areas
 			setTimeout(function(){
 				$('.pop-out').removeClass('pop-out');
-				$('.pre-pop').removeClass('pre-pop');
-			}, 450);
+				// $('.pre-pop').removeClass('pre-pop');
+				$('.show-last').addClass('show');
+			}, 500);
 		}, 1000);
-	}, 100);
+	}, 50);
 
 
-	$('.project').on('click', function(e){
+	$('li a').on('click', function(e){
+		e.preventDefault();
 		$('.to-hide').addClass('hide');
-		let id = $(e.currentTarget).attr('id');
-		window.location = '/' + id;
+		let page = $(e.currentTarget).attr('href');
+		window.location = page;
 	});
 
 
@@ -70,19 +75,22 @@ $(document).ready(function(){
 
 		$('#welcome').toggleClass('center--is-hidden');
 		setTimeout(function(){
-			$('#'+id).toggleClass('center--is-hidden');
+			$('#desktop-'+id).find('.center__project').toggleClass('center--is-hidden');
+			$('#mobile-'+id).toggleClass('show-projects');
+			$('#mobile-'+id).find('.center__project').toggleClass('center--is-hidden');
 		}, 100);
 	});
 
 });
 
 function setVersionToggle(){
-	document.getElementById('port-version').value = '4';
-	$('#port-version').change(function(){
+	$('select').val('4');
+	$('select').change(function(e){
 		let value = parseInt(this.value);
+		console.log(value);
 		switch(value){
-			case 0: break;
-			case 1: 
+			case 4: break;
+			case 3: 
 				$('.to-hide').addClass('hide');
 				window.location = '/3';
 				break;
@@ -90,7 +98,7 @@ function setVersionToggle(){
 				$('.to-hide').addClass('hide');
 				window.location = '/2';
 				break;
-			case 3:
+			case 1:
 				$('.to-hide').addClass('hide');
 				window.location = '/1';
 				break;

@@ -1,11 +1,12 @@
 $(document).ready(function(){
 	setFavicon();
-	// get project id & set localStorage to seen 
 
-	$('.back').click(function(){
+	$('.back').click(function(e){
+		e.preventDefault();
+
 		$('.to-hide').addClass('hide');
-		let section = $('.header').attr('id');
-		window.location = '/#' + section;
+		
+		window.location = '/?back=true';
 	});
 
 	setTimeout(function(){
@@ -18,7 +19,7 @@ $(document).ready(function(){
 				drawQuoteMarks();
 			}, 250);
 		}, 300);
-	}, 400);
+	}, 50);
 	
 });
 

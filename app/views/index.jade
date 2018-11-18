@@ -5,66 +5,66 @@ block localcss
 block localscripts
 	script(src='js/home.js')
 block content
-	.homepage
+	.body-container
 		.hero
-			//- .mobile-show
-			//- 	.hero__footer.dont-show
-			//- 		.hero__footer-toggle
-			//- 			.select-wrapper
-			//- 				select
-			//- 					option(value=0) v4.2018
-			//- 					option(value=1) v3.2017
-			//- 					option(value=2) v2.2016
-			//- 					option(value=3) v1.2014
-							
-			//- 		.hero__footer-icons
-			//- 			a(href='https://www.are.na/matt-o-hagan' target='_blank' rel='noopener noreferrer')
-			//- 				include svgs/arena-logo.svg
-			//- 			a(href='https://www.instagram.com/mattohagan/' target='_blank' rel='noopener noreferrer')
-			//- 				include svgs/ig-logo.svg
+			.mobile-show
+				.hero__footer.show-last
+					include home/version-toggle
+					include home/social-icons
 
-
-			.hero__content.row
+			.hero__content.row.mobile-hide
 				.hero__content-left.four.columns
 					.focus-area--is-red.focus-area--is-2#fa-designing
 						include focus-area/designing
-					.focus-area--is-blue.focus-area--is-3#fa-community
+					.focus-area--is-blue.focus-area--is-4#fa-community
 						include focus-area/community
 				.hero__content-center.four.columns
-					.center__welcome.dont-show#welcome
-						h3 Welcome!
-						p This is my lil corner of the<br>net, happy explorin'
-					include center-project/sharing
-
+					.dont-show
+						.center__welcome#welcome
+							h3 Welcome!
+							p This is my lil corner of the<br>net, happy explorin'
+					.center__projects-container#desktop-sharing
+						include center-project/sharing
 				.hero__content-right.four.columns
 					.focus-area--is-purple.focus-area--is-1#fa-artifacts
 						include focus-area/artifacts
-					.focus-area--is-orange.focus-area--is-4#fa-sharing
+					.focus-area--is-orange.focus-area--is-3#fa-sharing
 						include focus-area/sharing
+
+			.mobile-show
+				.hero__content.row
+					.hero__content-center.twelve.columns
+						.dont-show
+							.center__welcome
+								h3 Welcome!
+								p This is my lil corner of the<br>net, happy explorin'
+				.hero__content.row
+					.hero__content-center.twelve.columns
+						.focus-area--is-purple.focus-area--is-1#fa-artifacts
+							include focus-area/artifacts
+						.focus-area--is-red.focus-area--is-2#fa-designing
+							include focus-area/designing
+						.focus-area--is-orange.focus-area--is-3#fa-sharing
+							include focus-area/sharing
+						.center__projects-container#mobile-sharing
+							include center-project/sharing
+						.focus-area--is-blue.focus-area--is-4#fa-community
+							include focus-area/community
 
 
 			
-							
-
-			.hero__footer
-				.hero__footer-toggle.mobile-hide
-					.select-wrapper
-						.select-wrapper__arrow
-							include svgs/icon-arrow.svg
-						select#port-version
-							option(value=1) v1.2014
-							option(value=2) v2.2016
-							option(value=3) v3.2017
-							option(value=4 selected='selected') v4.2018
+			.hero__footer.show-last
+				.mobile-hide
+					include home/version-toggle
 
 				.hero__footer-description
-					|Design at <a href='/plaid'>Plaid</a> ~ Art and community at <a href='/teal'>Teal Process</a>
-						
-				.hero__footer-icons.mobile-hide
-					a(href='https://www.are.na/matt-o-hagan' target='_blank' rel='noopener noreferrer')
-						include svgs/arena-logo.svg
-					a(href='https://www.instagram.com/mattohagan/' target='_blank' rel='noopener noreferrer')
-						include svgs/ig-logo.svg
+					.mobile-hide
+						|Design at <a href='/plaid'>Plaid</a> ~ Art and community at <a href='/teal'>Teal Process</a>
+					.mobile-show
+						|Design at <a href='/plaid'>Plaid</a><br>~<br> Art and community<br>at <a href='/teal'>Teal Process</a>
+
+				.mobile-hide
+					include home/social-icons
 
 
 						

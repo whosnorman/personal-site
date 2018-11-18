@@ -28,6 +28,12 @@ html {
 .max-width {
   max-width: 1300px; }
 
+.body-container {
+  width: calc(100% - 16rem);
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  margin: 0 auto; }
+
 a {
   color: #171717;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -49,3 +55,9 @@ select {
   margin-bottom: 0;
   padding: 0;
   height: 1.5em; }
+
+@media all and (max-width: 799px) {
+  .body-container {
+    width: calc(100% - 4.8rem);
+    padding-top: 2.4rem;
+    padding-bottom: 8rem; } }
