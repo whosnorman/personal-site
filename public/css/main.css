@@ -3,8 +3,24 @@
   src: url("/fonts/Souvenir-Demi.otf");
   font-weight: 500; }
 
+@font-face {
+  font-family: 'Souvenir';
+  src: url("/fonts/Souvenir-Bold.otf");
+  font-weight: 600; }
+
+::selection {
+  background: #FFAE4A;
+  /* WebKit/Blink Browsers */ }
+
+::-moz-selection {
+  background: #FFAE4A;
+  /* Gecko Browsers */ }
+
 html, body {
   background: #FFF6EA; }
+
+img {
+  max-width: 100%; }
 
 body {
   font-family: itc-avant-garde-gothic-pro, sans-serif;
@@ -13,6 +29,13 @@ body {
   font-size: 1.6rem;
   line-height: 2.4rem;
   letter-spacing: 0.2px; }
+
+h1 {
+  font-family: "Souvenir", serif;
+  font-size: 5.2rem;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  line-height: 1.2; }
 
 h3 {
   font-family: "Souvenir", serif;

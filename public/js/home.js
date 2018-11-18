@@ -49,7 +49,7 @@ $(document).ready(function(){
 				$('.pop-out').removeClass('pop-out');
 				// $('.pre-pop').removeClass('pre-pop');
 				$('.show-last').addClass('show');
-			}, 500);
+			}, 400);
 		}, 1000);
 	}, 50);
 
@@ -57,8 +57,10 @@ $(document).ready(function(){
 	$('li a').on('click', function(e){
 		e.preventDefault();
 		$('.to-hide').addClass('hide');
-		let page = $(e.currentTarget).attr('href');
-		window.location = page;
+		setTimeout(function(){
+			let page = $(e.currentTarget).attr('href');
+			window.location = page;
+		}, 300);
 	});
 
 

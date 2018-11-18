@@ -258,12 +258,14 @@
   .focus-area--is-1 .pre-pop {
     transition-delay: 0ms; }
   .focus-area--is-2 {
-    margin-top: 25%; }
+    margin-top: 25%;
+    margin-left: 10%; }
     .focus-area--is-2 .dont-show {
       transition-delay: 600ms; }
   .focus-area--is-3 {
     align-self: flex-end;
-    margin-bottom: 30%; }
+    margin-bottom: 30%;
+    margin-right: 10%; }
     .focus-area--is-3 .dont-show {
       transition-delay: 800ms; }
   .focus-area--is-4 {

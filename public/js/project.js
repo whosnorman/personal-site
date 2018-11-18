@@ -1,12 +1,12 @@
 $(document).ready(function(){
 	setFavicon();
 
-	$('.back').click(function(e){
+	$('.header__back').click(function(e){
 		e.preventDefault();
-
 		$('.to-hide').addClass('hide');
-		
-		window.location = '/?back=true';
+		setTimeout(function(){
+			window.location = '/?back=true';
+		}, 300);
 	});
 
 	setTimeout(function(){

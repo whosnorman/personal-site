@@ -1,436 +1,231 @@
-$red: #F23D60;
-$purple: #564787;
-$blue: #37A3F4;
+$off-black: #171717;
+$gray: #C0C0C0;
 
-
-.container {
-	max-width: 1000px;
-}
-
-.dont-show {
-	opacity: 0;
-	-webkit-transform: translate(0, -20px);
-	transform: translate(0, -20px);
-	transition: all 450ms ease-out;
-
-	&.show {
-		-webkit-transform: translate(0, 0);
-		transform: translate(0, 0);
-		opacity: 1;
-	}
-}
-
-.illos {
-	img {
-		width: 100%;
-		margin-top: 10rem;
-	}
-}
-
-.to-hide {
-	opacity: 1;
-	transition: all 300ms ease-out;
-
-	&.hide {
-		opacity: 0;
-	}
-}
-
-#dev {
-	.quote span::before {
-		background-color: rgba(86, 71, 135, 0.2);
-	}
-}
-
-#design {
-	.quote span::before {
-		background-color: rgba(242, 61, 96, 0.2);
-	}
-}
+$beige: #FFF6EA;
+$purple: #CDBCEB;
+$red: #FF6E6E;
+$blue: #8ACCFF;
+$orange: #FFAE4A;
 
 
 .header {
-	width: 100%;
-	height: 0;
-	
-	&.slide-down {
-		-webkit-animation: 750ms spring linear;
-		animation: 750ms spring linear;
-  		-webkit-animation-fill-mode: forwards;
-  		animation-fill-mode: forwards;
-	}
 
-	// testing out just easing the height
-	//
-	// opacity: 0;
-	// height: 37vh;
-	// transition: all 400ms ease-in;
+	position: relative;
 
-	// &.slide-down {
-	// 	opacity: 1;x
-	// }
-	
-	&#dev {
-		color: $purple;
-		background-color: rgba(86, 71, 135, 0.2);
-
-		.back .triangle {
-			border-right: 0.8rem solid $purple;
-		}
-
-		.meta .experience::after {
-			background-color: $purple;
-		}
-	}
-
-	&#design {
-		color: $red;
-		background-color: rgba(242, 61, 96, 0.2);
-
-		.back .triangle {
-			border-right: 0.8rem solid $red;
-		}
-
-		.meta .experience::after {
-			background-color: $red;
-		}
-	}
-
-
-	.hide-left {
-		-webkit-transform: translate(-40px, 0);
-		transform: translate(-40px, 0);
-		opacity: 0;
-		transition: all 300ms ease-out;
-
-		&.show {
-			-webkit-transform: translate(0, 0);
-			transform: translate(0, 0);
-			opacity: 1;
-		}
-
-		&.type {
-			transition-delay: 50ms;
-		}
-
-		&.back {
-			transition-delay: 50ms;
-		}
-	}
-
-	.title {
-		padding-top: 10rem;
-		font-family: 'League Spartan';
-		font-size: 8rem;
-	}
-
-	.meta {
+	&__back {
 		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		margin-top: -4rem;
+		flex-direction: row;
+		align-items: center;
+		width: 8rem;
+		margin-bottom: 5.2rem;
+		margin-left: 2rem;
 
-		.type {
-			font-size: 2rem;
-			line-height: 1rem;
-
-			span {
-				font-style: italic;
-				margin-left: 2rem;
-			}
-		}
-
-		.experience {
-			font-size: 2rem;
-			padding-right: 1.3rem;
-			position: relative;
-
-			ul {
-				margin: 0;
-				text-align: right;
-				list-style: none;
-				padding: 0;
-			}
-
-			li {
-				line-height: 1.8rem;
-				margin-top: 1.2rem;
-				-webkit-transform: translate(20px, 0);
-				transform: translate(20px, 0);
-				opacity: 0;
-				transition: all 300ms ease-out;
-				transition-delay: 50ms;
-			}
-
-			li:nth-child(1) {
-				transition-delay: 150ms;
-				margin-top: 0;
-			}
-
-			&.move-up li {
-				opacity: 1;
-				-webkit-transform: translate(0, 0);
-				transform: translate(0, 0);
-			}
-
-			&::after {
-				content: '';
-				position: absolute;
-				bottom: 0;
-				right: 0;
-				height: 0;
-				width: 0.4rem;
-				background-color: $purple;
-				transition: all 200ms ease-out;
-			}
-
-			&.move-up::after {
-				height: 100%;
-			}
-		}
-
-		.extra-margin {
-			margin-top: 3rem;
-		}
-
-		&.slim {
-			margin-top: 0rem;
-		}
-
-		
-	}
-	
-
-	.back {
-		padding-top: 3rem;
-		width: auto;
-		font-weight: 500;
-		font-size: 1.8rem;
-
-		.triangle {
-			width: 0;
-			height: 0;
-			float: left;
-			margin-top: 0.4rem;
-			margin-right: 1rem;
-
-			border-right: 0.8rem solid $purple;
-			border-top: 0.8rem solid transparent;
-			border-bottom: 0.8rem solid transparent;
+		svg {
+			transform: rotate(180deg) translateX(0);
+			transition: all 200ms ease-in-out;
+			margin-right: 0.8rem;
+			height: 16px;
 		}
 
 		&:hover {
-			opacity: 0.6;
 			cursor: pointer;
+
+			svg {
+				transform: rotate(180deg) translateX(4px);
+			}
 		}
 	}
-}
 
-.quote {
-	padding-top: 12rem;
-	padding-bottom: 15rem;
-	font-size: 4rem;
-	font-weight: 500;
-	line-height: 6rem;
+	&__fa-tag {
+		height: 14rem;
+		width: 14rem;
+		border-radius: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		position: absolute;
+		right: 10rem;
+		top: 0;
+		transform: rotate(-16deg);
+		border: 1px solid $off-black;
+		background: $beige;
+		z-index: 10;
+	}
 
-	span {
-		width: 100%;
+	&__title {
 		position: relative;
 
-		&::before {
-			content: '';
-			z-index: -1;
+		&-topper {
+			transform: translate(-20px, -20px);
+			border-radius: 1px;
+			border: 1px solid $off-black;
+			background: $beige;
+			padding-top: 2.4rem;
+			padding-right: 4rem;
+			padding-bottom: 3.2rem;
+			padding-left: 4rem;
+			z-index: 5;
+			position: relative;
+
+			h1 {
+				margin-bottom: 0.8rem;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+
+		&-shadow {
+			border-radius: 1px;
+			border: 1px solid $off-black;
+			background: $orange;
 			position: absolute;
-			bottom: 1.5rem;
-			height: 2rem;
-			width: 0;
-			background-color: rgba(86, 71, 135, 0.2);
-			transition: all 300ms linear;
-		}
-
-		&.show::before {
-			width: 100%;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 0;
 		}
 	}
+
+	
 }
 
+.project {
 
-.base-info {
-	transition-delay: 250ms;
-
-	.sub-header {
-		font-weight: 800;
-		font-size: 1.8rem;
-	}
-
-	.text {
-		opacity: 0.5;
-		font-size: 2rem;
-		margin-bottom: 7rem;
-	}
-
-	img {
-		width: 100%;
-		height: auto;
-	}
-
-	.sub-text {
-		margin-top: 1rem;
-		opacity: 0.6;
-		font-size: 2rem;
-		/*
-		border-left: 0.4rem solid rgba(0,0,0, 0.5);
-		line-height: 2.2rem;
-		padding-left: 0.8rem;
-		*/
-	}
-}
-
-.section {
-	.heading {
-		font-family: 'League Spartan';
-		font-size: 5rem;
+	&-container {
+		width: 960px;
+		margin: 0 auto;
 		margin-top: 12rem;
 	}
 
-	.text {
-		opacity: 0.6;
-		font-size: 2rem;
-		line-height: 3.5rem;
+	&--is-orange {
+		.header__back svg g g {
+			fill: $orange;
+		}
+
+		&::selection {
+		  background: $orange;
+		}
+
+	}
+}
+
+.content {
+	margin-top: 4rem;
+	display: flex;
+	justify-content: center;
+	position: relative;
+
+	&__experience {
+		position: absolute;
+		margin-left: 2rem;
+		left: 0;
+	}
+
+	&__quote {
+		font-size: 4rem;
+		font-weight: 500;
+		line-height: 6rem;
 
 		span {
-			opacity: 1;
+			width: 100%;
+			position: relative;
+
+			&::before {
+				content: '';
+				z-index: -1;
+				position: absolute;
+				bottom: 1.5rem;
+				height: 2rem;
+				width: 0;
+				background-color: rgba(86, 71, 135, 0.2);
+				transition: all 300ms linear;
+			}
+
+			&.show::before {
+				width: 100%;
+			}
 		}
 	}
-
-	img {
-		width: 100%;
-		height: auto;
-		margin-top: 3rem;
-
-		&.half {
-			width: 50%;
-		}
-	}
 }
-
-.add-border {
-	border: 0.5rem solid rgba(0,0,0, 0.1);
-	margin-left: -0.5rem;
-}
-
-a {
-	opacity: 1;
-	color: #303030;
-	text-decoration: none;
-	border-bottom: 1px solid rgba(0,0,0,0.3);
-}
-
-#dev a:hover {
-	color: black;
-	border-color: $purple;
-	opacity: 1;
-	cursor: pointer;
-}
-
-#design a:hover {
-	color: black;
-	border-color: $red;
-	opacity: 1;
-	cursor: pointer;
-}
-
-
-.last-bit {
-	width: 100%;
-	height: 20vh;
-	margin-top: 12rem;
-	margin-bottom: -4rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-}
-
 
 .footer {
-	width: 100%;
-	height: 40vh;
-	margin-top: 5rem;
-	margin-bottom: 5rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	margin-bottom: 12rem;
 
-	.back {
-		padding: 1.2rem 2rem 1rem 2rem;
-		font-size: 2rem;
-		font-weight: 500;
-		border: 0;
-		border-radius: 5px;
+	&__project {
+		border-radius: 1px;
+		border: 1px solid $off-black;
+		background: $beige;
+		padding-bottom: 4rem;
+		padding-right: 4rem;
+		padding-top: 4rem;
+		padding-left: 4rem;
+		position: relative;
+		display: flex;
+		align-items: center;
 
-		.triangle {
-			width: 0;
-			height: 0;
-			float: left;
-			margin-top: 0.6rem;
-			margin-right: 1rem;
-
-			border-right: 0.8rem solid $purple;
-			border-top: 0.8rem solid transparent;
-			border-bottom: 0.8rem solid transparent;
-
-			transition: all 200ms ease-out;
+		svg {
+			height: 20px;
+			position: absolute;
+			right: 4rem;
+			transition: all 200ms ease-in-out;
 		}
 
-		&#dev:hover {
+		&-tag {
+			position: absolute;
+			top: -21px;
+			left: 50%;
+			transform: translateX(-50%);
+			border-radius: 1px;
+			border: 1px solid $off-black;
+			background: $beige;
+			padding-top: 0.8rem;
+		    padding-right: 1.6rem;
+			padding-bottom: 0.8rem;
+		    padding-left: 1.6rem;
+		    transition: all 200ms ease-in-out;
+
+			&--is-different {
+				border-top-right-radius: 24px;
+				border-bottom-left-radius: 24px;
+			}
+		}
+
+		&:hover {
 			cursor: pointer;
-			background-color: rgba(86, 71, 135, 0.1);
 
-			.triangle {
-				-webkit-transform: translate(-4px, 0);
-				transform: translate(-4px, 0);
+			svg {
+				transform: translate(0.8rem);
 			}
 		}
 
-		&#design:hover {
-			cursor: pointer;
-			background-color: rgba(242, 61, 96, 0.1);
+		@mixin focus-area-color($color){
+			&:hover {
+				.footer__project-tag {
+					background: $color;
+				}
+			}
 
-			.triangle {
-				-webkit-transform: translate(-4px, 0);
-				transform: translate(-4px, 0);
+			svg g g {
+				fill: $color;
 			}
 		}
 
-		&#dev {
-			color: $purple;
-			background-color: rgba(86, 71, 135, 0.2);
-
-			.triangle {
-				border-right: 0.8rem solid $purple;
-			}
+		&--is-red {
+			@include focus-area-color($red);
 		}
 
-		&#design {
-			color: $red;
-			background-color: rgba(242, 61, 96, 0.2);
-
-			.triangle {
-				border-right: 0.8rem solid $red;
-			}
+		&--is-orange {
+			@include focus-area-color($orange);
 		}
 	}
-
-
 }
 
 
-@media all and (max-width: 450px) {
-	html {
-		font-size: 8px;
-	}
-
+@media all and (max-width: 799px) {
 	.quote {
 		font-size: 2.8rem;
 		line-height: 4.5rem;
@@ -441,60 +236,4 @@ a {
 			bottom: 1rem;
 		}
 	}
-
-	.header {
-		.title {
-			font-size: 3.5rem;
-			padding-bottom: 3rem;
-			padding-top: 15rem;
-		}
-
-		.meta {
-			.type {
-				line-height: 1.8rem;
-
-				span {
-					margin-left: 1rem;
-				}
-			}
-
-			&.slim {
-				margin-top: -1rem;
-			}
-		}
-
-		.back .triangle {
-			margin-top: 0.5rem;
-		}
-
-	}
-
-	.section {
-		.heading {
-			line-height: 6.5rem;
-			margin-bottom: 1rem;
-		}
-	}
-
-
 }
-
-
-@media all and (max-width: 320px) {
-	html {
-		font-size: 7px;
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-

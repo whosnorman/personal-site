@@ -474,6 +474,7 @@ $frame-duration: 450ms;
 
 	&--is-2 {
 		margin-top: 25%;
+		margin-left: 10%;
 
 		.dont-show {
 			transition-delay: 600ms;
@@ -483,6 +484,7 @@ $frame-duration: 450ms;
 	&--is-3 {
 		align-self: flex-end;
 		margin-bottom: 30%;
+		margin-right: 10%;
 
 		.dont-show {
 			transition-delay: 800ms;

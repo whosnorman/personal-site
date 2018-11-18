@@ -5,27 +5,56 @@ block localcss
 block localscripts
 	script(src='js/project.js')
 block content
-	.body-container
-		.header#design
-			.row
-				.ten.columns
-				.hide-left
-					.back
-						.triangle
-						| Home
-				.title.hide-left 
-					block title
-					|hello
-				.meta
-					.type.hide-left
-						block type
-						block year
-					block experience 
-		.container#design
+	.project-container.project--is-orange
+		.row
+			.header.twelve.columns
+				.header__back
+					include ../svgs/icon-arrow.svg
+					|Home
+				.header__fa-tag
+					|Sharing<br>creative<br>space
+				.header__title
+					.header__title-topper
+						h1
+							//- block title
+							|Studio Office
+						p
+							|NYC Residency ~ 2018
+					.header__title-shadow
+
+		.row.content
+			.seven.columns
+				.content__experience
+					|Art and<br>Community
+				.content__quote
+					|a buncha text is about to go here
+				h4 Getting started
+				p After arriving in New York, we were able to secure a studio space in a couple of days. We moved in the next day, put together a couple vignettes of our adventure thus far, and let our friends know what we were up to.
+		.row.content
+			.twelve.columns
+				img(src='/3/img/hunt/hunt-onboardings.png')
+		.row.content
+			.seven.columns
+				p Here's some more text for ya goons
+		.row.footer
+			.footer__project.six.columns.footer__project--is-orange
+				.footer__project-tag.footer__project-tag--is-similar Similar
+				.footer__project-details
+					|<b>oh boy</b><br>this one's a good one
+				include ../svgs/icon-arrow.svg
+			.footer__project.six.columns.footer__project--is-red
+				.footer__project-tag.footer__project-tag--is-different Different
+				.footer__project-details
+					|<b>awhh snap</b><br>here's another project
+				include ../svgs/icon-arrow.svg
+
+
+
+
+
+		.container
 			.quote.dont-show
 				block quote
-			.base-info.row.dont-show
-				block base-info
 
 		.container.dont-show#design
 			block main
