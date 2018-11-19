@@ -29,6 +29,8 @@ $orange: #FFAE4A;
 
 html, body {
 	background: $beige;
+	position: relative;
+	z-index: -10;
 }
 
 img {

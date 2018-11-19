@@ -17,7 +17,9 @@
   /* Gecko Browsers */ }
 
 html, body {
-  background: #FFF6EA; }
+  background: #FFF6EA;
+  position: relative;
+  z-index: -10; }
 
 img {
   max-width: 100%; }

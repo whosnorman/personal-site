@@ -8,9 +8,10 @@ block content
 	.project-container.project--is-orange
 		.row
 			.header.twelve.columns
-				.header__back
-					include ../svgs/icon-arrow.svg
-					|Home
+				a(href='/')
+					.header__back
+						include ../svgs/icon-arrow.svg
+						|Home
 				.header__fa-tag
 					|Sharing<br>creative<br>space
 				.header__title
@@ -27,26 +28,28 @@ block content
 				.content__experience
 					|Art and<br>Community
 				.content__quote
-					|a buncha text is about to go here
-				h4 Getting started
+					|In January of 2018, two friends and I created our own #[span mini-residency] in New York City. Once settled, we invited friends and artists to make something with us.
 				p After arriving in New York, we were able to secure a studio space in a couple of days. We moved in the next day, put together a couple vignettes of our adventure thus far, and let our friends know what we were up to.
 		.row.content
 			.twelve.columns
 				img(src='/3/img/hunt/hunt-onboardings.png')
 		.row.content
 			.seven.columns
-				p Here's some more text for ya goons
+				h4 Getting started
+				p After arriving in New York, we were able to secure a studio space in a couple of days. We moved in the next day, put together a couple vignettes of our adventure thus far, and let our friends know what we were up to.
 		.row.footer
-			.footer__project.six.columns.footer__project--is-orange
-				.footer__project-tag.footer__project-tag--is-similar Similar
-				.footer__project-details
-					|<b>oh boy</b><br>this one's a good one
-				include ../svgs/icon-arrow.svg
-			.footer__project.six.columns.footer__project--is-red
-				.footer__project-tag.footer__project-tag--is-different Different
-				.footer__project-details
-					|<b>awhh snap</b><br>here's another project
-				include ../svgs/icon-arrow.svg
+			a(href='').six.columns
+				.footer__project#footer-similar-color
+					.footer__project-tag.footer__project-tag--is-similar Similar
+					.footer__project-details#footer-similar-details
+						|<b>oh snap</b><br>this one's a good one
+					include ../svgs/icon-arrow.svg
+			a(href='').six.columns
+				.footer__project#footer-diff-color
+					.footer__project-tag.footer__project-tag--is-different Different
+					.footer__project-details#footer-diff-details
+						|<b>awhh jeez</b><br>here's another project
+					include ../svgs/icon-arrow.svg
 
 
 
