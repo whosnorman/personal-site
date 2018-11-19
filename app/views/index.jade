@@ -23,6 +23,8 @@ block content
 						.center__welcome#welcome
 							h3 Welcome!
 							p This is my lil corner of the<br>net, happy explorin'
+					.center__projects-container.center--no-events#desktop-artifacts
+						include center-project/artifacts
 					.center__projects-container.center--no-events#desktop-sharing
 						include center-project/sharing
 					.center__projects-container.center--no-events#desktop-designing
@@ -44,6 +46,8 @@ block content
 					.hero__content-center.twelve.columns
 						.focus-area--is-purple.focus-area--is-1#fa-m-artifacts
 							include focus-area/artifacts
+						.center__projects-container#mobile-artifacts
+							include center-project/artifacts
 						.focus-area--is-red.focus-area--is-2#fa-m-designing
 							include focus-area/designing
 						.center__projects-container#mobile-designing
@@ -62,9 +66,9 @@ block content
 
 				.hero__footer-description
 					.mobile-hide
-						|Design at <a href='/plaid'>Plaid</a> ~ Art and community at <a href='/teal'>Teal Process</a>
+						|Designing for developers at <a href='https://plaid.com/' rel="noopener noreferrer" target="_blank">Plaid</a> ~ Art and community at <a href='/teal'>Teal Process</a>
 					.mobile-show
-						|Design at <a href='/plaid'>Plaid</a><br>~<br> Art and community<br>at <a href='/teal'>Teal Process</a>
+						|Designing for<br>developers at <a href='https://plaid.com/' rel="noopener noreferrer" target="_blank">Plaid</a><br>~<br> Art and community<br>at <a href='/teal'>Teal Process</a>
 
 				.mobile-hide
 					include home/social-icons

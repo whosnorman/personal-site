@@ -36,12 +36,6 @@ function setRelatedProjects(){
 
 	let associations = [
 		{
-			'name': 'Plaid',
-			'desc': 'Designing for developers',
-			'page': '/plaid',
-			'focus': 'designing'
-		},
-		{
 			'name': 'Hunt',
 			'desc': 'HackNY scavenger hunt',
 			'page': '/hunt',
@@ -58,23 +52,17 @@ function setRelatedProjects(){
 			'desc': 'One-month studio Residency',
 			'page': '/studio-office',
 			'focus': 'sharing'
-		},
-		{
-			'name': 'Shared context',
-			'desc': 'Tools on digital proximity',
-			'page': '/shared-context',
-			'focus': 'sharing'
 		}
 	];
 
 	let projects = {
 		'sharing': {
 			color: 'orange',
-			count: 2
+			count: 1
 		},
 		'designing': {
 			color: 'red',
-			count: 3
+			count: 2
 		}
 	};
 
