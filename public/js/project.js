@@ -38,6 +38,18 @@ function setRelatedProjects(){
 
 	let associations = [
 		{
+			'name': 'Teal Process & Company',
+			'desc': 'Art collective + creative research',
+			'page': '/teal',
+			'focus': 'artifacts'
+		},
+		{
+			'name': '29-09',
+			'desc': 'Exploring an online publication',
+			'page': '/29-09',
+			'focus': 'artifacts'
+		},
+		{
 			'name': 'Hunt',
 			'desc': 'HackNY scavenger hunt',
 			'page': '/hunt',
@@ -70,6 +82,10 @@ function setRelatedProjects(){
 		},
 		'designing': {
 			color: 'red',
+			count: 2
+		},
+		'artifacts': {
+			color: 'purple',
 			count: 2
 		}
 	};

@@ -23,6 +23,14 @@ module.exports = function(app){
 		res.render('project/temporal-canvas');
 	});
 
+	app.get('/29-09', function(req, res){
+		res.render('project/29-09');
+	});
+
+	app.get('/teal', function(req, res){
+		res.render('project/teal');
+	});
+
 	app.redirect('/resume',
 		"https://www.dropbox.com/s/8mt66kqr4t27tk4/Resume.pdf?dl=0"
 	);
