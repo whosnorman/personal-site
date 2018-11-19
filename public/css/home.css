@@ -32,16 +32,21 @@
           width: 100%;
           top: 50%;
           transform: translateY(-50%); }
-          .hero__content-center .center__project--is-orange .center__project-arrow {
-            height: 20px; }
-            .hero__content-center .center__project--is-orange .center__project-arrow svg g g {
-              fill: #FFAE4A; }
+          .hero__content-center .center__project--is-purple svg g g {
+            fill: #FFAE4A; }
+          .hero__content-center .center__project--is-red svg g g {
+            fill: #FF6E6E; }
+          .hero__content-center .center__project--is-orange svg g g {
+            fill: #FFAE4A; }
+          .hero__content-center .center__project--is-blue svg g g {
+            fill: #8ACCFF; }
           .hero__content-center .center__project-arrow {
             position: absolute;
             top: 50%;
             right: 0;
             transform: translate(-16px, -50%);
-            transition: all 200ms ease-in-out; }
+            transition: all 200ms ease-in-out;
+            height: 20px; }
           .hero__content-center .center__project ul {
             list-style: none;
             text-align: left;
@@ -66,9 +71,9 @@
                 height: 100%;
                 padding-top: 4rem;
                 padding-bottom: 4rem;
-                border: none; }
+                border: none;
+                text-decoration: none; }
               .hero__content-center .center__project ul li a:hover {
-                -webkit-text-stroke-width: 0;
                 color: #171717;
                 border: none; }
               .hero__content-center .center__project ul li b {
@@ -88,6 +93,8 @@
           .hero__content-center .center--is-hidden ul li {
             opacity: 0;
             transform: translateX(-16px); }
+        .hero__content-center .center--no-events {
+          pointer-events: none; }
     .hero__content-left {
       height: 100%;
       padding-bottom: 8rem;
@@ -104,6 +111,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
+    .hero__footer a {
+      color: #171717;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      padding-bottom: 1.5px;
+      text-decoration: none; }
+      .hero__footer a:hover {
+        color: #FFF6EA;
+        border-bottom: 1px dashed transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #171717; }
     .hero__footer-toggle .select-wrapper {
       position: relative;
       display: flex;

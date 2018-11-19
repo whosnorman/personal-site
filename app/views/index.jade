@@ -14,21 +14,23 @@ block content
 
 			.hero__content.row.mobile-hide
 				.hero__content-left.four.columns
-					.focus-area--is-red.focus-area--is-2#fa-designing
+					.focus-area--is-red.focus-area--is-2#fa-d-designing
 						include focus-area/designing
-					.focus-area--is-blue.focus-area--is-4#fa-community
+					.focus-area--is-blue.focus-area--is-4#fa-d-community
 						include focus-area/community
 				.hero__content-center.four.columns
 					.dont-show
 						.center__welcome#welcome
 							h3 Welcome!
 							p This is my lil corner of the<br>net, happy explorin'
-					.center__projects-container#desktop-sharing
+					.center__projects-container.center--no-events#desktop-sharing
 						include center-project/sharing
+					.center__projects-container.center--no-events#desktop-designing
+						include center-project/designing
 				.hero__content-right.four.columns
-					.focus-area--is-purple.focus-area--is-1#fa-artifacts
+					.focus-area--is-purple.focus-area--is-1#fa-d-artifacts
 						include focus-area/artifacts
-					.focus-area--is-orange.focus-area--is-3#fa-sharing
+					.focus-area--is-orange.focus-area--is-3#fa-d-sharing
 						include focus-area/sharing
 
 			.mobile-show
@@ -40,19 +42,20 @@ block content
 								p This is my lil corner of the<br>net, happy explorin'
 				.hero__content.row
 					.hero__content-center.twelve.columns
-						.focus-area--is-purple.focus-area--is-1#fa-artifacts
+						.focus-area--is-purple.focus-area--is-1#fa-m-artifacts
 							include focus-area/artifacts
-						.focus-area--is-red.focus-area--is-2#fa-designing
+						.focus-area--is-red.focus-area--is-2#fa-m-designing
 							include focus-area/designing
-						.focus-area--is-orange.focus-area--is-3#fa-sharing
+						.center__projects-container#mobile-designing
+							include center-project/designing
+						.focus-area--is-orange.focus-area--is-3#fa-m-sharing
 							include focus-area/sharing
 						.center__projects-container#mobile-sharing
 							include center-project/sharing
-						.focus-area--is-blue.focus-area--is-4#fa-community
+						.focus-area--is-blue.focus-area--is-4#fa-m-community
 							include focus-area/community
 
 
-			
 			.hero__footer.show-last
 				.mobile-hide
 					include home/version-toggle

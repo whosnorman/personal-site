@@ -11,6 +11,14 @@ module.exports = function(app){
 		res.render('project/studio-office');
 	});
 
+	app.get('/hunt', function(req, res){
+		res.render('project/hunt');
+	});
+
+	app.get('/illustrations', function(req, res){
+		res.render('project/illustrations');
+	});
+
 	app.redirect('/resume',
 		"https://www.dropbox.com/s/8mt66kqr4t27tk4/Resume.pdf?dl=0"
 	);

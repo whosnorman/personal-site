@@ -1,0 +1,30 @@
+extends ../layout
+
+block localcss
+	link(rel='stylesheet' type='text/css' href='css/project.css')
+block localscripts
+	script(src='js/project.js')
+block content
+	.project-container.project--is-orange
+		.row
+			.header.twelve.columns.dont-show-header
+				a(href='/')
+					.header__back
+						include ../svgs/icon-arrow.svg
+						|Home
+				.header__fa-tag
+					|Sharing<br>creative<br>space
+				.header__title
+					.header__title-topper
+						h1
+							block title
+						p
+							block description
+					.header__title-shadow
+
+		block project-content
+
+		include project-footer
+
+
+

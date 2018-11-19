@@ -1,55 +1,26 @@
-extends ../layout
+extends sharing-template
 
-block localcss
-	link(rel='stylesheet' type='text/css' href='css/project.css')
-block localscripts
-	script(src='js/project.js')
-block content
-	.project-container.project--is-orange
-		.row
-			.header.twelve.columns.dont-show-header
-				a(href='/')
-					.header__back
-						include ../svgs/icon-arrow.svg
-						|Home
-				.header__fa-tag
-					|Sharing<br>creative<br>space
-				.header__title
-					.header__title-topper
-						h1
-							//- block title
-							|Studio Office
-						p
-							|NYC Residency ~ 2018
-					.header__title-shadow
+block title
+	|Studio Office
 
-		.row.content.dont-show
-			.seven.columns
-				.content__experience.dont-show
-					|Art and<br>Community
-				.content__quote.dont-show
-					|In January of 2018, two friends and I created our own #[span mini-residency] in New York City. Once settled, we invited friends and artists to make something with us.
-				p.intro.dont-show After arriving in New York, we were able to secure a studio space in a couple of days. We moved in the next day, put together a couple vignettes of our adventure thus far, and let our friends know what we were up to.
-		.row.content.show-last
-			.twelve.columns
-				img(src='/3/img/hunt/hunt-onboardings.png')
-		.row.content.show-last
-			.seven.columns
-				h4 Getting started
-				p After arriving in New York, we were able to secure a studio space in a couple of days. We moved in the next day, put together a couple vignettes of our adventure thus far, and let our friends know what we were up to.
-		.row.footer.show-last
-			a(href='').six.columns
-				.footer__project#footer-similar-color
-					.footer__project-tag.footer__project-tag--is-similar Similar
-					.footer__project-details#footer-similar-details
-						|<b>oh snap</b><br>this one's a good one
-					include ../svgs/icon-arrow.svg
-			a(href='').six.columns
-				.footer__project#footer-diff-color
-					.footer__project-tag.footer__project-tag--is-different Different
-					.footer__project-details#footer-diff-details
-						|<b>awhh jeez</b><br>here's another project
-					include ../svgs/icon-arrow.svg
+block description
+	|NYC Residency ~ 2018
 
-
+block project-content
+	.row.content.content--is-intro.dont-show
+		.seven.columns
+			.content__experience.dont-show
+				|Art and<br>Community
+			.content__quote.dont-show
+				|In January of 2018, two friends and I created our own #[span mini-residency] in New York City. Once settled, we invited friends and artists to make something with us.
+			.intro.dont-show 
+			h4 Getting started
+			p After arriving in New York, we were able to secure a studio space in a couple of days. We moved in the next day, put together a couple vignettes of our adventure thus far, and let our friends know what we were up to.
+	.row.content.show-last
+		.twelve.columns
+			img(src='/3/img/hunt/hunt-onboardings.png')
+	.row.content.show-last
+		.seven.columns
+			h4 Getting started
+			p After arriving in New York, we were able to secure a studio space in a couple of days. We moved in the next day, put together a couple vignettes of our adventure thus far, and let our friends know what we were up to.
 

@@ -26,9 +26,9 @@ $orange: #FFAE4A;
 	// override base anchor styling
 	a {
 		border: none;
+		text-decoration: none;
 
 		&:hover {
-			-webkit-text-stroke-width: 0;
 			color: $off-black;
 		}
 	}
@@ -175,22 +175,41 @@ $orange: #FFAE4A;
 		margin-top: 12rem;
 	}
 
-	&--is-orange {
+	@mixin project-color-adjustments($color) {
 		.header__back svg g g {
-			fill: $orange;
+			fill: $color;
+		}
+
+		.header__title-shadow {
+			background: $color;
 		}
 
 		&::selection {
-		  background: $orange;
+		  background: $color;
 		}
 
 		.content .content__quote {
 			span::before {
-				background-color: $orange;
+				background-color: $color;
 				opacity: 0.4;
 			}
 		}
+	}
 
+	&--is-red {
+		@include project-color-adjustments($red);
+	}
+
+	&--is-orange {
+		@include project-color-adjustments($orange);
+	}
+
+	&--is-blue {
+		@include project-color-adjustments($blue);
+	}
+
+	&--is-purple {
+		@include project-color-adjustments($purple);
 	}
 }
 
@@ -201,23 +220,21 @@ $orange: #FFAE4A;
 	position: relative;
 	z-index: 10;
 
+	&--is-intro {
+		margin-top: 8rem;
+
+		.content__quote {
+			margin-bottom: 8rem;
+		}
+
+	}
+
 	p {
 		font-family: adobe-caslon-pro, serif;
 		font-weight: 400;
 		font-style: normal;
 		font-size: 1.9rem;
 		line-height: 2.9rem;
-	}
-
-	h4 {
-		font-family: adobe-caslon-pro, serif;
-		font-weight: 700;
-		font-style: normal;
-		border-bottom: 1px solid rgba(0,0,0,0.2);
-		padding-bottom: 0.8rem;
-		font-size: 1.9rem;
-		line-height: 2.8rem;
-		letter-spacing: 0.1px;
 	}
 
 	&__experience {
@@ -227,6 +244,21 @@ $orange: #FFAE4A;
 
 		&.dont-show {
 			transition-delay: 0ms;
+		}
+	}
+
+	&__extend {
+		position: relative;
+
+		img {
+			max-width: 150%;
+			margin-left: 5.2rem;
+		}
+
+		&--is-large {
+			img {
+				max-width: 190%;
+			}
 		}
 	}
 
@@ -257,7 +289,6 @@ $orange: #FFAE4A;
 				height: 1.3rem;
 				width: 0;
 				background: none;
-				border-radius: 1px;
 				transition: all 350ms linear;
 			}
 
@@ -275,14 +306,14 @@ $orange: #FFAE4A;
 
 .footer {
 	margin-bottom: 12rem;
-	margin-top: 8rem;
+	margin-top: 12rem;
 
 	// override base anchor styling
 	a {
 		border: none;
+		text-decoration: none;
 
 		&:hover {
-			-webkit-text-stroke-width: 0;
 			color: $off-black;
 		}
 	}
@@ -354,6 +385,14 @@ $orange: #FFAE4A;
 		&--is-orange {
 			@include focus-area-color($orange);
 		}
+
+		&--is-blue {
+			@include focus-area-color($blue);
+		}
+
+		&--is-purple {
+			@include focus-area-color($purple);
+		}
 	}
 }
 
@@ -408,9 +447,22 @@ $orange: #FFAE4A;
 		}
 	}
 
-	.content__experience {
-		display: none;
+	.content {
+		&__experience {
+			display: none;
+		}
+
+		&__extend {
+			position: relative;
+
+			img {
+				max-width: 100%;
+				margin-left: 0;
+			}
+		}
 	}
+
+
 
 	html {
 		font-size: 9px;

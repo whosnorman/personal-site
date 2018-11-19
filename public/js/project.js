@@ -42,6 +42,12 @@ function setRelatedProjects(){
 			'focus': 'designing'
 		},
 		{
+			'name': 'Hunt',
+			'desc': 'HackNY scavenger hunt',
+			'page': '/hunt',
+			'focus': 'designing'
+		},
+		{
 			'name': 'Studio Office',
 			'desc': 'One-month studio Residency',
 			'page': '/studio-office',
@@ -62,7 +68,7 @@ function setRelatedProjects(){
 		},
 		'designing': {
 			color: 'red',
-			count: 1
+			count: 2
 		}
 	};
 
