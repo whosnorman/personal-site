@@ -52,8 +52,7 @@ $frame-duration: 450ms;
 					position: absolute;
 					width: 100%;
 					height: 100%;
-					display: flex;
-					align-items: center;
+					top: 0;
 				}
 
 				&__project {
@@ -61,6 +60,8 @@ $frame-duration: 450ms;
 					transition: all 300ms ease-in-out;
 					opacity: 1;
 					width: 100%;
+					top: 50%;
+					transform: translateY(-50%);
 
 					&--is-orange {
 						.center__project-arrow {
@@ -84,8 +85,7 @@ $frame-duration: 450ms;
 						list-style: none;
 						text-align: left;
 						width: 100%;
-						padding-left: 2.4rem;
-						padding-right: 2.4rem;
+						padding: 0;
 						margin: 0;
 
 						li {
@@ -178,13 +178,13 @@ $frame-duration: 450ms;
 		&-toggle {
 			.select-wrapper {
 				position: relative;
-				display: flex;
-				align-items: center;
 
 				&__arrow {
 					margin-right: 1rem;
 					transition: all 200ms ease-in-out;
 					height: 20px;
+					top: 50%;
+					transform: translate(0, -50%);
 
 					svg g g {
 						fill: $beige;
@@ -208,7 +208,7 @@ $frame-duration: 450ms;
 					cursor: pointer;
 
 					.select-wrapper__arrow {
-						transform: translateX(4px);
+						transform: translate(4px, -50%);
 					}
 				}
 			}
@@ -574,6 +574,9 @@ $frame-duration: 450ms;
 				&__project {
 					position: relative;
 					width: 275px;
+					top: 0;
+					left: 50%;
+					transform: translate(-50%, 0);
 
 					&.center--is-hidden {
 						li {
