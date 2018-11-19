@@ -48,6 +48,12 @@ function setRelatedProjects(){
 			'focus': 'designing'
 		},
 		{
+			'name': 'Illustrations',
+			'desc': 'Buncha digital doodles',
+			'page': '/illustrations',
+			'focus': 'designing'
+		},
+		{
 			'name': 'Studio Office',
 			'desc': 'One-month studio Residency',
 			'page': '/studio-office',
@@ -68,7 +74,7 @@ function setRelatedProjects(){
 		},
 		'designing': {
 			color: 'red',
-			count: 2
+			count: 3
 		}
 	};
 
