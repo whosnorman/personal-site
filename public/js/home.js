@@ -1,6 +1,6 @@
 let frameDuration = 260;
 
-$(document).ready(function(){
+(function(){
 	setFavicon();
 	setVersionToggle();
 
@@ -83,7 +83,7 @@ $(document).ready(function(){
 		}, 100);
 	});
 
-});
+})();
 
 function setVersionToggle(){
 	$('select').val('4');

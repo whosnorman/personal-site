@@ -1,4 +1,5 @@
-$(document).ready(function(){
+(function(){
+
 	setFavicon();
 	setRelatedProjects();
 
@@ -24,7 +25,7 @@ $(document).ready(function(){
 		}, 250);
 	}, 50);
 	
-});
+})();
 
 
 // find and set similar and different projects 
