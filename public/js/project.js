@@ -45,7 +45,7 @@ function setRelatedProjects(){
 		},
 		{
 			'name': '29-09',
-			'desc': 'Exploring an online publication',
+			'desc': 'An online publication',
 			'page': '/29-09',
 			'focus': 'artifacts'
 		},
