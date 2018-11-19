@@ -54,13 +54,19 @@ function setRelatedProjects(){
 			'desc': 'One-month studio Residency',
 			'page': '/studio-office',
 			'focus': 'sharing'
+		},
+		{
+			'name': 'Temporal canvas',
+			'desc': 'Drawing with friends',
+			'page': '/temporal-canvas',
+			'focus': 'sharing'
 		}
 	];
 
 	let projects = {
 		'sharing': {
 			color: 'orange',
-			count: 1
+			count: 2
 		},
 		'designing': {
 			color: 'red',

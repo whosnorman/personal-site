@@ -20,6 +20,10 @@
           transition-delay: 250ms;
           opacity: 1;
           transform: translateX(0); }
+        .hero__content-center .center__community {
+          transition: all 300ms ease-in-out;
+          opacity: 1;
+          transform: translateX(0); }
         .hero__content-center .center__projects-container {
           position: absolute;
           width: 100%;
@@ -90,6 +94,8 @@
           .hero__content-center .center--is-hidden.center__welcome {
             transition-delay: 0ms;
             transform: translate(16px); }
+          .hero__content-center .center--is-hidden .center__community {
+            transform: translate(-16px); }
           .hero__content-center .center--is-hidden ul li {
             opacity: 0;
             transform: translateX(-16px); }
