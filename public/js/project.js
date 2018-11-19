@@ -3,13 +3,15 @@
 	setFavicon();
 	setRelatedProjects();
 
-	$('a').click(function(e){
-		e.preventDefault();
-		$('.to-hide').addClass('hide');
-		setTimeout(function(){
-			let page = $(e.currentTarget).attr('href');
-			window.location = page;
-		}, 300);
+	$('a').on('click', function(e){
+		if($(this).attr('target') != '_blank'){
+			e.preventDefault();
+			$('.to-hide').addClass('hide');
+			setTimeout(function(){
+				let page = $(e.currentTarget).attr('href');
+				window.location = page;
+			}, 300);
+		}
 	});
 
 	setTimeout(function(){

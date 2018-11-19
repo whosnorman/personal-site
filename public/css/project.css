@@ -170,6 +170,8 @@
     margin-top: 8rem; }
     .content--is-intro .content__quote {
       margin-bottom: 8rem; }
+  .content--no-top-margin {
+    margin-top: 0; }
   .content p {
     font-family: adobe-caslon-pro, serif;
     font-weight: 400;
@@ -215,6 +217,12 @@
         transition: all 350ms linear; }
       .content__quote span.show::before {
         width: 100%; }
+  .content__caption {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    opacity: 0.5;
+    padding-top: 1.6rem; }
 
 .intro.dont-show {
   transition-delay: 150ms; }
