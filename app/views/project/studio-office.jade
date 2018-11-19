@@ -7,7 +7,7 @@ block localscripts
 block content
 	.project-container.project--is-orange
 		.row
-			.header.twelve.columns
+			.header.twelve.columns.dont-show-header
 				a(href='/')
 					.header__back
 						include ../svgs/icon-arrow.svg
@@ -23,21 +23,21 @@ block content
 							|NYC Residency ~ 2018
 					.header__title-shadow
 
-		.row.content
+		.row.content.dont-show
 			.seven.columns
-				.content__experience
+				.content__experience.dont-show
 					|Art and<br>Community
-				.content__quote
+				.content__quote.dont-show
 					|In January of 2018, two friends and I created our own #[span mini-residency] in New York City. Once settled, we invited friends and artists to make something with us.
-				p After arriving in New York, we were able to secure a studio space in a couple of days. We moved in the next day, put together a couple vignettes of our adventure thus far, and let our friends know what we were up to.
-		.row.content
+				p.intro.dont-show After arriving in New York, we were able to secure a studio space in a couple of days. We moved in the next day, put together a couple vignettes of our adventure thus far, and let our friends know what we were up to.
+		.row.content.show-last
 			.twelve.columns
 				img(src='/3/img/hunt/hunt-onboardings.png')
-		.row.content
+		.row.content.show-last
 			.seven.columns
 				h4 Getting started
 				p After arriving in New York, we were able to secure a studio space in a couple of days. We moved in the next day, put together a couple vignettes of our adventure thus far, and let our friends know what we were up to.
-		.row.footer
+		.row.footer.show-last
 			a(href='').six.columns
 				.footer__project#footer-similar-color
 					.footer__project-tag.footer__project-tag--is-similar Similar
@@ -53,11 +53,3 @@ block content
 
 
 
-
-
-		.container
-			.quote.dont-show
-				block quote
-
-		.container.dont-show#design
-			block main

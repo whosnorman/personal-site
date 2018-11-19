@@ -12,15 +12,16 @@ $(document).ready(function(){
 	});
 
 	setTimeout(function(){
-		$('.header').addClass('slide-down');
+		$('.header').addClass('show');
 
 		setTimeout(function(){
-			showHeader();
+			$('.dont-show').addClass('show');
+
 			setTimeout(function(){
-				$('.dont-show').addClass('show');
-				drawQuoteMarks();
+				$('.show-last').addClass('show');
+			drawQuoteMarks();
 			}, 250);
-		}, 300);
+		}, 250);
 	}, 50);
 	
 });
@@ -102,15 +103,6 @@ function setRelatedProjects(){
 
 	setProjectDetails(similarProject, 'similar');
 	setProjectDetails(diffProject, 'diff');	
-}
-
-function showHeader(){
-	let showLeft = $('.hide-left').toArray();
-	showLeft.forEach(function(el){
-		$(el).addClass('show');
-	});
-
-	$('.experience').addClass('move-up');
 }
 
 function drawQuoteMarks(){
