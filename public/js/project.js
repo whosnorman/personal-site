@@ -38,8 +38,8 @@ function setRelatedProjects(){
 
 	let associations = [
 		{
-			'name': 'Teal Process & Company',
-			'desc': 'Art collective + creative research',
+			'name': 'TP&C',
+			'desc': 'Creative research endeavors',
 			'page': '/teal',
 			'focus': 'artifacts'
 		},
