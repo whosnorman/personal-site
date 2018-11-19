@@ -52,7 +52,7 @@ $frame-duration: 450ms;
 					position: absolute;
 					width: 100%;
 					height: 100%;
-					top: 0;
+					top: -4rem;
 				}
 
 				&__project {
@@ -178,13 +178,13 @@ $frame-duration: 450ms;
 		&-toggle {
 			.select-wrapper {
 				position: relative;
+				display: flex;
+				align-items: center;
 
 				&__arrow {
 					margin-right: 1rem;
 					transition: all 200ms ease-in-out;
 					height: 20px;
-					top: 50%;
-					transform: translate(0, -50%);
 
 					svg g g {
 						fill: $beige;
@@ -208,7 +208,7 @@ $frame-duration: 450ms;
 					cursor: pointer;
 
 					.select-wrapper__arrow {
-						transform: translate(4px, -50%);
+						transform: translateX(4px);
 					}
 				}
 			}
@@ -565,6 +565,7 @@ $frame-duration: 450ms;
 					max-height: 0;
 					transition: all 350ms ease-in-out;
 					overflow: hidden;
+					top: 0;
 
 					&.show-projects {
 						max-height: 500px;

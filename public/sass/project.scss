@@ -296,14 +296,14 @@ $orange: #FFAE4A;
 		padding-top: 4rem;
 		padding-left: 4rem;
 		position: relative;
-		display: flex;
-		align-items: center;
 
 		svg {
 			height: 20px;
 			position: absolute;
 			right: 4rem;
 			transition: all 200ms ease-in-out;
+			top: 50%;
+			transform: translate(0, -50%);
 		}
 
 		&-tag {
@@ -330,7 +330,7 @@ $orange: #FFAE4A;
 			cursor: pointer;
 
 			svg {
-				transform: translate(0.8rem);
+				transform: translate(0.8rem, -50%);
 			}
 		}
 
