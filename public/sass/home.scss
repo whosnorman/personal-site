@@ -553,6 +553,28 @@ $frame-duration: 450ms;
 @media all and (max-width: 799px) {
 
 	.focus-area {
+		
+		&:hover {
+			.focus-area__topper {
+				transform: translate(0, 0);
+			}
+
+			.focus-area__arrow {
+				transform: translate(-32px, -50%);
+			}
+
+			&.focus-area--is-raised {
+				.focus-area__topper {
+					transform: translate(-10px, -10px);
+				}
+
+				.focus-area__arrow {
+					transform: translate(40px, -50%);
+				}
+			}
+		}
+
+
 		&--is-1 {
 			margin: 0;
 			align-self: center;

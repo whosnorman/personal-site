@@ -304,6 +304,14 @@
   .focus-area {
     margin-top: 1.6rem;
     margin-bottom: 1.6rem; }
+    .focus-area:hover .focus-area__topper {
+      transform: translate(0, 0); }
+    .focus-area:hover .focus-area__arrow {
+      transform: translate(-32px, -50%); }
+    .focus-area:hover.focus-area--is-raised .focus-area__topper {
+      transform: translate(-10px, -10px); }
+    .focus-area:hover.focus-area--is-raised .focus-area__arrow {
+      transform: translate(40px, -50%); }
     .focus-area--is-1 {
       margin: 0;
       align-self: center; }
