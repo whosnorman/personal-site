@@ -198,8 +198,9 @@
   .focus-area.pop-out .focus-area__topper {
     transform: translate(-10px, -10px); }
   .focus-area.pop-out .focus-area__arrow {
-    transform: translate(-32px, -50%);
-    transition-delay: 100ms; }
+    transform: translate(-32px, -50%); }
+  .focus-area.remove-pop-out .focus-area__topper {
+    transform: translate(0px, 0px); }
   .focus-area:hover {
     cursor: pointer; }
     .focus-area:hover .focus-area__topper {
@@ -278,24 +279,38 @@
     fill: #FFAE4A; }
   .focus-area--is-1 .dont-show {
     transition-delay: 400ms; }
-  .focus-area--is-1 .pre-pop {
-    transition-delay: 0ms; }
+  .focus-area--is-1 .pop-out .focus-area__topper {
+    transition-delay: 0; }
+  .focus-area--is-1 .pop-out .focus-area__arrow {
+    transition-delay: 100ms; }
   .focus-area--is-2 {
     margin-top: 25%;
     margin-left: 10%; }
     .focus-area--is-2 .dont-show {
       transition-delay: 600ms; }
+    .focus-area--is-2 .pop-out .focus-area__topper {
+      transition-delay: 100ms; }
+    .focus-area--is-2 .pop-out .focus-area__arrow {
+      transition-delay: 200ms; }
   .focus-area--is-3 {
     align-self: flex-end;
     margin-bottom: 30%;
     margin-right: 10%; }
     .focus-area--is-3 .dont-show {
       transition-delay: 800ms; }
+    .focus-area--is-3 .pop-out .focus-area__topper {
+      transition-delay: 150ms; }
+    .focus-area--is-3 .pop-out .focus-area__arrow {
+      transition-delay: 250ms; }
   .focus-area--is-4 {
     align-self: flex-end;
     margin-bottom: 10%; }
     .focus-area--is-4 .dont-show {
       transition-delay: 1000ms; }
+    .focus-area--is-4 .pop-out .focus-area__topper {
+      transition-delay: 200ms; }
+    .focus-area--is-4 .pop-out .focus-area__arrow {
+      transition-delay: 300ms; }
 
 .mobile-show {
   display: none; }

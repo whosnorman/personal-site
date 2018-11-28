@@ -16,11 +16,15 @@ let frameDuration = 260;
 
 			// remove pop out for focus areas
 			setTimeout(function(){
-				$('.pop-out').removeClass('pop-out');
-				// $('.pre-pop').removeClass('pre-pop');
+				$('.pop-out').addClass('remove-pop-out');
 				$('.show-last').addClass('show');
+
+				setTimeout(function(){
+					$('.pop-out').removeClass('pop-out');
+					$('.remove-pop-out').removeClass('remove-pop-out');
+				}, 300);
 			}, 400);
-		}, 1000);
+		}, 1200);
 	}, 5);
 
 
