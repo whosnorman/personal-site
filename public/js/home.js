@@ -21,7 +21,7 @@ let frameDuration = 260;
 				$('.show-last').addClass('show');
 			}, 400);
 		}, 1000);
-	}, 50);
+	}, 5);
 
 
 	$('a').on('click', function(e){

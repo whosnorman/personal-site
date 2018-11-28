@@ -114,12 +114,18 @@
 .project--is-red .header__title-shadow {
   background: #FF6E6E; }
 
-.project--is-red::selection {
-  background: #FF6E6E; }
-
 .project--is-red .content .content__quote span::before {
   background-color: #FF6E6E;
   opacity: 0.4; }
+
+.project--is-red a:hover {
+  text-decoration-color: #FF6E6E; }
+
+.project--is-red ::selection {
+  background: #FF6E6E91; }
+
+.project--is-red ::-moz-selection {
+  background: #FF6E6E91; }
 
 .project--is-orange .header__back svg g g {
   fill: #FFAE4A; }
@@ -127,12 +133,18 @@
 .project--is-orange .header__title-shadow {
   background: #FFAE4A; }
 
-.project--is-orange::selection {
-  background: #FFAE4A; }
-
 .project--is-orange .content .content__quote span::before {
   background-color: #FFAE4A;
   opacity: 0.4; }
+
+.project--is-orange a:hover {
+  text-decoration-color: #FFAE4A; }
+
+.project--is-orange ::selection {
+  background: #FFAE4A91; }
+
+.project--is-orange ::-moz-selection {
+  background: #FFAE4A91; }
 
 .project--is-blue .header__back svg g g {
   fill: #8ACCFF; }
@@ -140,12 +152,18 @@
 .project--is-blue .header__title-shadow {
   background: #8ACCFF; }
 
-.project--is-blue::selection {
-  background: #8ACCFF; }
-
 .project--is-blue .content .content__quote span::before {
   background-color: #8ACCFF;
   opacity: 0.4; }
+
+.project--is-blue a:hover {
+  text-decoration-color: #8ACCFF; }
+
+.project--is-blue ::selection {
+  background: #8ACCFF; }
+
+.project--is-blue ::-moz-selection {
+  background: #8ACCFF; }
 
 .project--is-purple .header__back svg g g {
   fill: #CDBCEB; }
@@ -153,12 +171,18 @@
 .project--is-purple .header__title-shadow {
   background: #CDBCEB; }
 
-.project--is-purple::selection {
-  background: #CDBCEB; }
-
 .project--is-purple .content .content__quote span::before {
   background-color: #CDBCEB;
   opacity: 0.4; }
+
+.project--is-purple a:hover {
+  text-decoration-color: #CDBCEB; }
+
+.project--is-purple ::selection {
+  background: #CDBCEB91; }
+
+.project--is-purple ::-moz-selection {
+  background: #CDBCEB91; }
 
 .content {
   margin-top: 4rem;

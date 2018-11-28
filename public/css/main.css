@@ -9,11 +9,11 @@
   font-weight: 600; }
 
 ::selection {
-  background: #FFAE4A;
+  background: #FFAE4A91;
   /* WebKit/Blink Browsers */ }
 
 ::-moz-selection {
-  background: #FFAE4A;
+  background: #FFAE4A91;
   /* Gecko Browsers */ }
 
 html, body {
