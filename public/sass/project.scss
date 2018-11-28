@@ -356,7 +356,7 @@ $blue_highlight: #8ACCFF;
 				content: '';
 				z-index: -1;
 				position: absolute;
-				bottom: 0.5rem;
+				bottom: 1.5rem;
 				height: 1.3rem;
 				width: 0;
 				background: none;
@@ -498,16 +498,6 @@ $blue_highlight: #8ACCFF;
 
 
 @media all and (max-width: 799px) {
-	.quote {
-		font-size: 2.8rem;
-		line-height: 4.5rem;
-		padding-top: 6rem;
-		padding-bottom: 8rem;
-
-		span::before {
-			bottom: 1rem;
-		}
-	}
 
 	.project-container {
 		margin-top: 5.2rem;
