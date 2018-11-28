@@ -132,6 +132,13 @@ $blue_highlight: #8ACCFF;
 		border: 1px solid $off-black;
 		background: $beige;
 		z-index: 10;
+
+		-webkit-animation: rotateTag 100s infinite;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-delay: 500ms;
+		animation: rotateTag 100s infinite;
+		animation-timing-function: linear;
+		animation-delay: 500ms;
 	}
 
 	&__title {
@@ -465,6 +472,27 @@ $blue_highlight: #8ACCFF;
 		&--is-purple {
 			@include focus-area-color($purple);
 		}
+	}
+}
+
+
+@-webkit-keyframes rotateTag {
+	from { 
+		transform: rotate(-16deg) translate(0,0); 
+	}
+
+	to { 
+		transform: rotate(-375deg) translate(0,0); 
+	}
+}
+
+@keyframes rotateTag {
+	from { 
+		transform: rotate(-16deg) translate(0,0); 
+	}
+
+	to { 
+		transform: rotate(-375deg) translate(0,0); 
 	}
 }
 

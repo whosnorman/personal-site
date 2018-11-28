@@ -74,7 +74,13 @@
     transform: rotate(-16deg) translate(0, 0);
     border: 1px solid #171717;
     background: #FFF6EA;
-    z-index: 10; }
+    z-index: 10;
+    -webkit-animation: rotateTag 100s infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 500ms;
+    animation: rotateTag 100s infinite;
+    animation-timing-function: linear;
+    animation-delay: 500ms; }
   .header__title {
     position: relative; }
     .header__title-topper {
@@ -327,6 +333,18 @@
       background: #CDBCEB; }
     .footer__project--is-purple svg g g {
       fill: #CDBCEB; }
+
+@-webkit-keyframes rotateTag {
+  from {
+    transform: rotate(-16deg) translate(0, 0); }
+  to {
+    transform: rotate(-375deg) translate(0, 0); } }
+
+@keyframes rotateTag {
+  from {
+    transform: rotate(-16deg) translate(0, 0); }
+  to {
+    transform: rotate(-375deg) translate(0, 0); } }
 
 @media all and (max-width: 799px) {
   .quote {
