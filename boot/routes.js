@@ -7,6 +7,10 @@ module.exports = function(app){
 		res.render('index');
 	});
 
+	app.get('/pondering', function(req, res){
+		res.render('project/pondering');
+	});
+
 	app.get('/studio-office', function(req, res){
 		res.render('project/studio-office');
 	});

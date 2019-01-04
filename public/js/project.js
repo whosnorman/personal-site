@@ -63,7 +63,7 @@ function setRelatedProjects(){
 		},
 		{
 			'name': 'Studio Office',
-			'desc': 'One-month studio Residency',
+			'desc': 'One-month NYC Residency',
 			'page': '/studio-office',
 			'focus': 'sharing'
 		},
@@ -72,13 +72,19 @@ function setRelatedProjects(){
 			'desc': 'Drawing with friends',
 			'page': '/temporal-canvas',
 			'focus': 'sharing'
+		},
+		{
+			'name': 'Pondering',
+			'desc': 'Code Societies at SFPC',
+			'page': '/pondering',
+			'focus': 'sharing'
 		}
 	];
 
 	let projects = {
 		'sharing': {
 			color: 'orange',
-			count: 2
+			count: 3
 		},
 		'designing': {
 			color: 'red',
