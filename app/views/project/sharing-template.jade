@@ -4,6 +4,7 @@ block localcss
 	link(rel='stylesheet' type='text/css' href='css/project.css')
 block localscripts
 	script(src='js/project.js')
+	block loacl-sharing-scripts 
 block content
 	.project-container.project--is-orange
 		.row
@@ -25,6 +26,3 @@ block content
 		block project-content
 
 		include project-footer
-
-
-

@@ -1,12 +1,30 @@
-extends sharing-template
+extends ../layout
 
-block title
-	|Pondering
+block localcss
+	link(rel='stylesheet' type='text/css' href='css/project.css')
+	
+block localscripts
+	script(src='js/project.js')
+	script(src='js/pondering.js')
 
-block description
-	|Code Societies at SFPC ~ 2019
-
-block project-content
+block content
+	.project-container.project--is-orange
+		.row
+			.header.twelve.columns.dont-show-header
+				a(href='/')
+					.header__back
+						include ../svgs/icon-arrow.svg
+						|Home
+				.header__fa-tag
+					|Sharing<br>creative<br>space
+				.header__title
+					.header__title-topper
+						h1
+							block Pondering
+						p
+							block Code Societies at SFPC ~ 2019
+					.header__title-shadow
+	
 	.row.content.content--is-intro.dont-show
 		.seven.columns
 			.content__experience.dont-show
@@ -22,11 +40,21 @@ block project-content
 	//- 	.seven.columns
 	//- 		h4 Header for date
 	//- 		p Somethin fun here
+	
+	.row.content.show-last
+		.seven.columns
+			h4 01-12.19
+			p woooo this is a placeholder, should replace this with some thoughts and sentiments 
+	
+	
+	.row.content.show-last
+		.seven.columns.sfpc-friends
+			h4 Code society friends 
+			#sfpc-marquee
+			
+	
 
 	//- copy for image
 	//- .row.content.content--no-top-margin.show-last
 	//- 	.nine.columns
 	//- 		img.has-border(src='img/studio-office/dan-studio-visit-doc.png')
-
-
-
