@@ -6,6 +6,16 @@
     transform: translate(0, 0);
     opacity: 1; }
 
+.sfpc-friends {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0 2.4rem 2.4rem 2.4rem;
+  margin-bottom: 8rem;
+  border-radius: 1px; }
+  .sfpc-friends h4 {
+    margin-top: 2.6rem;
+    margin-bottom: 0rem;
+    border-bottom: 0px solid transparent; }
+
 .header {
   position: relative; }
   .header a {

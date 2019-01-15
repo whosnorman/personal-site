@@ -26,6 +26,19 @@ $blue_highlight: #8ACCFF;
 	}
 }
 
+.sfpc-friends {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0 2.4rem 2.4rem 2.4rem;
+  margin-bottom: 8rem;
+	border-radius: 1px;
+
+	h4 {
+		margin-top: 2.6rem;
+		margin-bottom: 0rem;
+		border-bottom: 0px solid transparent;
+	}
+}
+
 .header {
 
 	position: relative;
@@ -178,7 +191,7 @@ $blue_highlight: #8ACCFF;
 		}
 	}
 
-	
+
 }
 
 .project {
@@ -220,7 +233,7 @@ $blue_highlight: #8ACCFF;
 		}
 
 		::-moz-selection {
-		  background: $red_highlight; 
+		  background: $red_highlight;
 		}
 	}
 
@@ -232,7 +245,7 @@ $blue_highlight: #8ACCFF;
 		}
 
 		::-moz-selection {
-		  background: $orange_highlight; 
+		  background: $orange_highlight;
 		}
 	}
 
@@ -244,7 +257,7 @@ $blue_highlight: #8ACCFF;
 		}
 
 		::-moz-selection {
-		  background: $blue_highlight; 
+		  background: $blue_highlight;
 		}
 	}
 
@@ -256,7 +269,7 @@ $blue_highlight: #8ACCFF;
 		}
 
 		::-moz-selection {
-		  background: $purple_highlight; 
+		  background: $purple_highlight;
 		}
 	}
 }
@@ -456,7 +469,7 @@ $blue_highlight: #8ACCFF;
 			}
 		}
 
-		// footer specific projects 
+		// footer specific projects
 		&--is-red {
 			@include focus-area-color($red);
 		}
@@ -477,22 +490,22 @@ $blue_highlight: #8ACCFF;
 
 
 @-webkit-keyframes rotateTag {
-	from { 
-		transform: rotate(-16deg) translate(0,0); 
+	from {
+		transform: rotate(-16deg) translate(0,0);
 	}
 
-	to { 
-		transform: rotate(-375deg) translate(0,0); 
+	to {
+		transform: rotate(-375deg) translate(0,0);
 	}
 }
 
 @keyframes rotateTag {
-	from { 
-		transform: rotate(-16deg) translate(0,0); 
+	from {
+		transform: rotate(-16deg) translate(0,0);
 	}
 
-	to { 
-		transform: rotate(-375deg) translate(0,0); 
+	to {
+		transform: rotate(-375deg) translate(0,0);
 	}
 }
 
@@ -515,7 +528,7 @@ $blue_highlight: #8ACCFF;
 		&__fa-tag {
 			display: none;
 
-			/* i tried */ 
+			/* i tried */
 			// height: 12rem;
 			// width: 12rem;
 			// top: -32px;
