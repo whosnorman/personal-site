@@ -1,7 +1,7 @@
 
 module.exports = function(app){
 
-	/* version 3 routes */ 
+	/* version 3 routes */
 
 	app.get('/', function(req, res) {
 		res.render('index');
@@ -41,6 +41,10 @@ module.exports = function(app){
 
 	app.redirect('/workshop',
 		"https://www.dropbox.com/s/gxuh951cmsu6ev5/product-design-workshop.pdf?dl=0"
+	);
+
+	app.redirect('/bits',
+		"http://6ca541ed.ngrok.io/phone"
 	);
 
 
@@ -91,7 +95,7 @@ module.exports = function(app){
 		res.render('3/project/vestview');
 	});
 
-	
+
 
 
 
@@ -141,7 +145,7 @@ module.exports = function(app){
 		res.sendfile('public/1/index.html');
 	});
 
-	
+
 
 	// 404
 	// always have this route last
