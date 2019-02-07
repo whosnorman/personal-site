@@ -44,7 +44,11 @@ module.exports = function(app){
 	);
 
 	app.redirect('/bits',
-		"http://6ca541ed.ngrok.io/phone"
+		"http://bits-and-bobs.herokuapp.com/phone"
+	);
+
+	app.redirect('/bobs',
+		"http://bits-and-bobs.herokuapp.com"
 	);
 
 
