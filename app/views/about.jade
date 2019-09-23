@@ -1,0 +1,42 @@
+extends layout
+
+block localcss
+	link(rel='stylesheet' type='text/css' href='css/about.css')
+block localscripts
+	script(src='js/about.js')
+block content
+	.container.hero
+
+		.hero__middle
+			.row.hero__middle-center
+				.hero__middle-left.six.columns
+					.frames
+						.frame.frame--0
+							img(src='/img/IMG_7763.jpg').not-visible
+						.frame.frame--1.frame--is-hidden
+							img(src='/img/matt-gif-2.gif').not-visible
+						.frame.frame--2.frame--is-hidden
+							img(src='/img/static-antique.jpg').not-visible
+						.frame.frame--3.frame--is-hidden
+							img(src='/img/IMG_9633.jpg').not-visible
+						.frame.frame--4 
+							img(src='/img/primitive 003.png').not-visible
+					.controls
+						#go-left
+						#pause
+						#play
+						#go-right
+
+
+				.hero__middle-right.three.columns.dont-show
+					p.copy
+						|<b>Heyo!</b> </br>
+						|I'm Matt. I also go by Norman in art projects.
+
+
+						
+		
+
+
+
+					
