@@ -38,6 +38,14 @@ module.exports = function(app){
 	app.get('/teal', function(req, res){
 		res.render('project/teal');
 	});
+	
+	app.get('/modes', function(req, res){
+		res.render('project/modes-of-exploring');
+	});
+
+	app.get('/friends', function(req, res){
+		res.render('project/friends-last-tuesday');
+	});
 
 	app.redirect('/resume',
 		"https://www.dropbox.com/s/8mt66kqr4t27tk4/Resume.pdf?dl=0"

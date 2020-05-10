@@ -26,11 +26,11 @@
 			}, 250);
 		}, 250);
 	}, 5);
-	
+
 })();
 
 
-// find and set similar and different projects 
+// find and set similar and different projects
 // in footer project links
 function setRelatedProjects(){
 
@@ -38,8 +38,14 @@ function setRelatedProjects(){
 
 	let associations = [
 		{
-			'name': 'TP&C',
-			'desc': 'Creative research endeavors',
+			'name': 'Modes of exploration',
+			'desc': 'Mostly digital, all conceptual',
+			'page': '/modes',
+			'focus': 'artifacts'
+		},
+		{
+			'name': 'Teal P&C',
+			'desc': 'Always an open question',
 			'page': '/teal',
 			'focus': 'artifacts'
 		},
@@ -120,7 +126,7 @@ function setRelatedProjects(){
 		diffProject = associations[random];
 	} while (diffProject.focus == currentFocusArea)
 
-	
+
 	function setProjectDetails(projectObj, idTag) {
 		let projectFocus = projectObj.focus;
 		let projectClass = 'footer__project--is-';
@@ -133,7 +139,7 @@ function setRelatedProjects(){
 	}
 
 	setProjectDetails(similarProject, 'similar');
-	setProjectDetails(diffProject, 'diff');	
+	setProjectDetails(diffProject, 'diff');
 }
 
 function drawQuoteMarks(){
