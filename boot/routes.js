@@ -1,14 +1,14 @@
 
 module.exports = function(app){
 
-	/* version 3 routes */
+	/* version 4 routes */
 
 	app.get('/', function(req, res) {
 		res.render('index');
 	});
 
-	app.get('/about', function(req, res) {
-		res.render('about');
+	app.get('/heyo', function(req, res) {
+		res.render('heyo');
 	});
 
 	app.get('/pondering', function(req, res){
@@ -38,7 +38,7 @@ module.exports = function(app){
 	app.get('/teal', function(req, res){
 		res.render('project/teal');
 	});
-	
+
 	app.get('/modes', function(req, res){
 		res.render('project/modes-of-exploring');
 	});

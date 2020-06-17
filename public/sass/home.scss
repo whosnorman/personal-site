@@ -203,9 +203,10 @@ $frame-duration: 450ms;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: baseline;
 
 
-		a {
+		a, .about {
 			color: $off-black;
 			// transition: color 200ms ease-in-out;
 			// border-bottom: 1px dashed $off-black;
@@ -225,12 +226,14 @@ $frame-duration: 450ms;
 			.select-wrapper {
 				position: relative;
 				display: flex;
-				align-items: center;
+				align-items: baseline;
 
 				&__arrow {
 					margin-right: 1rem;
 					transition: all 200ms ease-in-out;
 					height: 20px;
+					position: relative;
+    			bottom: -2px;
 
 					svg g g {
 						fill: $beige;
@@ -267,6 +270,8 @@ $frame-duration: 450ms;
 				margin-right: 1.6rem;
 				text-decoration: none;
 				border-bottom: none;
+				bottom: -4px;
+    		position: relative;
 
 				&:last-child {
 					margin-right: 0;
@@ -277,6 +282,10 @@ $frame-duration: 450ms;
 						fill: $beige;
 						stroke: $off-black;
 					}
+				}
+
+				&.about {
+					bottom: 0;
 				}
 			}
 

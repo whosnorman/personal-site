@@ -83,7 +83,7 @@
               .hero__content-center .center__project ul li b {
                 letter-spacing: 0.5px; }
               .hero__content-center .center__project ul li:last-child {
-                border-bottom: 1px solid transparent; }
+                border-bottom: 1px solid rgba(0, 0, 0, 0); }
               .hero__content-center .center__project ul li:hover {
                 cursor: pointer; }
                 .hero__content-center .center__project ul li:hover .center__project-arrow {
@@ -116,13 +116,14 @@
   .hero__footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; }
-    .hero__footer a {
+    justify-content: space-between;
+    align-items: baseline; }
+    .hero__footer a, .hero__footer .about {
       color: #171717;
       border-bottom: 1px solid rgba(0, 0, 0, 0.3);
       padding-bottom: 1.5px;
       text-decoration: none; }
-      .hero__footer a:hover {
+      .hero__footer a:hover, .hero__footer .about:hover {
         color: #FFF6EA;
         border-bottom: 1px dashed transparent;
         -webkit-text-stroke-width: 1px;
@@ -130,11 +131,13 @@
     .hero__footer-toggle .select-wrapper {
       position: relative;
       display: flex;
-      align-items: center; }
+      align-items: baseline; }
       .hero__footer-toggle .select-wrapper__arrow {
         margin-right: 1rem;
         transition: all 200ms ease-in-out;
-        height: 20px; }
+        height: 20px;
+        position: relative;
+        bottom: -2px; }
         .hero__footer-toggle .select-wrapper__arrow svg g g {
           fill: #FFF6EA; }
       .hero__footer-toggle .select-wrapper select {
@@ -153,12 +156,16 @@
     .hero__footer-icons a {
       margin-right: 1.6rem;
       text-decoration: none;
-      border-bottom: none; }
+      border-bottom: none;
+      bottom: -4px;
+      position: relative; }
       .hero__footer-icons a:last-child {
         margin-right: 0; }
       .hero__footer-icons a:hover svg g g {
         fill: #FFF6EA;
         stroke: #171717; }
+      .hero__footer-icons a.about {
+        bottom: 0; }
     .hero__footer-icons svg g g {
       fill: #171717; }
 

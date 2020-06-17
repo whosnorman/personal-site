@@ -1,0 +1,98 @@
+extends layout
+
+block localcss
+	link(rel='stylesheet' type='text/css' href='css/project.css')
+	link(rel='stylesheet' type='text/css' href='css/about.css')
+block localscripts
+	script(src='js/about.js')
+block content
+	.about-container
+		.row
+			.header.twelve.columns.dont-show-header.about-header
+				a(href='/')
+					.header__back
+						include ./svgs/icon-arrow.svg
+						|Home
+				.header__right
+					a(href='https://www.are.na/norman-o-hagan' target='_blank' rel='noopener noreferrer')
+						include ./svgs/arena-logo.svg
+					a(href='https://www.instagram.com/whosnorman/' target='_blank' rel='noopener noreferrer')
+						include ./svgs/ig-logo.svg
+					div heyo@wadeful.net
+				//- .header__fa-tag
+				//- 	|Designing<br>digital<br>products
+				//- .header__title
+				//- 	.header__title-topper
+				//- 		h1
+				//- 			block title
+				//- 		p
+				//- 			block description
+				//- 	.header__title-shadow
+
+		.row.content.content--is-intro.dont-show
+			.two.columns
+			.four.columns
+				.dont-show
+					h3 Heyo! I'm Norm.
+					p
+						|This is my personal code of practice; a poetic summation of where my thoughts currently reside.
+					div 
+						.practice.practice--is-orange 
+						| Proceed wadefully
+					div
+						.practice.practice--is-blue 
+						| Encourage exploration 
+					div 
+						.practice.practice--is-red 
+						| Embed emotion
+					div 
+						.practice.practice--is-purple 
+						| Create conceptually 
+			.four.columns
+				.frames.dont-show
+					.frame.frame--0
+						img(src='/img/norman/paper-norman.JPG').not-visible
+					.frame.frame--1.frame--is-hidden
+						img(src='/img/norman/smiley-norman.jpg').not-visible
+					.frame.frame--2.frame--is-hidden
+						img(src='/img/norman/lemonade-norman-2.jpeg').not-visible
+					.frame.frame--3.frame--is-hidden
+						img(src='/img/norman/speeding-bullet-norman.jpg').not-visible
+					.frame.frame--4 
+						img(src='/img/norman/norman-uke-2.gif').not-visible
+				.controls
+					#go-left
+					#pause
+					#play
+					#go-right
+			.two.columns
+
+		.row.content.show-last
+			.eight.columns.gestures
+				h6 Gestures
+				table
+					tr
+						td 2017
+						td Conducting creative research through <a href='https://tealprocess.net' target='_blank' rel='noopener noreferrer'>Teal Process & Company</a>
+					tr
+						td 2017 
+						td Designing developer tools and learning resources at <a href='https://plaid.com' target='_blank' rel='noopener noreferrer'>Plaid</a>
+					tr
+						td 2019
+						td Exploring encouragement and community with <a href='https://friends-last-tuesday.glitch.me/' target='_blank' rel='noopener noreferrer'>FRIENDS,</a>
+					tr
+						td 2019
+						td Code Societies and Recreating the Past with <a href='https://sfpc.io/' target='_blank' rel='noopener noreferrer'>SFPC</a> <3
+				br
+				.faded Feel free to <a href='mailto:heyo@wadeful.net' target="_blank" rel="noopener noreferrer">reach out</a> about any of the work or ideas on this site!
+		
+						
+					
+
+
+						
+		
+
+
+
+					

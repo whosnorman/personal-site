@@ -32,6 +32,34 @@ $(document).ready(function(){
 		}, 3000);
 	}, 1000);
 
+
+	// for fade back home
+	$('a').on('click', function(e){
+		if($(this).attr('target') != '_blank'){
+			e.preventDefault();
+			$('.to-hide').addClass('hide');
+			setTimeout(function(){
+				let page = $(e.currentTarget).attr('href');
+				window.location = page;
+			}, 300);
+		}
+	});
+
+	// show header and last in sequence
+	setTimeout(function(){
+		$('.header').addClass('show');
+
+		setTimeout(function(){
+			$('.dont-show').addClass('show');
+
+			setTimeout(function(){
+				$('.show-last').addClass('show');
+			drawQuoteMarks();
+			}, 250);
+		}, 250);
+	}, 5);
+
+
 });
 
 
