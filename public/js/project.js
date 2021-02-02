@@ -56,6 +56,18 @@ function setRelatedProjects(){
 			'focus': 'artifacts'
 		},
 		{
+			'name': 'Plaid',
+			'desc': 'Financial infrastructure',
+			'page': '/plaid',
+			'focus': 'designing'
+		},
+		{
+			'name': 'We Sketch',
+			'desc': 'Live audience games',
+			'page': '/we-sketch',
+			'focus': 'designing'
+		},
+		{
 			'name': 'Hunt',
 			'desc': 'HackNY scavenger hunt',
 			'page': '/hunt',

@@ -10,13 +10,13 @@ $orange_highlight: #FFAE4A91;
 
 @font-face {
   font-family: 'Souvenir';
-  src: url('/fonts/Souvenir-Demi.otf'); 
+  src: url('/fonts/Souvenir-Demi.otf');
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Souvenir';
-  src: url('/fonts/Souvenir-Bold.otf'); 
+  src: url('/fonts/Souvenir-Bold.otf');
   font-weight: 600;
 }
 
@@ -34,7 +34,7 @@ html, body {
 	z-index: -10;
 }
 
-img {
+img, video {
 	max-width: 100%;
 
 	&.has-border {
@@ -146,6 +146,3 @@ select {
 		padding-bottom: 8rem;
 	}
 }
-
-
-

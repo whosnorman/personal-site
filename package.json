@@ -4,7 +4,8 @@
   "engines": {
     "node": "4.7.0"
   },
-  "description": "matt ohagan's personal website",
+  "stack": "heroku-20",
+  "description": "norm ohagan's personal website",
   "main": "web.js",
   "scripts": {
     "css": "node-sass public/sass -o public/css",
