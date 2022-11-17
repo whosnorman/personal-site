@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-close</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="attempt-004" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2" transform="translate(-121.000000, -75.000000)" fill-rule="nonzero" stroke="#000000">
+            <g id="icon-close" transform="translate(121.000000, 75.000000)">
+                <circle id="Oval-4" stroke-width="1.09090909" fill="#FFF6EA" cx="12" cy="12" r="11.4545455"></circle>
+                <path d="M8,8 L15.7620873,15.7620873" id="Line-7" stroke-linecap="square"></path>
+                <path d="M8,16 L15.7620873,8.23791265" id="Line-7" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

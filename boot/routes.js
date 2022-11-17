@@ -1,66 +1,14 @@
 
 module.exports = function(app){
 
-	/* version 4 routes */
 
-	app.get('/', function(req, res) {
-		res.render('index');
-	});
-
-	app.get('/heyo', function(req, res) {
-		res.render('heyo');
-	});
-
-	app.get('/pondering', function(req, res){
-		res.render('project/pondering');
-	});
-
-	app.get('/studio-office', function(req, res){
-		res.render('project/studio-office');
-	});
-
-	app.get('/hunt', function(req, res){
-		res.render('project/hunt');
-	});
-
-	app.get('/illustrations', function(req, res){
-		res.render('project/illustrations');
-	});
-
-	app.get('/temporal-canvas', function(req, res){
-		res.render('project/temporal-canvas');
-	});
-
-	app.get('/29-09', function(req, res){
-		res.render('project/29-09');
-	});
-
-	app.get('/teal', function(req, res){
-		res.render('project/teal');
-	});
-
-	app.get('/modes', function(req, res){
-		res.render('project/modes-of-exploring');
-	});
-
-	app.get('/friends', function(req, res){
-		res.render('project/friends-last-tuesday');
-	});
-
-	app.get('/plaid', function(req, res){
-		res.render('project/plaid');
-	});
-
-	app.get('/we-sketch', function(req, res){
-		res.render('project/we-sketch');
-	});
-
+	/* redirects */
 	app.redirect('/resume',
 		"https://www.dropbox.com/s/8mt66kqr4t27tk4/Resume.pdf?dl=0"
 	);
 
 	app.redirect('/workshop',
-		"https://www.dropbox.com/s/gxuh951cmsu6ev5/product-design-workshop.pdf?dl=0"
+		"https://www.dropbox.com/s/gxuh941cmsu6ev4/product-design-workshop.pdf?dl=0"
 	);
 
 	app.redirect('/bits',
@@ -71,6 +19,67 @@ module.exports = function(app){
 		"http://bits-and-bobs.herokuapp.com"
 	);
 
+
+	/* version 5 routes */
+
+	app.get('/', function(req, res) {
+		res.render('index');
+	});
+
+
+	/* version 4 routes */
+
+	app.get('/4/', function(req, res) {
+		res.render('4/index');
+	});
+
+	app.get('/4/heyo', function(req, res) {
+		res.render('4/heyo');
+	});
+
+	app.get('/4/pondering', function(req, res){
+		res.render('4/project/pondering');
+	});
+
+	app.get('/4/studio-office', function(req, res){
+		res.render('4/project/studio-office');
+	});
+
+	app.get('/4/hunt', function(req, res){
+		res.render('4/project/hunt');
+	});
+
+	app.get('/4/illustrations', function(req, res){
+		res.render('4/project/illustrations');
+	});
+
+	app.get('/4/temporal-canvas', function(req, res){
+		res.render('4/project/temporal-canvas');
+	});
+
+	app.get('/4/29-09', function(req, res){
+		res.render('4/project/29-09');
+	});
+
+	app.get('/4/teal', function(req, res){
+		res.render('4/project/teal');
+	});
+
+	app.get('/4/modes', function(req, res){
+		res.render('4/project/modes-of-exploring');
+	});
+
+	app.get('/4/friends', function(req, res){
+		res.render('4/project/friends-last-tuesday');
+	});
+
+	app.get('/4/plaid', function(req, res){
+		res.render('4/project/plaid');
+	});
+
+	app.get('/4/we-sketch', function(req, res){
+		res.render('4/project/we-sketch');
+	});
 
 
 	/* version 3 routes */

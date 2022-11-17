@@ -1,0 +1,87 @@
+extends layout
+
+block localcss
+	link(rel='stylesheet' type='text/css' href='css/home.css')
+block localscripts
+	script(src='js/home.js')
+block content
+	.body-container
+		.hero
+			.mobile-show
+				.hero__footer.show-last
+					include home/version-toggle
+					include home/social-icons
+
+			.hero__content.row.mobile-hide
+				.hero__content-left.four.columns
+					.focus-area--is-red.focus-area--is-2#fa-d-designing
+						include focus-area/designing
+					.focus-area--is-blue.focus-area--is-4#fa-d-community
+						include focus-area/community
+				.hero__content-center.four.columns
+					.dont-show
+						.center__welcome#welcome
+							h3 Welcome!
+							p This is norm's lil corner of the<br>net, happy explorin'
+					.center__projects-container.center--no-events#desktop-artifacts
+						include center-project/artifacts
+					.center__projects-container.center--no-events#desktop-sharing
+						include center-project/sharing
+					.center__projects-container.center--no-events#desktop-designing
+						include center-project/designing
+					.center__projects-container.center--no-events#desktop-community
+						include center-project/community
+				.hero__content-right.four.columns
+					.focus-area--is-purple.focus-area--is-1#fa-d-artifacts
+						include focus-area/artifacts
+					.focus-area--is-orange.focus-area--is-3#fa-d-sharing
+						include focus-area/sharing
+
+			.mobile-show
+				.hero__content.row
+					.hero__content-center.twelve.columns
+						.dont-show
+							.center__welcome
+								h3 Welcome!
+								p This is norm's lil corner of the<br>net, happy explorin'
+				.hero__content.row
+					.hero__content-center.twelve.columns
+						.focus-area--is-purple.focus-area--is-1#fa-m-artifacts
+							include focus-area/artifacts
+						.center__projects-container#mobile-artifacts
+							include center-project/artifacts
+						.focus-area--is-red.focus-area--is-2#fa-m-designing
+							include focus-area/designing
+						.center__projects-container#mobile-designing
+							include center-project/designing
+						.focus-area--is-orange.focus-area--is-3#fa-m-sharing
+							include focus-area/sharing
+						.center__projects-container#mobile-sharing
+							include center-project/sharing
+						.focus-area--is-blue.focus-area--is-4#fa-m-community
+							include focus-area/community
+						.center__projects-container#mobile-community
+							include center-project/community
+
+
+
+			.hero__footer.show-last
+				.mobile-hide
+					include home/version-toggle
+
+				.hero__footer-description
+					.mobile-show
+						| Art and community<br>at <a href='/teal'>Teal Process</a><br>~<br> Designing for<br>developers at <a href='https://dribbble.com/shots/8761107-Diagram-system' rel="noopener noreferrer" target="_blank">Plaid</a>
+					.mobile-hide
+						| Art and community at <a href='/teal'>Teal Process</a> ~ Designing for developers at <a href='https://dribbble.com/shots/8761107-Diagram-system' rel="noopener noreferrer" target="_blank">Plaid</a>
+
+				.mobile-hide
+					include home/social-icons
+
+
+						
+		
+
+
+
+					

@@ -1,0 +1,59 @@
+extends ../layout
+
+block localcss
+	link(rel='stylesheet' type='text/css' href='css/project.css')
+	
+block localscripts
+	script(src='js/project.js')
+
+block content
+	.project-container.project--is-orange
+		.row
+			.header.twelve.columns.dont-show-header
+				a(href='/')
+					.header__back
+						include ../svgs/icon-arrow.svg
+						|Home
+				.header__fa-tag
+					|Sharing<br>creative<br>space
+				.header__title
+					.header__title-topper
+						h1 Pondering
+						p Code Societies at SFPC ~ 2019
+					.header__title-shadow
+	
+		.row.content.content--is-intro.dont-show
+			.seven.columns
+				.content__experience.dont-show
+					|Living blog<br>of sorts
+				.content__quote.dont-show
+					|Sentiments and gatherings influenced from my three weeks at #[a(href='http://sfpc.io/codesocieties-winter-19/' target='_blank' rel='noopener noreferrer') School for Poetic Computation].
+				.intro.dont-show 
+				h4 01-03.19
+				p winter sun softly wades <br> taking solace in the brisk air
+
+		//- copy for copy
+		//- .row.content.show-last
+		//- 	.seven.columns
+		//- 		h4 Header for date
+		//- 		p Somethin fun here
+		
+		//- .row.content.show-last
+		//- 	.seven.columns
+		//- 		h4 01-12.19
+		//- 		p woooo this is a placeholder, should replace this with some thoughts and sentiments 
+		
+		
+		.row.content.show-last
+			.seven.columns.sfpc-friends
+				h4 Code society friends 
+				#sfpc-marquee
+				
+		script(src='http://cdn.jsdelivr.net/gh/SFPC/codesocieties_students/list-of-blogs/get-blog-list.js')
+			
+	
+
+	//- copy for image
+	//- .row.content.content--no-top-margin.show-last
+	//- 	.nine.columns
+	//- 		img.has-border(src='img/studio-office/dan-studio-visit-doc.png')

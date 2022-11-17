@@ -4,11 +4,11 @@ let frameDuration = 260;
 	setFavicon();
 	setVersionToggle();
 
-	// show initial elements 
+	// show initial elements
 	setTimeout(function(){
 		$('.dont-show').addClass('show');
 
-		// remove classes for initial entrace, including focus areas 
+		// remove classes for initial entrace, including focus areas
 		setTimeout(function(){
 			$('.dont-show').removeClass('dont-show');
 			$('.focus-area').addClass('pop-out');
@@ -55,7 +55,7 @@ let frameDuration = 260;
 				// enter in welcome
 
 				$('#welcome').removeClass(hiddenClass);
-				toggleProjectList(selected);	
+				toggleProjectList(selected);
 				openFocus = null;
 			} else {
 				// close currently open
@@ -75,7 +75,7 @@ let frameDuration = 260;
 			// exit welcome
 
 			openFocus = selected;
-			
+
 			$('#welcome').addClass(hiddenClass);
 			setTimeout(function(){
 				toggleProjectList(selected);
@@ -89,31 +89,38 @@ function toggleProjectList(id){
 	$('#desktop-'+id).find('.center__project').toggleClass('center--is-hidden');
 	$('#desktop-'+id).toggleClass('center--no-events');
 	$('#mobile-'+id).toggleClass('show-projects');
-	$('#mobile-'+id).find('.center__project').toggleClass('center--is-hidden');			
+	$('#mobile-'+id).find('.center__project').toggleClass('center--is-hidden');
 }
 
 function setVersionToggle(){
-	$('select').val('4');
+	$('select').val('5');
 	$('select').change(function(e){
 		let value = parseInt(this.value);
-		console.log(value);
+		let newLocation = '';
 		switch(value){
-			case 4: break;
-			case 3: 
-				$('.to-hide').addClass('hide');
-				window.location = '/3';
+			case 5:
+				break;
+			case 4:
+				newLocation = '/4';
+				break;
+			case 3:
+				newLocation = '/3';
 				break;
 			case 2:
-				$('.to-hide').addClass('hide');
-				window.location = '/2';
+				newLocation = '/2';
 				break;
 			case 1:
-				$('.to-hide').addClass('hide');
-				window.location = '/1';
+				newLocation = '/1';
 				break;
 			default:
 				break;
+		}
 
+		if(newLocation != ''){
+			$('.to-hide').addClass('hide');
+			setTimeout(()=>{
+				window.location = newLocation;
+			}, 400)
 		}
 	});
 }
@@ -133,15 +140,3 @@ function setFavicon(){
 	var favLink = '<link rel="shortcut icon" href="/public/img/'+favicon+'">';
 	$('head').append(favLink);
 }
-
-
-
-
-
-
-
-
-
-
-
-
