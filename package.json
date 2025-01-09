@@ -4,7 +4,7 @@
   "engines": {
     "node": "4.7.0"
   },
-  "stack": "heroku-20",
+  "stack": "heroku-24",
   "description": "norm ohagan's personal website",
   "main": "web.js",
   "scripts": {
