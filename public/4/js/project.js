@@ -40,61 +40,61 @@ function setRelatedProjects(){
 		{
 			'name': 'Modes of exploration',
 			'desc': 'Mostly digital, all conceptual',
-			'page': '/modes',
+			'page': '/4/modes',
 			'focus': 'artifacts'
 		},
 		{
 			'name': 'Teal P&C',
 			'desc': 'Always an open question',
-			'page': '/teal',
+			'page': '/4/teal',
 			'focus': 'artifacts'
 		},
 		{
 			'name': '29-09',
 			'desc': 'An online publication',
-			'page': '/29-09',
+			'page': '/4/29-09',
 			'focus': 'artifacts'
 		},
 		{
 			'name': 'Plaid',
 			'desc': 'Financial infrastructure',
-			'page': '/plaid',
+			'page': '/4/plaid',
 			'focus': 'designing'
 		},
 		{
 			'name': 'We Sketch',
 			'desc': 'Live audience games',
-			'page': '/we-sketch',
+			'page': '/4/we-sketch',
 			'focus': 'designing'
 		},
 		{
 			'name': 'Hunt',
 			'desc': 'HackNY scavenger hunt',
-			'page': '/hunt',
+			'page': '/4/hunt',
 			'focus': 'designing'
 		},
 		{
 			'name': 'Illustrations',
 			'desc': 'Buncha digital doodles',
-			'page': '/illustrations',
+			'page': '/4/illustrations',
 			'focus': 'designing'
 		},
 		{
 			'name': 'Studio Office',
 			'desc': 'One-month NYC Residency',
-			'page': '/studio-office',
+			'page': '/4/studio-office',
 			'focus': 'sharing'
 		},
 		{
 			'name': 'Temporal canvas',
 			'desc': 'Drawing with friends',
-			'page': '/temporal-canvas',
+			'page': '/4/temporal-canvas',
 			'focus': 'sharing'
 		},
 		{
 			'name': 'Pondering',
 			'desc': 'Code Societies at SFPC',
-			'page': '/pondering',
+			'page': '/4/pondering',
 			'focus': 'sharing'
 		}
 	];
