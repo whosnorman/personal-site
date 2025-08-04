@@ -12,6 +12,96 @@ $frame-delay: 150ms;
 $frame-duration: 450ms;
 
 
+.intro-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__content {
+		width: 100%;
+		max-width: 420px;
+	}
+
+	&__footer {
+		width: 100%;
+
+		.hero__footer {
+			width: calc(100% - 8rem);
+			position: fixed;
+			bottom: 4rem;
+		}
+	}
+}
+
+.intro {
+	p.large {
+		font-size: 2rem;
+		line-height: 1.5;
+	}
+
+	p.max391 {
+		max-width: 391px;
+	}
+
+	&__divider {
+		height: 1px;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.1);
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+	}
+
+	&__label {
+		font-size: 1.3rem;
+		font-weight: 600;
+		line-height: 1.2;
+		letter-spacing: 1.5px;
+		margin-bottom: 1.6rem;
+	}
+
+	&__header {
+		text-align: center;
+		margin-top: 11rem;
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+
+		h3 {
+			font-size: 2.4rem;
+			line-height: 1.2;
+		}
+
+		a {
+			text-decoration-color: rgba(0, 0, 0, 0.1);
+		}
+
+		a:hover {
+			text-decoration-color: rgba(0, 0, 0, 0);
+		}
+	}
+
+	&__works {
+		text-align: center;
+
+		p {
+			margin-bottom: 0.8rem;
+		}
+
+		a {
+			text-decoration-color: rgba(0, 0, 0, 0.1);
+		}
+
+		a:hover {
+			text-decoration-color: rgba(0, 0, 0, 0);
+		}
+	}
+
+	&__story {
+		margin-bottom: 12rem;
+	}
+}
+
 .hero {
 	height: calc(100vh - 16rem);
 	display: flex;
@@ -272,13 +362,15 @@ $frame-duration: 450ms;
 				border-bottom: none;
 				bottom: -4px;
     		position: relative;
+				display: inline-flex;
 
 				&:last-child {
 					margin-right: 0;
 				}
 
 				&:hover {
-					svg g g {
+					svg g g,
+					svg g path {
 						fill: $beige;
 						stroke: $off-black;
 					}
@@ -287,6 +379,14 @@ $frame-duration: 450ms;
 				&.about {
 					bottom: 0;
 				}
+			}
+
+			svg {
+				overflow: visible;
+			}
+
+			svg g {
+				clip-path: none;
 			}
 
 			svg g g {

@@ -4,39 +4,19 @@ block localcss
 	link(rel='stylesheet' type='text/css' href='css/home.css')
 block localscripts
 	script(src='js/home.js')
+	script(src='js/home_links.js')
 block content
 	.body-container
-		.hero
-			.mobile-show
+		.intro-container
+			.intro-container__footer
 				.hero__footer.show-last
-					include home/social-icons
 					include home/version-toggle
-
-			.hero__content.row.mobile-hide
-				.hero__content-left.four.columns
-				.hero__content-center.four.columns
-					.dont-show
-						.center__welcome#welcome
-							.welcome-wontyou
-								include ./svgs/wont-you.svg
-							p <br><i>once a website, always an artist.</i><br>Distributed by <a href="https://usb.club" target="_blank">USB Club</a><br>- w.
-
-			.mobile-show
-				.hero__content.row
-					.hero__content-center.twelve.columns
-						.dont-show
-							.center__welcome
-							.welcome-wontyou
-								include ./svgs/wont-you.svg
-							p <br><i>once a website, always an artist.</i><br>Distributed by <a href="https://usb.club" target="_blank">USB Club</a><br>- w.
-
-			.hero__footer.show-last
-				.mobile-hide
-					include home/version-toggle
-
-				
-				.mobile-hide
 					include home/social-icons
+
+			.intro-container__content
+				.dont-show
+					.center__welcome#welcome
+						include home/intro
 
 
 						

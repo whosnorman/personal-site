@@ -78,9 +78,9 @@ html {
   max-width: 1300px; }
 
 .body-container {
-  width: calc(100% - 16rem);
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  width: calc(100% - 8rem);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   margin: 0 auto; }
 
 a {
