@@ -24,7 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Anchors found:", anchors);
     const colors = ["#8ACCFF", "#CDBCEB", "#FFAE4A", "#FF6E6E"]; // blue, purple, orange, red
     
+    // Check if device is mobile
+    const isMobile = window.innerWidth <= 768 || /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
     anchors.forEach((anchor, index) => {
+      // Skip hover effects entirely on mobile
+      if (isMobile) {
+        return;
+      }
+      
       // Determine background color: special case for "Teal Process & Company"
       let backgroundColor;
       let textColor = "#000"; // default text color
