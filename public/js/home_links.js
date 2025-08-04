@@ -25,9 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const colors = ["#8ACCFF", "#CDBCEB", "#FFAE4A", "#FF6E6E"]; // blue, purple, orange, red
     
     anchors.forEach((anchor, index) => {
-      // Determine background color: orange for first 3, then cycle through colors
+      // Determine background color: special case for "Teal Process & Company"
       let backgroundColor;
-      if (index < 3) {
+      let textColor = "#000"; // default text color
+      
+      if (anchor.textContent.trim() === "Teal Process & Company") {
+        backgroundColor = "rgba(0, 0, 0, 0.95)"; // black at 0.95 opacity
+        textColor = "#fff"; // white text
+      } else if (index < 3) {
         backgroundColor = "#FFAE4A"; // orange for first three
       } else {
         backgroundColor = colors[(index - 3) % colors.length];
@@ -64,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
           top: `${rect.top + window.scrollY}px`,
           width: `${rect.width + 2}px`,
           height: `${rect.height}px`,
-          color: "#000",
+          color: textColor, // Use the determined text color
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -93,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Trigger fade in
         requestAnimationFrame(() => {
           background.style.opacity = "0.8";
-          background.style.pointerEvents = "auto";
+          // background.style.pointerEvents = "auto";
           textElement.style.opacity = "1";
         });
 
