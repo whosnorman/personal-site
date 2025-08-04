@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Trigger fade in
         requestAnimationFrame(() => {
           background.style.opacity = "0.8";
+          background.style.pointerEvents = "auto";
           textElement.style.opacity = "1";
         });
 
@@ -100,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (otherIdx !== index) {
             const [otherBackground, otherTextElement] = otherCover.childNodes;
             otherBackground.style.opacity = "0";
+            otherBackground.style.pointerEvents = "none";
             otherTextElement.style.opacity = "0";
           }
         });
@@ -108,6 +110,14 @@ document.addEventListener("DOMContentLoaded", () => {
       anchor.addEventListener("mouseleave", () => {
         // Trigger fade out
         background.style.opacity = "0";
+        background.style.pointerEvents = "none";
+        textElement.style.opacity = "0";
+      });
+
+      anchor.addEventListener("touchend", () => {
+        // Trigger fade out
+        background.style.opacity = "0";
+        background.style.pointerEvents = "none";
         textElement.style.opacity = "0";
       });
       
