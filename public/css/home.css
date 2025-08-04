@@ -43,6 +43,10 @@
   .intro__header h3 {
     font-size: 2.4rem;
     line-height: 1.2; }
+  .intro__header a {
+    text-decoration-color: rgba(0, 0, 0, 0.1); }
+  .intro__header a:hover {
+    text-decoration-color: rgba(0, 0, 0, 0); }
 
 .intro__works {
   text-align: center; }
@@ -51,7 +55,7 @@
   .intro__works a {
     text-decoration-color: rgba(0, 0, 0, 0.1); }
   .intro__works a:hover {
-    text-decoration-color: #FFAE4A; }
+    text-decoration-color: rgba(0, 0, 0, 0); }
 
 .intro__story {
   margin-bottom: 12rem; }
@@ -387,6 +391,9 @@
   display: none; }
 
 @media all and (max-width: 799px) {
+  .intro-container__footer .hero__footer {
+    top: 3rem;
+    width: calc(100% - 5rem); }
   .focus-area {
     margin-top: 1.6rem;
     margin-bottom: 1.6rem; }

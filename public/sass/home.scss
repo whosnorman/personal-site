@@ -673,6 +673,15 @@ $frame-duration: 450ms;
 
 @media all and (max-width: 799px) {
 
+	.intro-container {
+		&__footer {
+			.hero__footer {
+				top: 3rem;
+        width: calc(100% - 5rem);
+			}
+		}
+	}
+
 	.focus-area {
 
 		&:hover {
