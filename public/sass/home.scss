@@ -678,6 +678,7 @@ $frame-duration: 450ms;
 			.hero__footer {
 				top: 3rem;
         width: calc(100% - 5rem);
+				bottom: initial;
 			}
 		}
 	}

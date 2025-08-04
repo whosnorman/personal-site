@@ -393,7 +393,8 @@
 @media all and (max-width: 799px) {
   .intro-container__footer .hero__footer {
     top: 3rem;
-    width: calc(100% - 5rem); }
+    width: calc(100% - 5rem);
+    bottom: initial; }
   .focus-area {
     margin-top: 1.6rem;
     margin-bottom: 1.6rem; }
